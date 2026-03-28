@@ -1,7 +1,25 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     const swUrl = new URL('sw.js', document.baseURI).href;
-    navigator.serviceWorker.register(swUrl).catch(() => {});
+    navigator.serviceWorker
+      .register(swUrl)
+      .then((reg) => {
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') reg.update().catch(() => {});
+        });
+
+        reg.addEventListener('updatefound', () => {
+          const w = reg.installing;
+          if (!w) return;
+          w.addEventListener('statechange', () => {
+            if (w.state !== 'installed') return;
+            if (navigator.serviceWorker.controller) {
+              window.location.reload();
+            }
+          });
+        });
+      })
+      .catch(() => {});
   });
 }
 
