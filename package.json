@@ -1,0 +1,12 @@
+{
+  "name": "invooffice-landing",
+  "private": true,
+  "scripts": {
+    "build": "npx --yes clean-css-cli -o styles.min.css styles.css && npx --yes terser main.js -c -m -o main.min.js && node scripts/cache-bust.mjs",
+    "fonts:copy": "node scripts/copy-fonts.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/dm-sans": "^5.2.8",
+    "@fontsource/syne": "^5.2.7"
+  }
+}
