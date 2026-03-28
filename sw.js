@@ -1,5 +1,5 @@
 /* Service Worker — precache relatif au scope (racine domaine ou /repo/ sur GitHub Pages) */
-const CACHE = 'invooffice-landing-v5';
+const CACHE = 'invooffice-landing-v6';
 
 const REL_ASSETS = [
   'index.html',
@@ -72,6 +72,31 @@ function sameOriginPathOnly(request) {
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   if (request.method !== 'GET') return;
+
+  const accept = request.headers.get('accept') || '';
+  if (accept.includes('text/html')) {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response && response.ok) {
+            const copy = response.clone();
+            caches.open(CACHE).then((cache) => cache.put(request, copy));
+          }
+          return response;
+        })
+        .catch(() =>
+          caches.match(request).then((hit) => {
+            if (hit) return hit;
+            const pathOnly = sameOriginPathOnly(request);
+            if (pathOnly && pathOnly !== request.url) {
+              return caches.match(pathOnly);
+            }
+            return undefined;
+          })
+        )
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(request).then((hit) => {

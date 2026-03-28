@@ -2,7 +2,8 @@
   "name": "invooffice-landing",
   "private": true,
   "scripts": {
-    "build": "npx --yes clean-css-cli -o styles.min.css styles.css && npx --yes terser main.js -c -m -o main.min.js && node scripts/cache-bust.mjs",
+    "generate-blog": "node scripts/generate-blog.mjs",
+    "build": "node scripts/generate-blog.mjs && npx --yes clean-css-cli -o styles.min.css styles.css && npx --yes terser main.js -c -m -o main.min.js && node scripts/cache-bust.mjs",
     "fonts:copy": "node scripts/copy-fonts.mjs"
   },
   "devDependencies": {
