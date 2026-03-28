@@ -2,15 +2,133 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
-      "id": "facturation-2025-tpe",
-      "title": "Pourquoi un système de facturation compte en 2025 pour les petites entreprises",
+      "id": "relance-client-maroc-2026",
+      "title": "Relance Client au Maroc : Méthodes Efficaces pour Réduire les Impayés en 2026",
+      "date": "2026-03-28",
+      "tag": "Gestion & Trésorerie",
+      "excerpt": "Les retards de paiement impactent directement votre activité. Découvrez des méthodes simples et efficaces pour relancer vos clients au Maroc en 2026.",
+      "paragraphs": [
+        "Au Maroc, la gestion des impayés est un enjeu majeur pour les petites entreprises. Une relance bien structurée permet d’augmenter significativement les chances de paiement sans détériorer la relation client.",
+        "Mettre en place des rappels automatiques, adopter un ton professionnel et suivre les échéances sont des pratiques essentielles pour garder le contrôle sur votre trésorerie.",
+        "En structurant votre processus de relance dès le départ, vous gagnez du temps et améliorez votre stabilité financière sur le long terme.",
+        "Un outil unique pour tout piloter.\nINVOOffice remplace les tableurs compliqués et les processus manuels par une solution intégrée, simple et puissante."
+      ]
+    },
+    {
+      "id": "facturation-electronique-maroc-2026",
+      "title": "Facturation Électronique au Maroc : Ce qui Change en 2026 pour les Entreprises",
+      "date": "2026-03-28",
+      "tag": "Réglementation",
+      "excerpt": "La transition vers la facturation électronique s’accélère au Maroc. Voici ce que vous devez savoir pour rester conforme en 2026.",
+      "paragraphs": [
+        "La transformation digitale au Maroc accélère avec la facturation électronique. Cette évolution vise à renforcer la transparence fiscale et simplifier les échanges.",
+        "Les entreprises doivent s’équiper d’outils capables de générer des factures conformes aux exigences légales et techniques.",
+        "Anticiper ces changements permet d’éviter les erreurs et de rester en conformité avec la réglementation.",
+        "Un outil unique pour tout piloter.\nINVOOffice remplace les tableurs compliqués et les processus manuels par une solution intégrée, simple et puissante."
+      ]
+    },
+    {
+      "id": "gestion-stock-maroc-pme",
+      "title": "Comment Gérer Son Stock Efficacement au Maroc en 2026",
+      "date": "2026-03-28",
+      "tag": "Gestion",
+      "excerpt": "Une mauvaise gestion de stock peut coûter cher. Découvrez comment optimiser vos stocks et éviter les pertes en 2026.",
+      "paragraphs": [
+        "La gestion de stock est essentielle pour assurer la rentabilité d’une entreprise. Une mauvaise organisation peut entraîner des pertes importantes.",
+        "Un suivi précis des entrées et sorties permet d’éviter les ruptures et d’optimiser les approvisionnements.",
+        "Automatiser ce processus améliore la visibilité et réduit les erreurs humaines.",
+        "Un outil unique pour tout piloter.\nINVOOffice remplace les tableurs compliqués et les processus manuels par une solution intégrée, simple et puissante."
+      ]
+    },
+    {
+      "id": "devis-professionnel-maroc",
+      "title": "Créer un Devis Professionnel au Maroc : Bonnes Pratiques 2026",
       "date": "2026-03-28",
       "tag": "Facturation",
-      "excerpt": "Encore trop de petites entreprises facturent à la main : erreurs, retards et peu de visibilité sur la trésorerie. Voici pourquoi un vrai système de facturation compte en 2025.",
+      "excerpt": "Un devis bien structuré augmente vos chances de conversion. Voici comment créer un devis professionnel au Maroc en 2026.",
       "paragraphs": [
-        "En 2025, une petite structure qui facture correctement gagne du temps et de la crédibilité : numérotation claire, mentions légales cohérentes et historique des paiements facilitent les échanges avec clients et comptable.",
-        "Un outil dédié — même simple — permet de sortir des PDF propres, de suivre les impayés et d’anticiper la TVA ou les obligations locales, sans tout refaire à la main à chaque mois.",
-        "Pour un jeune entrepreneur, investir tôt dans une habitude de facturation structurée évite la dette technique administrative quand l’activité accélère : moins de stress, plus de contrôle."
+        "Le devis est un élément clé dans la relation commerciale. Il doit être clair, détaillé et professionnel pour inspirer confiance.",
+        "Mentionner les informations essentielles et structurer correctement les prestations permet d’éviter les malentendus avec les clients.",
+        "Un devis bien présenté améliore votre image et augmente vos chances de conclure une vente.",
+        "Un outil unique pour tout piloter.\nINVOOffice remplace les tableurs compliqués et les processus manuels par une solution intégrée, simple et puissante."
+      ]
+    },
+    {
+      "id": "optimisation-tva-maroc-2026",
+      "title": "TVA au Maroc : Astuces pour Optimiser Votre Gestion en 2026",
+      "date": "2026-03-28",
+      "tag": "Fiscalité",
+      "excerpt": "La TVA peut vite devenir complexe. Découvrez des astuces simples pour mieux gérer et optimiser votre TVA au Maroc.",
+      "paragraphs": [
+        "La gestion de la TVA est une obligation incontournable pour les entreprises marocaines. Une mauvaise gestion peut entraîner des pénalités.",
+        "Suivre correctement les déclarations, comprendre les taux et anticiper les paiements permet d’éviter les erreurs coûteuses.",
+        "Un outil adapté simplifie ce processus et garantit une meilleure conformité fiscale.",
+        "Un outil unique pour tout piloter.\nINVOOffice remplace les tableurs compliqués et les processus manuels par une solution intégrée, simple et puissante."
+      ]
+    },
+    {
+      "id": "numerotation-facture-maroc",
+      "title": "Numérotation des Factures au Maroc : Règles et Bonnes Pratiques 2026",
+      "date": "2026-03-28",
+      "tag": "Conformité DGI",
+      "excerpt": "Une mauvaise numérotation peut poser des problèmes fiscaux. Voici les règles à respecter au Maroc en 2026.",
+      "paragraphs": [
+        "La numérotation des factures est une obligation légale au Maroc. Chaque facture doit suivre une séquence chronologique sans rupture ni duplication.",
+        "Une mauvaise gestion peut entraîner des sanctions ou compliquer les contrôles fiscaux.",
+        "Mettre en place un système automatique permet d’éviter les erreurs et de garantir une conformité totale.",
+        "Un outil unique pour tout piloter.\nINVOOffice remplace les tableurs compliqués et les processus manuels par une solution intégrée, simple et puissante."
+      ]
+    },
+    {
+      "id": "suivi-paiement-client-maroc",
+      "title": "Comment Suivre les Paiements Clients au Maroc Sans Erreurs",
+      "date": "2026-03-28",
+      "tag": "Gestion & Trésorerie",
+      "excerpt": "Le suivi des paiements est essentiel pour éviter les pertes. Découvrez les meilleures pratiques en 2026.",
+      "paragraphs": [
+        "Un bon suivi des paiements clients permet d’avoir une vision claire de votre trésorerie.",
+        "Sans organisation, il devient difficile de savoir qui a payé et qui est en retard.",
+        "Automatiser ce suivi permet de gagner du temps et de réduire les erreurs humaines.",
+        "Un outil unique pour tout piloter.\nINVOOffice remplace les tableurs compliqués et les processus manuels par une solution intégrée, simple et puissante."
+      ]
+    },
+    {
+      "id": "tableau-bord-entreprise-maroc",
+      "title": "Tableau de Bord Entreprise : Les Indicateurs Essentiels à Suivre en 2026",
+      "date": "2026-03-28",
+      "tag": "Stratégie",
+      "excerpt": "Piloter son entreprise sans indicateurs est risqué. Voici les KPI essentiels pour 2026.",
+      "paragraphs": [
+        "Un tableau de bord permet de suivre les performances de votre entreprise en temps réel.",
+        "Les indicateurs comme le chiffre d’affaires, les dépenses et la trésorerie sont essentiels pour prendre de bonnes décisions.",
+        "Avoir une vue claire et centralisée améliore la gestion globale de votre activité.",
+        "Un outil unique pour tout piloter.\nINVOOffice remplace les tableurs compliqués et les processus manuels par une solution intégrée, simple et puissante."
+      ]
+    },
+    {
+      "id": "erreurs-comptabilite-maroc",
+      "title": "Les Erreurs de Comptabilité les Plus Courantes au Maroc et Comment les Éviter",
+      "date": "2026-03-28",
+      "tag": "Comptabilité",
+      "excerpt": "Des erreurs simples peuvent coûter cher. Découvrez comment les éviter en 2026.",
+      "paragraphs": [
+        "La comptabilité est un pilier essentiel de toute entreprise. Pourtant, certaines erreurs sont fréquentes et peuvent avoir des conséquences importantes.",
+        "Mauvaise saisie, oublis ou manque de suivi peuvent impacter votre situation financière.",
+        "Adopter des outils fiables permet de sécuriser votre gestion comptable.",
+        "Un outil unique pour tout piloter.\nINVOOffice remplace les tableurs compliqués et les processus manuels par une solution intégrée, simple et puissante."
+      ]
+    },
+    {
+      "id": "digitalisation-entreprise-maroc",
+      "title": "Pourquoi Digitaliser Son Entreprise au Maroc en 2026 Est Devenu Indispensable",
+      "date": "2026-03-28",
+      "tag": "Stratégie",
+      "excerpt": "La digitalisation n’est plus une option. Découvrez pourquoi elle est essentielle en 2026.",
+      "paragraphs": [
+        "La digitalisation permet d’améliorer la productivité et de réduire les tâches manuelles.",
+        "Les entreprises qui adoptent des outils numériques gagnent en efficacité et en compétitivité.",
+        "Passer au digital est aujourd’hui une nécessité pour assurer la croissance de votre activité.",
+        "Un outil unique pour tout piloter.\nINVOOffice remplace les tableurs compliqués et les processus manuels par une solution intégrée, simple et puissante."
       ]
     }
   ]
