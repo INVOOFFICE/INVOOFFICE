@@ -1,8 +1,9 @@
 /* Service Worker — precache relatif au scope (racine domaine ou /repo/ sur GitHub Pages) */
-const CACHE = 'invooffice-landing-v4';
+const CACHE = 'invooffice-landing-v5';
 
 const REL_ASSETS = [
   'index.html',
+  'blog/index.html',
   'styles.min.css',
   'main.min.js',
   'manifest.json',

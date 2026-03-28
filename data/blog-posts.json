@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Source de vérité prévue pour l’automatisation (build ou script). Les slugs correspondent aux ancres blog/index.html#…",
+  "posts": [
+    {
+      "id": "facturation-dgi",
+      "title": "Factures et conformité DGI : ce que les TPE doivent retenir",
+      "date": "2026-03-15",
+      "tag": "Facturation",
+      "excerpt": "ICE, mentions obligatoires, TVA multi-taux : un rappel utile avant d’envoyer vos premiers documents officiels."
+    },
+    {
+      "id": "pwa-donnees-locales",
+      "title": "PWA et données locales : pourquoi votre activité reste autonome",
+      "date": "2026-03-08",
+      "tag": "PWA & offline",
+      "excerpt": "Sans abonnement ni serveur obligatoire : comment nos applications gardent vos données sous votre contrôle."
+    },
+    {
+      "id": "licence-vie-pme",
+      "title": "Licence à vie vs abonnement : le bon choix pour une PME marocaine",
+      "date": "2026-02-28",
+      "tag": "Conseils",
+      "excerpt": "Comparer les coûts sur 3 ou 5 ans et éviter les mauvaises surprises sur le budget logiciel."
+    }
+  ]
+}
