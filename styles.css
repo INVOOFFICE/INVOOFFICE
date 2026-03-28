@@ -206,8 +206,8 @@ body::before {
   opacity: 0.4;
 }
 
-/* ── NAV ── */
-nav {
+/* ── NAV (uniquement la barre du haut — pas .blog-pagination) ── */
+.site-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
@@ -636,6 +636,10 @@ section {
 }
 
 .blog-pagination {
+  position: static;
+  z-index: auto;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -643,6 +647,10 @@ section {
   gap: 16px 24px;
   margin-top: 28px;
   padding-top: 8px;
+  border: none;
+  background: transparent;
+  backdrop-filter: none;
+  min-height: 0;
 }
 
 .blog-pagination-status {
@@ -1397,7 +1405,7 @@ footer {
 }
 
 @media (min-width: 901px) {
-  nav {
+  .site-nav {
     padding-left: max(40px, env(safe-area-inset-left, 0px));
     padding-right: max(40px, env(safe-area-inset-right, 0px));
   }
