@@ -66,7 +66,7 @@ document.querySelectorAll('.btn-features-toggle').forEach((btn) => {
   const statusEl = document.getElementById('blog-pagination-status');
   if (!grid || !nav || !btnPrev || !btnNext || !statusEl) return;
 
-  const PAGE_SIZE = 4;
+  const PAGE_SIZE = 6;
   const cards = Array.from(grid.querySelectorAll('.blog-card'));
   if (cards.length <= PAGE_SIZE) return;
 
