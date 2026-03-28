@@ -631,6 +631,51 @@ section {
   opacity: 0.92;
 }
 
+.blog-card.is-page-hidden {
+  display: none !important;
+}
+
+.blog-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-top: 28px;
+  padding-top: 8px;
+}
+
+.blog-pagination-status {
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text2);
+  min-width: 7.5rem;
+  text-align: center;
+}
+
+.blog-pagination-btn {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, opacity 0.2s;
+}
+
+.blog-pagination-btn:hover:not(:disabled) {
+  border-color: var(--border2);
+  background: rgba(9, 188, 138, 0.06);
+}
+
+.blog-pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 /* ── BLOG (page dédiée) ── */
 .blog-page-main {
   padding: max(88px, calc(56px + env(safe-area-inset-top, 0px))) 0 100px;

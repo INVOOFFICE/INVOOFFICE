@@ -57,3 +57,52 @@ document.querySelectorAll('.btn-features-toggle').forEach((btn) => {
     label.textContent = paused ? 'Reprendre' : 'Pause';
   });
 })();
+
+(function initBlogGridPagination() {
+  const grid = document.getElementById('blog-grid');
+  const nav = document.getElementById('blog-pagination');
+  const btnPrev = document.getElementById('blog-pagination-prev');
+  const btnNext = document.getElementById('blog-pagination-next');
+  const statusEl = document.getElementById('blog-pagination-status');
+  if (!grid || !nav || !btnPrev || !btnNext || !statusEl) return;
+
+  const PAGE_SIZE = 4;
+  const cards = Array.from(grid.querySelectorAll('.blog-card'));
+  if (cards.length <= PAGE_SIZE) return;
+
+  nav.hidden = false;
+  let page = 0;
+  const totalPages = Math.ceil(cards.length / PAGE_SIZE);
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function apply() {
+    const start = page * PAGE_SIZE;
+    cards.forEach((card, i) => {
+      const onPage = i >= start && i < start + PAGE_SIZE;
+      card.classList.toggle('is-page-hidden', !onPage);
+      if (onPage) card.classList.add('visible');
+    });
+    btnPrev.disabled = page <= 0;
+    btnNext.disabled = page >= totalPages - 1;
+    statusEl.textContent = 'Page ' + (page + 1) + ' / ' + totalPages;
+  }
+
+  function scrollToGrid() {
+    grid.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'nearest' });
+  }
+
+  btnPrev.addEventListener('click', () => {
+    if (page <= 0) return;
+    page--;
+    apply();
+    scrollToGrid();
+  });
+  btnNext.addEventListener('click', () => {
+    if (page >= totalPages - 1) return;
+    page++;
+    apply();
+    scrollToGrid();
+  });
+
+  apply();
+})();

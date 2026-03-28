@@ -328,7 +328,7 @@ section{position:relative;z-index:1}
   }
 }
 </style>
-<link rel="stylesheet" href="styles.min.css?v=af530877b1">
+<link rel="stylesheet" href="styles.min.css?v=7a4c659bab">
 </head>
 <body>
 
@@ -563,7 +563,7 @@ section{position:relative;z-index:1}
       <p>Conseils pratiques sur la facturation au Maroc, la conformité DGI et l’usage de nos logiciels en licence à vie.</p>
     </div>
 
-    <div class="blog-grid">
+    <div class="blog-grid" id="blog-grid">
       <!-- BLOG_GRID_AUTO_START -->
       <article class="blog-card reveal" itemscope itemtype="https://schema.org/BlogPosting">
         <div class="blog-card-meta">
@@ -666,6 +666,11 @@ section{position:relative;z-index:1}
       </article>
 <!-- BLOG_GRID_AUTO_END -->
     </div>
+    <nav class="blog-pagination" id="blog-pagination" aria-label="Pagination des articles du blog" hidden>
+      <button type="button" class="blog-pagination-btn" id="blog-pagination-prev" aria-label="Page précédente">Précédent</button>
+      <span class="blog-pagination-status" id="blog-pagination-status" aria-live="polite"></span>
+      <button type="button" class="blog-pagination-btn" id="blog-pagination-next" aria-label="Page suivante">Suivant</button>
+    </nav>
   </div>
 </section>
 
@@ -750,6 +755,6 @@ section{position:relative;z-index:1}
   </div>
 </footer>
 
-<script src="main.min.js?v=47b2c82b3f" defer></script>
+<script src="main.min.js?v=a799629abc" defer></script>
 </body>
 </html>
