@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- CSP : doit précéder gtag ; gtag nécessite googletagmanager + domaines GA -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com; worker-src 'self'; manifest-src 'self'; base-uri 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://region2.google-analytics.com https://region1.analytics.google.com https://region2.analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net; worker-src 'self'; manifest-src 'self'; base-uri 'self'; object-src 'none'">
 <!-- Google tag (gtag.js) — Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GC4REEPPD6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-GC4REEPPD6');
+  gtag('config', 'G-GC4REEPPD6', { send_page_view: true });
 </script>
 <meta name="theme-color" content="#080c10">
 <meta name="color-scheme" content="dark">
@@ -33,15 +33,15 @@
 <meta property="og:site_name" content="INVOOffice">
 <meta property="og:title" content="INVOOffice Maroc — Logiciels de gestion licence à vie pour TPE &amp; PME">
 <meta property="og:description" content="Facturation, location auto, caisse : solutions locales, offline, sans abonnement. Pensées pour les professionnels au Maroc.">
-<meta property="og:image" content="https://invooffice.com/og-image.svg">
-<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:image" content="https://invooffice.com/images/INVOOFFICE.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:height" content="675">
 <meta property="og:image:alt" content="INVOOffice — logiciels de gestion Maroc, licence à vie">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="INVOOffice Maroc — Licence à vie, données locales">
 <meta name="twitter:description" content="Logiciels de gestion pour TPE, PME et entrepreneurs au Maroc. Pas d'abonnement — payez une fois.">
-<meta name="twitter:image" content="https://invooffice.com/og-image.svg">
+<meta name="twitter:image" content="https://invooffice.com/images/INVOOFFICE.png">
 <meta name="twitter:image:alt" content="INVOOffice — logiciels de gestion Maroc">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="favicon.svg">
@@ -73,6 +73,22 @@
       "description": "Logiciels de facturation, gestion de flotte et caisse — licence à vie, stockage local, Maroc.",
       "publisher": { "@id": "https://invooffice.com/#organization" },
       "inLanguage": "fr-MA"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://invooffice.com/#webpage",
+      "url": "https://invooffice.com/",
+      "name": "INVOOffice Maroc — Logiciels de gestion licence à vie pour TPE et PME",
+      "description": "Logiciels de facturation DGI, location de véhicules et caisse restaurant — licence à vie, données locales, Maroc.",
+      "isPartOf": { "@id": "https://invooffice.com/#website" },
+      "about": { "@id": "https://invooffice.com/#organization" },
+      "inLanguage": "fr-MA",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://invooffice.com/images/INVOOFFICE.png",
+        "width": 1200,
+        "height": 675
+      }
     },
     {
       "@type": "ItemList",

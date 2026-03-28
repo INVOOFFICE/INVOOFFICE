@@ -85,17 +85,40 @@ function buildJsonLd(siteBaseUrl, posts) {
   const blogUrl = `${base}/blog/`;
   const graph = {
     '@context': 'https://schema.org',
-    '@type': 'Blog',
-    name: 'Blog INVOOffice',
-    url: blogUrl,
-    description: 'Guides et actualités pour TPE et PME au Maroc.',
-    publisher: { '@id': `${base}/#organization` },
-    blogPost: posts.map((p) => ({
-      '@type': 'BlogPosting',
-      headline: p.title,
-      datePublished: p.date,
-      url: `${base}/blog/#${p.id}`,
-    })),
+    '@graph': [
+      {
+        '@type': 'Blog',
+        '@id': `${blogUrl}#blog`,
+        name: 'Blog INVOOffice',
+        url: blogUrl,
+        description: 'Guides et actualités pour TPE et PME au Maroc.',
+        publisher: { '@id': `${base}/#organization` },
+        blogPost: posts.map((p) => ({
+          '@type': 'BlogPosting',
+          headline: p.title,
+          datePublished: p.date,
+          url: `${base}/blog/#${p.id}`,
+        })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${blogUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Accueil',
+            item: `${base}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Blog',
+            item: blogUrl,
+          },
+        ],
+      },
+    ],
   };
   return `<script type="application/ld+json">\n${JSON.stringify(graph, null, 2)}\n</script>`;
 }

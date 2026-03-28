@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com; worker-src 'self'; manifest-src 'self'; base-uri 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://region2.google-analytics.com https://region1.analytics.google.com https://region2.analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net; worker-src 'self'; manifest-src 'self'; base-uri 'self'; object-src 'none'">
 <!-- Google tag (gtag.js) — Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GC4REEPPD6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-GC4REEPPD6');
+  gtag('config', 'G-GC4REEPPD6', { send_page_view: true });
 </script>
 <meta name="theme-color" content="#080c10">
 <meta name="color-scheme" content="dark">
@@ -20,10 +20,21 @@
 <link rel="canonical" href="https://invooffice.com/blog/">
 <link rel="alternate" hreflang="fr-MA" href="https://invooffice.com/blog/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="fr_MA">
+<meta property="og:site_name" content="INVOOffice">
 <meta property="og:url" content="https://invooffice.com/blog/">
 <meta property="og:title" content="Blog INVOOffice — Guides &amp; actualités">
 <meta property="og:description" content="Facturation, PWA offline, licences : contenus pour les professionnels au Maroc.">
-<meta property="og:image" content="https://invooffice.com/og-image.svg">
+<meta property="og:image" content="https://invooffice.com/images/INVOOFFICE.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="og:image:alt" content="INVOOffice — logiciels de gestion Maroc, licence à vie">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog INVOOffice — Guides facturation &amp; licences au Maroc">
+<meta name="twitter:description" content="Facturation DGI, PWA offline, licence à vie : articles pour les professionnels au Maroc.">
+<meta name="twitter:image" content="https://invooffice.com/images/INVOOFFICE.png">
+<meta name="twitter:image:alt" content="INVOOffice — logiciels de gestion Maroc">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../favicon.svg">
 <link rel="manifest" href="../manifest.json">
@@ -31,73 +42,96 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Blog INVOOffice",
-  "url": "https://invooffice.github.io/INVOOFFICE/blog/",
-  "description": "Guides et actualités pour TPE et PME au Maroc.",
-  "publisher": {
-    "@id": "https://invooffice.github.io/INVOOFFICE/#organization"
-  },
-  "blogPost": [
+  "@graph": [
     {
-      "@type": "BlogPosting",
-      "headline": "Relance Client au Maroc : Méthodes Efficaces pour Réduire les Impayés en 2026",
-      "datePublished": "2026-03-28",
-      "url": "https://invooffice.github.io/INVOOFFICE/blog/#relance-client-maroc-2026"
+      "@type": "Blog",
+      "@id": "https://invooffice.com/blog/#blog",
+      "name": "Blog INVOOffice",
+      "url": "https://invooffice.com/blog/",
+      "description": "Guides et actualités pour TPE et PME au Maroc.",
+      "publisher": {
+        "@id": "https://invooffice.com/#organization"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Relance Client au Maroc : Méthodes Efficaces pour Réduire les Impayés en 2026",
+          "datePublished": "2026-03-28",
+          "url": "https://invooffice.com/blog/#relance-client-maroc-2026"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Facturation Électronique au Maroc : Ce qui Change en 2026 pour les Entreprises",
+          "datePublished": "2026-03-28",
+          "url": "https://invooffice.com/blog/#facturation-electronique-maroc-2026"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Comment Gérer Son Stock Efficacement au Maroc en 2026",
+          "datePublished": "2026-03-28",
+          "url": "https://invooffice.com/blog/#gestion-stock-maroc-pme"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Créer un Devis Professionnel au Maroc : Bonnes Pratiques 2026",
+          "datePublished": "2026-03-28",
+          "url": "https://invooffice.com/blog/#devis-professionnel-maroc"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "TVA au Maroc : Astuces pour Optimiser Votre Gestion en 2026",
+          "datePublished": "2026-03-28",
+          "url": "https://invooffice.com/blog/#optimisation-tva-maroc-2026"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Numérotation des Factures au Maroc : Règles et Bonnes Pratiques 2026",
+          "datePublished": "2026-03-28",
+          "url": "https://invooffice.com/blog/#numerotation-facture-maroc"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Comment Suivre les Paiements Clients au Maroc Sans Erreurs",
+          "datePublished": "2026-03-28",
+          "url": "https://invooffice.com/blog/#suivi-paiement-client-maroc"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Tableau de Bord Entreprise : Les Indicateurs Essentiels à Suivre en 2026",
+          "datePublished": "2026-03-28",
+          "url": "https://invooffice.com/blog/#tableau-bord-entreprise-maroc"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Les Erreurs de Comptabilité les Plus Courantes au Maroc et Comment les Éviter",
+          "datePublished": "2026-03-28",
+          "url": "https://invooffice.com/blog/#erreurs-comptabilite-maroc"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Pourquoi Digitaliser Son Entreprise au Maroc en 2026 Est Devenu Indispensable",
+          "datePublished": "2026-03-28",
+          "url": "https://invooffice.com/blog/#digitalisation-entreprise-maroc"
+        }
+      ]
     },
     {
-      "@type": "BlogPosting",
-      "headline": "Facturation Électronique au Maroc : Ce qui Change en 2026 pour les Entreprises",
-      "datePublished": "2026-03-28",
-      "url": "https://invooffice.github.io/INVOOFFICE/blog/#facturation-electronique-maroc-2026"
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "Comment Gérer Son Stock Efficacement au Maroc en 2026",
-      "datePublished": "2026-03-28",
-      "url": "https://invooffice.github.io/INVOOFFICE/blog/#gestion-stock-maroc-pme"
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "Créer un Devis Professionnel au Maroc : Bonnes Pratiques 2026",
-      "datePublished": "2026-03-28",
-      "url": "https://invooffice.github.io/INVOOFFICE/blog/#devis-professionnel-maroc"
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "TVA au Maroc : Astuces pour Optimiser Votre Gestion en 2026",
-      "datePublished": "2026-03-28",
-      "url": "https://invooffice.github.io/INVOOFFICE/blog/#optimisation-tva-maroc-2026"
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "Numérotation des Factures au Maroc : Règles et Bonnes Pratiques 2026",
-      "datePublished": "2026-03-28",
-      "url": "https://invooffice.github.io/INVOOFFICE/blog/#numerotation-facture-maroc"
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "Comment Suivre les Paiements Clients au Maroc Sans Erreurs",
-      "datePublished": "2026-03-28",
-      "url": "https://invooffice.github.io/INVOOFFICE/blog/#suivi-paiement-client-maroc"
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "Tableau de Bord Entreprise : Les Indicateurs Essentiels à Suivre en 2026",
-      "datePublished": "2026-03-28",
-      "url": "https://invooffice.github.io/INVOOFFICE/blog/#tableau-bord-entreprise-maroc"
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "Les Erreurs de Comptabilité les Plus Courantes au Maroc et Comment les Éviter",
-      "datePublished": "2026-03-28",
-      "url": "https://invooffice.github.io/INVOOFFICE/blog/#erreurs-comptabilite-maroc"
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "Pourquoi Digitaliser Son Entreprise au Maroc en 2026 Est Devenu Indispensable",
-      "datePublished": "2026-03-28",
-      "url": "https://invooffice.github.io/INVOOFFICE/blog/#digitalisation-entreprise-maroc"
+      "@type": "BreadcrumbList",
+      "@id": "https://invooffice.com/blog/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://invooffice.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://invooffice.com/blog/"
+        }
+      ]
     }
   ]
 }
