@@ -141,7 +141,7 @@ try {
 }
 
 const data = JSON.parse(raw);
-const siteBaseUrl = data.siteBaseUrl || 'https://invooffice.com';
+const siteBaseUrl = data.siteBaseUrl || 'https://invooffice.github.io/INVOOFFICE';
 const posts = sortPosts(data.posts || []);
 
 let indexHtml = readFileSync(indexPath, 'utf8');

@@ -1,5 +1,5 @@
 /* Service Worker — precache relatif au scope (racine domaine ou /repo/ sur GitHub Pages) */
-const CACHE = 'invooffice-landing-a1eb818dd1'; /* remplacé automatiquement au build (bump-sw-cache.mjs) */
+const CACHE = 'invooffice-landing-d5f21bb256'; /* remplacé automatiquement au build (bump-sw-cache.mjs) */
 
 const REL_ASSETS = [
   'index.html',

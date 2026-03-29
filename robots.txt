@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://invooffice.com/sitemap.xml
+Sitemap: https://invooffice.github.io/INVOOFFICE/sitemap.xml
