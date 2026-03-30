@@ -1,5 +1,5 @@
 {
-  "siteBaseUrl": "https://invooffice.com",
+  "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
       "id": "relance-client-maroc-2026",
@@ -129,6 +129,19 @@
         "Les entreprises qui adoptent des outils numériques gagnent en efficacité et en compétitivité.",
         "Passer au digital est aujourd’hui une nécessité pour assurer la croissance de votre activité.",
         "Un outil unique pour tout piloter.\nINVOOffice remplace les tableurs compliqués et les processus manuels par une solution intégrée, simple et puissante."
+      ]
+    },
+    {
+      "id": "gestion-flotte-maroc-2026",
+      "title": "Gestion de Flotte Automobile au Maroc : Simplifiez Vos Opérations en 2026",
+      "date": "2026-03-28",
+      "tag": "Gestion",
+      "excerpt": "La gestion de flotte peut vite devenir complexe. Découvrez comment la simplifier avec un outil adapté en 2026.",
+      "paragraphs": [
+        "Gérer une flotte automobile implique de suivre plusieurs éléments : véhicules, clients, réservations et maintenances.",
+        "Sans système structuré, les erreurs et les pertes de temps sont fréquentes.",
+        "Centraliser toutes les informations permet d’améliorer l’organisation et d’avoir une vision claire de votre activité.",
+        "INVOORent Pro vous permet de gérer toute votre flotte depuis une seule interface, avec simplicité et efficacité."
       ]
     }
   ]
