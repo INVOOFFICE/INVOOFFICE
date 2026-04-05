@@ -1200,6 +1200,88 @@ h3.card-name { font-size: 18px; }
   }
 }
 
+/* ── FAQ (SEO + assistants IA) ── */
+.faq-section {
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+}
+
+.faq-section .section-label h2 {
+  font-size: clamp(22px, 3.2vw, 38px);
+}
+
+.faq-list {
+  margin-top: 36px;
+  max-width: 42rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-item {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: border-color 0.25s;
+}
+
+.faq-item[open] {
+  border-color: var(--border2);
+}
+
+.faq-q {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 20px;
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-right: 40px;
+}
+
+.faq-q::-webkit-details-marker {
+  display: none;
+}
+
+.faq-q::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--teal);
+  border-bottom: 2px solid var(--teal);
+  transform: translateY(-65%) rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.faq-item[open] .faq-q::after {
+  transform: translateY(-35%) rotate(-135deg);
+}
+
+.faq-a {
+  padding: 0 20px 18px;
+  border-top: 1px solid var(--border);
+}
+
+.faq-a p {
+  margin: 14px 0 0;
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .faq-item:hover {
+    border-color: var(--border2);
+  }
+}
+
 /* ── CTA FINAL ── */
 .cta-section {
   padding: 100px 0;
@@ -1380,6 +1462,7 @@ footer {
   .blog-section { padding: 64px 0 72px; }
   .section-label { margin-bottom: 40px; }
   .benefits-section { padding: 64px 0; }
+  .faq-section { padding: 64px 0; }
   .cta-section { padding: 72px 0 88px; }
   footer { flex-direction: column; text-align: center; }
 }

@@ -23,12 +23,12 @@
  *
  * Colonne « published » : laisser vide pour les nouveaux articles ; après envoi réussi, horodatage « Publié … ».
  *
- * Publication planifiée (1 article / semaine) :
- * — Menu « Installer déclencheur hebdo (lundi 9h) » puis le script chaque semaine publie UNE ligne :
- *   la première ligne (de haut en bas) avec « published » vide (hors brouillon).
+ * Publication planifiée (jusqu’à 3 articles / jour) :
+ * — Menu « Installer déclencheur quotidien (9 h) » : chaque jour vers 9 h (fuseau du projet),
+ *   le script publie jusqu’à 3 lignes (de haut en bas) avec « published » vide — une fusion GitHub par article.
  * — Fusionne avec data/blog-posts.json sur GitHub (n’efface pas les articles déjà en ligne).
- * — « Tester publication 1 article » pour essayer sans attendre le lundi.
- * — « Supprimer déclencheur hebdo » pour annuler.
+ * — « Tester jusqu’à 3 articles » ou « Tester 1 article » pour essayer sans attendre le déclencheur.
+ * — « Supprimer déclencheur publication planifiée » supprime les déclencheurs liés (y compris anciens hebdo).
  *
  * Rapport (onglet feuille) : une ligne est ajoutée après chaque sync, publication ou test d’indexation.
  * Onglet par défaut « Rapport automatisation » ; propriété optionnelle BLOG_LOG_SHEET_NAME = autre nom.
@@ -40,6 +40,9 @@ var DEFAULT_GITHUB_OWNER = 'invooffice';
 var DEFAULT_GITHUB_REPO = 'INVOOFFICE';
 var DEFAULT_GITHUB_BRANCH = 'main';
 var DEFAULT_SITE_BASE_URL = 'https://invooffice.github.io/INVOOFFICE';
+
+/** Nombre max d’articles publiés à chaque passage du déclencheur quotidien (file = lignes « published » vides). */
+var SCHEDULED_PUBLISH_PER_RUN = 3;
 
 var ARTICLE_SHEET_NAME = 'Articles';
 /** En-têtes créés automatiquement en ligne 1 si la feuille est vide */
@@ -295,9 +298,10 @@ function onOpen() {
     .addItem('Tester indexation Google (sans GitHub)', 'testGoogleIndexingOnly')
     .addItem('Ouvrir le rapport automatisation…', 'openAutomationLogSheet')
     .addSeparator()
-    .addItem('Installer déclencheur hebdo (lundi 9h)', 'installWeeklyPublishTrigger')
-    .addItem('Supprimer déclencheur hebdo', 'removeWeeklyPublishTrigger')
-    .addItem('Tester publication 1 article (maintenant)', 'testPublishNextArticleWeekly')
+    .addItem('Installer déclencheur quotidien (9 h, jusqu’à 3 articles)', 'installDailyPublishTrigger')
+    .addItem('Supprimer déclencheur publication planifiée', 'removeScheduledPublishTriggers')
+    .addItem('Tester jusqu’à 3 articles (maintenant)', 'testPublishScheduledBatch')
+    .addItem('Tester 1 seul article (maintenant)', 'testPublishOneArticle')
     .addToUi();
 }
 
@@ -676,155 +680,189 @@ function syncBlogPostsToGitHub() {
 }
 
 /**
- * Déclencheur horaire : publie un seul article — la première ligne avec « published » vide.
- * Fusionne avec le JSON existant sur GitHub (les articles déjà publiés restent).
+ * Déclencheur quotidien : jusqu’à SCHEDULED_PUBLISH_PER_RUN articles (file = « published » vide).
+ * @deprecated Ancien nom — redirige vers la publication quotidienne (pour déclencheurs déjà créés).
  */
 function publishNextArticleWeekly() {
-  publishNextArticleWeeklyCore_(false);
+  publishScheduledArticlesDaily();
 }
 
-/** Même logique, avec boîte de dialogue pour un test manuel depuis le menu. */
-function testPublishNextArticleWeekly() {
-  publishNextArticleWeeklyCore_(true);
+/** Appelé par le déclencheur horaire quotidien. */
+function publishScheduledArticlesDaily() {
+  publishScheduledBatchCore_(false, SCHEDULED_PUBLISH_PER_RUN);
 }
 
-function publishNextArticleWeeklyCore_(showUi) {
-  var sourceLabel = showUi ? 'Publication 1 article (menu test)' : 'Publication planifiée (déclencheur hebdo)';
+/** Menu : teste jusqu’à 3 publications d’affilée. */
+function testPublishScheduledBatch() {
+  publishScheduledBatchCore_(true, SCHEDULED_PUBLISH_PER_RUN);
+}
+
+/** Menu : teste une seule publication. */
+function testPublishOneArticle() {
+  publishScheduledBatchCore_(true, 1);
+}
+
+/**
+ * Boucle : publie jusqu’à maxArticles articles (un commit GitHub par article).
+ * @param {boolean} showUi alertes finales
+ * @param {number} maxArticles ex. 3 ou 1
+ */
+function publishScheduledBatchCore_(showUi, maxArticles) {
+  var sourceBase = showUi ? 'Publication test (menu)' : 'Publication planifiée (quotidien)';
+  var count = 0;
+  var titles = [];
+  var lastCommit = '';
+  var lastIndexing = '';
   try {
-    var props = getProps_();
-    var sheet = getArticleSheet_();
-    ensureHeaderRow_(sheet);
+    getProps_();
+    for (var i = 0; i < maxArticles; i++) {
+      var slotLabel = sourceBase + (maxArticles > 1 ? ' [' + (i + 1) + '/' + maxArticles + ']' : '');
+      var one = publishOneQueuedArticle_(slotLabel);
+      if (!one) break;
+      count++;
+      titles.push('« ' + one.newPost.title + ' » (' + one.newPost.id + ')');
+      if (one.pushResult && one.pushResult.commitUrl) lastCommit = one.pushResult.commitUrl;
+      if (one.indexingNote) lastIndexing = one.indexingNote;
+    }
 
-    var values = sheet.getDataRange().getValues();
-    if (values.length < 2) {
-      appendAutomationLog_(sourceLabel, 'Ignoré', 'Feuille vide ou en-tête seul', '');
-      if (showUi) SpreadsheetApp.getUi().alert('Aucune ligne de données dans la feuille.');
+    if (count === 0) {
+      var msgNone =
+        'Aucun article en attente : aucune ligne avec « published » vide (hors brouillon). Remplissez la file puis relancez.';
+      appendAutomationLog_(sourceBase, 'Ignoré', 'File vide (published)', '');
+      if (showUi) SpreadsheetApp.getUi().alert(msgNone);
+      else Logger.log('publishScheduledBatch: ' + msgNone);
       return;
     }
 
-    var ci = getColumnIndices_(values);
-    if (ci.published === undefined) {
-      var err =
-        'La colonne « published » est requise pour la publication hebdo (configurez les colonnes).';
-      appendAutomationLog_(sourceLabel, 'Échec', err, '');
-      if (showUi) SpreadsheetApp.getUi().alert(err);
-      else Logger.log('publishNextArticleWeekly: ' + err);
-      return;
+    var summary =
+      count +
+      ' article(s) publié(s)' +
+      (count > 1 ? ' successivement' : '') +
+      '.\n\n' +
+      titles.join('\n');
+    if (lastCommit) summary += '\n\nDernier commit :\n' + lastCommit;
+    if (lastIndexing) summary += '\n\n' + lastIndexing;
+
+    if (showUi) SpreadsheetApp.getUi().alert(summary);
+    else
+      Logger.log(
+        'publishScheduledBatch OK: ' + count + ' article(s) — ' + titles.join(' | ')
+      );
+  } catch (e) {
+    Logger.log('publishScheduledBatch erreur: ' + e);
+    appendAutomationLog_(sourceBase, 'Échec', e.message || String(e), count > 0 ? 'après ' + count + ' OK' : '');
+    if (showUi) SpreadsheetApp.getUi().alert('Erreur : ' + (e.message || e));
+  }
+}
+
+/**
+ * Publie le prochain article éligible (première ligne « published » vide). Un commit GitHub.
+ * @return {{ newPost: Object, postsTotal: number, pushResult: Object, indexingNote: string }|null} null si file vide
+ */
+function publishOneQueuedArticle_(sourceLabel) {
+  var props = getProps_();
+  var sheet = getArticleSheet_();
+  ensureHeaderRow_(sheet);
+
+  var values = sheet.getDataRange().getValues();
+  if (values.length < 2) {
+    appendAutomationLog_(sourceLabel, 'Ignoré', 'Feuille vide ou en-tête seul', '');
+    return null;
+  }
+
+  var ci = getColumnIndices_(values);
+  if (ci.published === undefined) {
+    var err = 'La colonne « published » est requise (configurez les colonnes).';
+    appendAutomationLog_(sourceLabel, 'Échec', err, '');
+    throw new Error(err);
+  }
+
+  var found = null;
+  for (var r = 1; r < values.length; r++) {
+    var row = values[r];
+    var pub = row[ci.published];
+    var pubStrRaw = String(pub === null || pub === undefined ? '' : pub).trim();
+    if (pubStrRaw !== '') continue;
+
+    var pubStr = pubStrRaw.toLowerCase();
+    if (
+      pubStr === 'false' ||
+      pubStr === 'non' ||
+      pubStr === 'no' ||
+      pubStr === '0' ||
+      pubStr === 'brouillon' ||
+      pubStr === 'draft'
+    ) {
+      continue;
     }
 
-    var found = null;
-    for (var r = 1; r < values.length; r++) {
-      var row = values[r];
-      var pub = row[ci.published];
-      var pubStrRaw = String(pub === null || pub === undefined ? '' : pub).trim();
-      if (pubStrRaw !== '') continue;
+    var id = String(row[ci.id] || '').trim();
+    if (!id) continue;
 
-      var pubStr = pubStrRaw.toLowerCase();
-      if (
-        pubStr === 'false' ||
-        pubStr === 'non' ||
-        pubStr === 'no' ||
-        pubStr === '0' ||
-        pubStr === 'brouillon' ||
-        pubStr === 'draft'
-      ) {
-        continue;
-      }
+    found = { sheetRow: r + 1, row: row };
+    break;
+  }
 
-      var id = String(row[ci.id] || '').trim();
-      if (!id) continue;
+  if (!found) return null;
 
-      found = { sheetRow: r + 1, row: row };
+  var newPost = buildPostFromRow_(found.row, ci);
+
+  var remoteText = getRemoteBlogPostsJson_(props);
+  var posts = [];
+  if (remoteText) {
+    try {
+      var remoteObj = JSON.parse(remoteText);
+      posts = remoteObj.posts || [];
+    } catch (e) {
+      posts = [];
+    }
+  }
+
+  var replaced = false;
+  for (var j = 0; j < posts.length; j++) {
+    if (posts[j].id === newPost.id) {
+      posts[j] = newPost;
+      replaced = true;
       break;
     }
-
-    if (!found) {
-      var msgNone =
-        'Publication hebdo : aucun article en attente. Remplissez des lignes puis laissez « published » vide pour la file d’attente.';
-      appendAutomationLog_(sourceLabel, 'Ignoré', 'Aucun article en file (published vide)', '');
-      if (showUi) SpreadsheetApp.getUi().alert(msgNone);
-      else Logger.log(msgNone);
-      return;
-    }
-
-    var newPost = buildPostFromRow_(found.row, ci);
-
-    var remoteText = getRemoteBlogPostsJson_(props);
-    var posts = [];
-    if (remoteText) {
-      try {
-        var remoteObj = JSON.parse(remoteText);
-        posts = remoteObj.posts || [];
-      } catch (e) {
-        posts = [];
-      }
-    }
-
-    var replaced = false;
-    for (var i = 0; i < posts.length; i++) {
-      if (posts[i].id === newPost.id) {
-        posts[i] = newPost;
-        replaced = true;
-        break;
-      }
-    }
-    if (!replaced) posts.push(newPost);
-
-    posts.sort(function (a, b) {
-      return String(b.date).localeCompare(String(a.date));
-    });
-
-    var payload = {
-      siteBaseUrl: props.siteBase,
-      posts: posts,
-    };
-    var jsonString = JSON.stringify(payload, null, 2) + '\n';
-
-    var commitMsg = 'chore(blog): publication planifiée (' + newPost.id + ')';
-    var pushResult = pushJsonToGitHub_(props, jsonString, commitMsg);
-    var indexingNote = safeNotifyIndexingAfterPublish_(props);
-
-    var colPub = ci.published + 1;
-    var stamp =
-      'Publié ' +
-      Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'dd/MM/yyyy HH:mm');
-    sheet.getRange(found.sheetRow, colPub).setValue(stamp);
-
-    var logStat = 'OK';
-    if (indexingNote && (indexingNote.indexOf('échec') !== -1 || indexingNote.indexOf('erreur') !== -1)) {
-      logStat = 'Partiel';
-    }
-    var logDetail =
-      (pushResult && pushResult.commitUrl ? pushResult.commitUrl : '') +
-      (indexingNote ? ' | ' + indexingNote : '');
-    appendAutomationLog_(
-      sourceLabel,
-      logStat,
-      '« ' + newPost.title + ' » (' + newPost.id + ') — ' + posts.length + ' article(s) sur le site',
-      logDetail
-    );
-
-    var okMsg =
-      'Article publié : « ' +
-      newPost.title +
-      ' » (' +
-      newPost.id +
-      '). Total sur le site : ' +
-      posts.length +
-      ' article(s).';
-    if (pushResult && pushResult.commitUrl) {
-      okMsg += '\n\n' + pushResult.commitUrl;
-    }
-    if (indexingNote) {
-      okMsg += '\n\n' + indexingNote;
-    }
-    if (showUi) SpreadsheetApp.getUi().alert(okMsg);
-    else Logger.log('publishNextArticleWeekly OK: ' + newPost.id + ' — ' + (pushResult.commitUrl || '') + (indexingNote ? ' — ' + indexingNote : ''));
-  } catch (e) {
-    Logger.log('publishNextArticleWeekly erreur: ' + e);
-    appendAutomationLog_(sourceLabel, 'Échec', e.message || String(e), '');
-    if (showUi) SpreadsheetApp.getUi().alert('Erreur : ' + e.message);
   }
+  if (!replaced) posts.push(newPost);
+
+  posts.sort(function (a, b) {
+    return String(b.date).localeCompare(String(a.date));
+  });
+
+  var payload = {
+    siteBaseUrl: props.siteBase,
+    posts: posts,
+  };
+  var jsonString = JSON.stringify(payload, null, 2) + '\n';
+
+  var commitMsg = 'chore(blog): publication planifiée (' + newPost.id + ')';
+  var pushResult = pushJsonToGitHub_(props, jsonString, commitMsg);
+  var indexingNote = safeNotifyIndexingAfterPublish_(props);
+
+  var colPub = ci.published + 1;
+  var stamp =
+    'Publié ' +
+    Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'dd/MM/yyyy HH:mm');
+  sheet.getRange(found.sheetRow, colPub).setValue(stamp);
+
+  var logStat = 'OK';
+  if (indexingNote && (indexingNote.indexOf('échec') !== -1 || indexingNote.indexOf('erreur') !== -1)) {
+    logStat = 'Partiel';
+  }
+  var logDetail =
+    (pushResult && pushResult.commitUrl ? pushResult.commitUrl : '') +
+    (indexingNote ? ' | ' + indexingNote : '');
+  appendAutomationLog_(
+    sourceLabel,
+    logStat,
+    '« ' + newPost.title + ' » (' + newPost.id + ') — ' + posts.length + ' article(s) sur le site',
+    logDetail
+  );
+
+  return { newPost: newPost, postsTotal: posts.length, pushResult: pushResult, indexingNote: indexingNote };
 }
 
 function buildPostFromRow_(row, ci) {
@@ -883,40 +921,46 @@ function getRemoteBlogPostsJson_(props) {
   return Utilities.newBlob(Utilities.base64Decode(fileMeta.content.replace(/\n/g, ''))).getDataAsString();
 }
 
-/** Supprime tous les déclencheurs sur publishNextArticleWeekly (sans boîte de dialogue). */
-function deleteWeeklyPublishTriggersSilent_() {
+/** Supprime les déclencheurs publication planifiée (quotidien + ancien hebdo). */
+function deleteScheduledPublishTriggersSilent_() {
+  var handlers = { publishScheduledArticlesDaily: true, publishNextArticleWeekly: true };
   var triggers = ScriptApp.getProjectTriggers();
   for (var i = triggers.length - 1; i >= 0; i--) {
-    if (triggers[i].getHandlerFunction() === 'publishNextArticleWeekly') {
-      ScriptApp.deleteTrigger(triggers[i]);
-    }
+    var fn = triggers[i].getHandlerFunction();
+    if (handlers[fn]) ScriptApp.deleteTrigger(triggers[i]);
   }
 }
 
-/** Crée le déclencheur : chaque lundi à 9h (fuseau horaire du projet Apps Script). */
-function installWeeklyPublishTrigger() {
-  deleteWeeklyPublishTriggersSilent_();
-  ScriptApp.newTrigger('publishNextArticleWeekly')
+/**
+ * Déclencheur : chaque jour vers 9 h (fuseau Projet Apps Script → Réglages généraux).
+ * Jusqu’à SCHEDULED_PUBLISH_PER_RUN articles par passage (un commit par article).
+ */
+function installDailyPublishTrigger() {
+  deleteScheduledPublishTriggersSilent_();
+  ScriptApp.newTrigger('publishScheduledArticlesDaily')
     .timeBased()
-    .everyWeeks(1)
-    .onWeekDay(ScriptApp.WeekDay.MONDAY)
+    .everyDays(1)
     .atHour(9)
     .create();
   SpreadsheetApp.getUi().alert(
-    'Déclencheur installé : chaque lundi vers 9h, le script publie la première ligne avec « published » vide (fusion avec GitHub).'
+    'Déclencheur installé : chaque jour vers 9 h, jusqu’à ' +
+      SCHEDULED_PUBLISH_PER_RUN +
+      ' article(s) (lignes « published » vides, dans l’ordre de la feuille). Anciens déclencheurs hebdo supprimés.'
   );
 }
 
-/** Supprime les déclencheurs horaires liés à publishNextArticleWeekly. */
-function removeWeeklyPublishTrigger() {
+function removeScheduledPublishTriggers() {
   var before = 0;
+  var handlers = { publishScheduledArticlesDaily: true, publishNextArticleWeekly: true };
   var triggers = ScriptApp.getProjectTriggers();
   for (var j = 0; j < triggers.length; j++) {
-    if (triggers[j].getHandlerFunction() === 'publishNextArticleWeekly') before++;
+    if (handlers[triggers[j].getHandlerFunction()]) before++;
   }
-  deleteWeeklyPublishTriggersSilent_();
+  deleteScheduledPublishTriggersSilent_();
   SpreadsheetApp.getUi().alert(
-    before > 0 ? before + ' déclencheur(s) hebdo supprimé(s).' : 'Aucun déclencheur hebdo à supprimer.'
+    before > 0
+      ? before + ' déclencheur(s) de publication supprimé(s).'
+      : 'Aucun déclencheur de publication planifiée à supprimer.'
   );
 }
 

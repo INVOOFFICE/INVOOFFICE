@@ -23,8 +23,8 @@ WaApply (ancien guide) vs INVOOffice (ce projet) — ce qui manquait à adapter
   [ ] Pas de siteName / siteDescription dans blog-posts.json : seulement
       siteBaseUrl + posts.
 
-  [ ] Publication planifiée : 1 article par run, lundi 9h (pas batch N/jour,
-      pas BLOG_PUBLISH_HOUR dans les propriétés).
+  [ ] Publication planifiée : jusqu’à 3 articles par run, chaque jour ~9 h
+      (SCHEDULED_PUBLISH_PER_RUN dans BlogSyncToGitHub.gs ; fuseau = projet).
 
   [ ] Tampon après envoi : « Publié dd/MM/yyyy HH:mm » (pas « Published » US).
 
@@ -48,9 +48,10 @@ PIÈGE #1 (souvent confondu avec « synchro cassée »)
 
   Vrai brouillon : mettre dans published : false, non, brouillon, draft, 0.
 
-  La publication hebdo / test 1 article ne traite QUE les lignes published
-  vide (file d’attente) ; la sync complète, elle, inclut toutes les lignes
-  avec published vide OU déjà rempli (sauf brouillons).
+  La publication planifiée (déclencheur quotidien 9 h : jusqu’à 3 articles)
+  et les tests menu ne traitent QUE les lignes « published » vides (file) ;
+  la sync complète inclut toutes les lignes avec published vide OU déjà rempli
+  (sauf brouillons).
 
 --------------------------------------------------------------------------------
 1) Flux réel (ordre des événements)

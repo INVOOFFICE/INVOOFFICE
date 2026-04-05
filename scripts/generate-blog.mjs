@@ -91,7 +91,8 @@ function buildJsonLd(siteBaseUrl, posts) {
         '@id': `${blogUrl}#blog`,
         name: 'Blog INVOOffice',
         url: blogUrl,
-        description: 'Guides et actualités pour TPE et PME au Maroc.',
+        description:
+          'Une boutique de solutions pour TPE, PME et entrepreneurs : usage personnel, données chez vous, travail hors ligne — et le reste quand vous en avez besoin.',
         publisher: { '@id': `${base}/#organization` },
         blogPost: posts.map((p) => ({
           '@type': 'BlogPosting',
