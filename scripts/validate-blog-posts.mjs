@@ -2,7 +2,7 @@
  * Valide data/blog-posts.json avant generate-blog.mjs.
  * Évite un build Pages silencieux ou cassé si le Sheets a produit un JSON incomplet.
  */
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -10,6 +10,13 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dataPath = join(root, 'data', 'blog-posts.json');
 
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
+
+if (!existsSync(dataPath)) {
+  console.warn(
+    'validate-blog-posts: data/blog-posts.json absent — skip (fichier ignoré par Git ou non encore créé ; Apps Script peut le pousser sur GitHub).'
+  );
+  process.exit(0);
+}
 
 let data;
 try {

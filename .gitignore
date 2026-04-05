@@ -9,3 +9,7 @@ desktop.ini
 # Secrets (jamais dans Git)
 .env
 .env.*
+
+# Blog : mis à jour par Google Apps Script → évite conflits de merge avec les commits locaux
+# Si le fichier était déjà versionné : git rm --cached data/blog-posts.json
+data/blog-posts.json
