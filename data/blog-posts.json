@@ -2,6 +2,19 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "tva-maroc-taux-declaration-pme-2026",
+      "title": "TVA Maroc : taux courants et bonnes habitudes pour les déclarations PME",
+      "date": "2026-04-04",
+      "tag": "Fiscalité",
+      "excerpt": "La TVA Maroc suit des règles précises selon les secteurs. Structurer vos écritures dès la facture évite les erreurs en fin de période.",
+      "paragraphs": [
+        "Les taux de TVA Maroc couvrent plusieurs situations : biens, services, opérations spécifiques. L’enjeu pour une PME n’est pas seulement de facturer, mais d’associer chaque ligne au bon taux et de conserver une trace exploitable pour la déclaration.",
+        "Une gestion rigoureuse des factures d’achat et de vente limite les écarts et les régularisations coûteuses. Les dirigeants gagnent du temps lorsqu’ils peuvent extraire des synthèses fiables sans ressaisir des tableurs.",
+        "Former l’équipe à une saisie homogène est aussi un levier de performance fiscale.",
+        "INVOOffice aide les entreprises marocaines à structurer facturation et TVA dans un même outil, avec une vision claire des montants et des exports adaptés au suivi fiscal."
+      ]
+    },
+    {
       "id": "facturation-maroc-ice-dgi-2026",
       "title": "Facture et ICE au Maroc : ce que la DGI attend des PME en 2026",
       "date": "2026-04-02",
