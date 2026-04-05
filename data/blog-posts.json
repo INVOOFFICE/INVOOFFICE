@@ -2,6 +2,19 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "facturation-maroc-ice-dgi-2026",
+      "title": "Facture et ICE au Maroc : ce que la DGI attend des PME en 2026",
+      "date": "2026-04-02",
+      "tag": "Conformité DGI",
+      "excerpt": "Votre facture doit porter les mentions légales attendues par la DGI Maroc. Voici le rappel utile pour les TPE et PME.",
+      "paragraphs": [
+        "Au Maroc, chaque facture commerciale doit permettre d’identifier clairement le vendeur et l’acheteur. L’ICE, l’IF et le RC ne sont pas de simples formalités : ils structurent la chaîne de conformité fiscale et facilitent les contrôles.",
+        "Une facturation irrégulière peut retarder une déduction de TVA Maroc ou compliquer une relation avec un client professionnel exigeant. Les PME gagnent à harmoniser leurs modèles et à vérifier systématiquement les mentions obligatoires avant envoi.",
+        "Anticiper ces exigences réduit le stress en période de déclaration et renforce votre crédibilité auprès des partenaires.",
+        "Pour centraliser factures, devis et contrôles DGI dans un flux unique, INVOOffice propose une gestion de facturation conforme au contexte marocain, avec aide à la cohérence des données et des exports utiles au quotidien."
+      ]
+    },
+    {
       "id": "relance-client-maroc-2026",
       "title": "Relance Client au Maroc : Méthodes Efficaces pour Réduire les Impayés en 2026",
       "date": "2026-03-28",
