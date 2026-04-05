@@ -2,6 +2,19 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "rapports-fiscaux-maroc-simplifier-fin-mois-2026",
+      "title": "Rapports fiscaux et fin de mois : structurer ses données au Maroc",
+      "date": "2026-04-16",
+      "tag": "Réglementation",
+      "excerpt": "Les déclarations reposent sur des agrégats fiables. Mieux organiser la facturation en amont évite la course le dernier jour.",
+      "paragraphs": [
+        "En fin de période, les entreprises doivent compiler ventes, TVA collectée et déductible, parfois des exports ou opérations spécifiques. Si les factures sont éparpillées ou mal classées, le rapport fiscal devient une reconstitution stressante.",
+        "Une facturation Maroc quotidienne disciplinée — mentions complètes, taux corrects, pièces jointes logiques — transforme la clôture en simple consolidation.",
+        "Les PME qui investissent dans ce socle gagnent aussi en visibilité sur leur marge réelle.",
+        "INVOOffice propose des rapports et une structuration de la facturation pensée pour le contexte marocain, afin d’approcher les échéances fiscales avec des données déjà prêtes à l’emploi."
+      ]
+    },
+    {
       "id": "devis-vers-facture-maroc-gagner-temps-2026",
       "title": "Du devis à la facture au Maroc : enchaîner sans double saisie",
       "date": "2026-04-14",
