@@ -4,7 +4,8 @@
   "scripts": {
     "generate-blog": "node scripts/generate-blog.mjs",
     "generate-sitemap": "node scripts/generate-sitemap.mjs",
-    "build": "node scripts/generate-blog.mjs && node scripts/generate-sitemap.mjs && node scripts/bump-sw-cache.mjs && npx --yes clean-css-cli -o styles.min.css styles.css && npx --yes terser main.js -c -m -o main.min.js && node scripts/cache-bust.mjs",
+    "validate-blog": "node scripts/validate-blog-posts.mjs",
+    "build": "node scripts/validate-blog-posts.mjs && node scripts/generate-blog.mjs && node scripts/generate-sitemap.mjs && node scripts/bump-sw-cache.mjs && npx --yes clean-css-cli -o styles.min.css styles.css && npx --yes terser main.js -c -m -o main.min.js && node scripts/cache-bust.mjs",
     "fonts:copy": "node scripts/copy-fonts.mjs"
   },
   "devDependencies": {

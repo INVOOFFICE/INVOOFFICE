@@ -1,0 +1,164 @@
+================================================================================
+GUIDE — Synchronisation Google Sheets → GitHub → blog INVOOffice (CE dépôt)
+================================================================================
+IMPORTANT — Si vous avez copié un guide type « WaApply » :
+  Ce blog ne fonctionne PAS comme un site qui fait fetch('data/blog-posts.json')
+  dans le navigateur. Le JSON sert au BUILD (Node) qui INJECTE le HTML dans
+  index.html et blog/index.html. Les sections ci-dessous « WaApply vs INVOOffice »
+  listent les idées fausses qui mènent à croire que la synchro est cassée.
+
+Objectif : faire correspondre la feuille, le dépôt GitHub et le site Pages, et
+savoir quoi vérifier quand « ça ne s’affiche pas ».
+
+--------------------------------------------------------------------------------
+WaApply (ancien guide) vs INVOOffice (ce projet) — ce qui manquait à adapter
+--------------------------------------------------------------------------------
+
+  [ ] Runtime : PAS de main.js qui charge blog-posts.json. Tout passe par
+      npm run build → scripts/generate-blog.mjs (marqueurs HTML).
+
+  [ ] Pas de liste de tags imposés : tag libre dans la feuille (pas de
+      TAG_CANONICAL_MAP dans ce repo).
+
+  [ ] Pas de siteName / siteDescription dans blog-posts.json : seulement
+      siteBaseUrl + posts.
+
+  [ ] Publication planifiée : 1 article par run, lundi 9h (pas batch N/jour,
+      pas BLOG_PUBLISH_HOUR dans les propriétés).
+
+  [ ] Tampon après envoi : « Publié dd/MM/yyyy HH:mm » (pas « Published » US).
+
+  [ ] Constante SITE : DEFAULT_SITE_BASE_URL + propriété SITE_BASE_URL
+      (pas WAAPPLY_SITE_BASE_URL).
+
+  [ ] Build : validate-blog-posts.mjs + generate-blog + generate-sitemap + …
+      Si le JSON est invalide, Actions échoue avec un message dans les logs.
+
+--------------------------------------------------------------------------------
+PIÈGE #1 (souvent confondu avec « synchro cassée »)
+--------------------------------------------------------------------------------
+
+  Action « Synchroniser vers GitHub » (sync complète) :
+    - Envoie TOUTES les lignes valides (hors brouillon) dans le JSON.
+    - Pour chaque ligne dont la colonne « published » était VIDE avant l’envoi,
+      le script écrit « Publié … » APRÈS le push.
+
+  Conséquence : une ligne laissée « published » vide n’est PAS un brouillon
+  pour cette action — elle part sur le site ET est marquée publiée.
+
+  Vrai brouillon : mettre dans published : false, non, brouillon, draft, 0.
+
+  La publication hebdo / test 1 article ne traite QUE les lignes published
+  vide (file d’attente) ; la sync complète, elle, inclut toutes les lignes
+  avec published vide OU déjà rempli (sauf brouillons).
+
+--------------------------------------------------------------------------------
+1) Flux réel (ordre des événements)
+--------------------------------------------------------------------------------
+
+  Feuille Google (Articles) + Apps Script BlogSyncToGitHub.gs
+        → commit API sur data/blog-posts.json (branche main / master)
+        → GitHub Actions : npm ci && npm run build
+        → validate-blog-posts.mjs puis generate-blog.mjs réécrivent les blocs
+          entre <!-- BLOG_*_AUTO_START --> et <!-- BLOG_*_AUTO_END -->
+        → GitHub Pages sert le site (HTML déjà rempli ; pas de fetch JSON client)
+
+--------------------------------------------------------------------------------
+2) Feuille — colonnes
+--------------------------------------------------------------------------------
+
+  id | title | date | tag | excerpt | body | published
+
+  Menu « Configurer les colonnes » si l’ordre des colonnes diffère.
+
+  date : AAAA-MM-JJ ou JJ/MM/AAAA ou date Sheets (voir formatDateIso_ dans .gs).
+
+  body : texte avec blancs entre paragraphes → paragraphs[] ; si la cellule
+  commence par <p → bodyHtml.
+
+--------------------------------------------------------------------------------
+3) Deux actions Apps Script
+--------------------------------------------------------------------------------
+
+  A) Synchroniser vers GitHub — remplace tout le tableau posts[] par la feuille.
+
+  B) Publication planifiée (ou test 1 article) — merge UN article dans le JSON
+     distant, tampon sur la ligne concernée uniquement.
+
+--------------------------------------------------------------------------------
+4) Propriétés du script (minimum)
+--------------------------------------------------------------------------------
+
+  GITHUB_TOKEN (obligatoire)
+  GITHUB_OWNER, GITHUB_REPO, GITHUB_BRANCH (sinon défauts invooffice / INVOOFFICE / main)
+  SITE_BASE_URL recommandé en production (URL canonique du site)
+
+  Voir l’en-tête de BlogSyncToGitHub.gs pour indexation GSC et rapport feuille.
+
+--------------------------------------------------------------------------------
+5) Pourquoi GitHub est à jour mais le site ne change pas
+--------------------------------------------------------------------------------
+
+  1) Workflow Actions en échec — onglet Actions du repo : l’étape
+     validate-blog-posts ou generate-blog affiche l’erreur (champ manquant,
+     date invalide, marqueurs HTML manquants).
+
+  2) Push sur une branche qui ne déclenche pas deploy-pages.yml (main/master).
+
+  3) Délai de déploiement Pages (quelques minutes).
+
+  4) Cache / Service Worker : navigation privée ou attendre le nouveau CACHE
+     dans sw.js (bump automatique au build).
+
+  5) Mauvais dépôt / branche dans les propriétés du script (commit ailleurs).
+
+--------------------------------------------------------------------------------
+6) Schéma data/blog-posts.json (ce dépôt)
+--------------------------------------------------------------------------------
+
+  {
+    "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
+    "posts": [
+      {
+        "id": "slug",
+        "title": "...",
+        "date": "AAAA-MM-JJ",
+        "tag": "...",
+        "excerpt": "...",
+        "paragraphs": [ "...", ... ]
+        /* ou "bodyHtml": "<p>..." */
+      }
+    ]
+  }
+
+--------------------------------------------------------------------------------
+7) Fichiers utiles
+--------------------------------------------------------------------------------
+
+  google-apps-script/BlogSyncToGitHub.gs
+  google-apps-script/Setup.html
+  scripts/validate-blog-posts.mjs   — garde-fou CI + message explicite
+  scripts/generate-blog.mjs
+  scripts/generate-sitemap.mjs
+  data/blog-posts.json
+  index.html  (marqueurs BLOG_GRID_AUTO_*)
+  blog/index.html (BLOG_ARTICLES_AUTO_*, BLOG_JSONLD_AUTO_*)
+  .github/workflows/deploy-pages.yml
+
+  Test local : npm run validate-blog   puis   npm run build
+
+--------------------------------------------------------------------------------
+8) Checklist « la synchro fonctionne vraiment »
+--------------------------------------------------------------------------------
+
+  [ ] Propriétés script : TOKEN + repo/branche corrects.
+  [ ] Feuille : id / title / date / tag / excerpt / body remplis pour chaque ligne envoyée.
+  [ ] Brouillons explicites (published = brouillon ou false), pas juste vide si
+      vous voulez exclure de la sync COMPLÈTE.
+  [ ] Après sync : fichier blog-posts.json sur GitHub contient l’article.
+  [ ] Actions : build vert ; sinon lire le log validate-blog-posts / generate-blog.
+  [ ] Site : section blog accueil + page /blog/ à jour après déploiement.
+
+================================================================================
+Fin — mettre à jour ce fichier si vous changez le script ou le build.
+================================================================================
