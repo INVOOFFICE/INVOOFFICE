@@ -764,6 +764,30 @@ section {
   margin-bottom: 0;
 }
 
+.blog-article-cta {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.blog-article-wa {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+  .blog-article-wa {
+    width: auto;
+    align-self: flex-start;
+  }
+
+  .blog-article-cta {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
 /* ── PRODUCTS ── */
 .products-section {
   padding: 100px 0;

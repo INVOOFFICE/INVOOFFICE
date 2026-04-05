@@ -42,6 +42,29 @@ function buildArticleBody(post) {
     .join('\n      ');
 }
 
+/** Numéro wa.me : chiffres uniquement, sans + (ex. 212630230803). */
+function normalizeWhatsappPhone(raw) {
+  const d = String(raw || '').replace(/\D/g, '');
+  return d || '212630230803';
+}
+
+function buildWhatsappArticleHref(phoneDigits, leadText, post, appendTitle) {
+  const lead = String(leadText || 'Bonjour, je veux en savoir plus').trim();
+  const msg =
+    appendTitle === false ? lead : `${lead} — Article : ${post.title}`;
+  return `https://wa.me/${phoneDigits}?text=${encodeURIComponent(msg)}`;
+}
+
+function buildArticleWhatsappCta(href) {
+  return `    <div class="blog-article-cta">
+      <a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" class="btn-wa blog-article-wa">
+        <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>
+        <span class="btn-wa-label btn-wa-label--full">Commander via WhatsApp</span>
+        <span class="btn-wa-label btn-wa-label--short">WhatsApp</span>
+      </a>
+    </div>`;
+}
+
 function buildBlogGridHtml(posts) {
   return posts
     .map((post, i) => {
@@ -60,12 +83,14 @@ function buildBlogGridHtml(posts) {
     .join('\n\n');
 }
 
-function buildBlogArticlesHtml(posts) {
+function buildBlogArticlesHtml(posts, waPhoneDigits, waLeadText, waAppendTitle) {
   return posts
     .map((post, i) => {
       const delay = i === 0 ? '' : ` style="transition-delay:${(i * 0.06).toFixed(2)}s"`;
       const display = post.dateDisplay || formatFr(post.date);
       const body = buildArticleBody(post);
+      const waHref = buildWhatsappArticleHref(waPhoneDigits, waLeadText, post, waAppendTitle);
+      const waCta = buildArticleWhatsappCta(waHref);
       return `  <article id="${escapeHtml(post.id)}" class="blog-article reveal"${delay} itemscope itemtype="https://schema.org/BlogPosting">
     <div class="blog-article-meta">
       <time datetime="${escapeHtml(post.date)}" itemprop="datePublished">${escapeHtml(display)}</time>
@@ -75,6 +100,7 @@ function buildBlogArticlesHtml(posts) {
     <div class="blog-article-body" itemprop="articleBody">
       ${body}
     </div>
+${waCta}
   </article>`;
     })
     .join('\n\n');
@@ -144,6 +170,12 @@ try {
 const data = JSON.parse(raw);
 const siteBaseUrl = data.siteBaseUrl || 'https://invooffice.github.io/INVOOFFICE';
 const posts = sortPosts(data.posts || []);
+const waPhoneDigits = normalizeWhatsappPhone(data.whatsappPhone);
+const waLeadText =
+  data.whatsappArticleMessage != null && String(data.whatsappArticleMessage).trim() !== ''
+    ? String(data.whatsappArticleMessage).trim()
+    : 'Bonjour, je veux en savoir plus';
+const waAppendTitle = data.whatsappArticleAppendTitle !== false;
 
 let indexHtml = readFileSync(indexPath, 'utf8');
 indexHtml = replaceRegion(
@@ -159,7 +191,7 @@ blogHtml = replaceRegion(
   blogHtml,
   '<!-- BLOG_ARTICLES_AUTO_START -->',
   '<!-- BLOG_ARTICLES_AUTO_END -->',
-  buildBlogArticlesHtml(posts)
+  buildBlogArticlesHtml(posts, waPhoneDigits, waLeadText, waAppendTitle)
 );
 
 const jsonLdStart = '<!-- BLOG_JSONLD_AUTO_START -->';

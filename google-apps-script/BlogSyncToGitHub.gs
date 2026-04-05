@@ -9,8 +9,9 @@
  *    Optionnel : propriété script BLOG_SHEET_NAME = nom exact d’un onglet à utiliser à la place.
  * 4. GitHub : PAT — Propriétés du script : GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO, GITHUB_BRANCH, SITE_BASE_URL (optionnel).
  *    Domaine perso plus tard (ex. www.invooffice.com) : mettre SITE_BASE_URL sur l’URL définitive + voir docs/domaine-personnalise.md dans le dépôt (Search Console, canonical).
- * 5. Indexation (optionnel) : après un push réussi (sync manuelle ou publication planifiée), envoi d’une notification
- *    « URL_UPDATED » via l’API Google Indexing (compte de service).
+ * 5. Indexation (optionnel) : après un push réussi, envoi d’une notification « URL_UPDATED » via l’API Google Indexing
+ *    (compte de service). Sync manuelle : une fois après le commit. Publication planifiée (publishScheduledArticlesDaily) :
+ *    une fois après le batch du jour (tous les articles publiés dans la même exécution), pas un appel par article.
  *    Propriétés du script : GSC_CLIENT_EMAIL + GSC_PRIVATE_KEY (clé PEM du JSON Cloud, avec \n pour les retours ligne).
  *    — Cloud : activer « Web Search Indexing API » sur le projet ; créer une clé compte de service.
  *    — Search Console : ajouter ce compte comme propriétaire (ou utilisateur complet) sur la propriété du site.
@@ -33,6 +34,8 @@
  * Publication planifiée (jusqu’à 3 articles / jour) :
  * — Menu « Installer déclencheur quotidien (9 h) » : chaque jour vers 9 h (fuseau du projet),
  *   le script publie jusqu’à 3 lignes (de haut en bas) avec « published » vide — une fusion GitHub par article.
+ * — Après le batch (1 à 3 articles), une seule notification Indexing API (URL_UPDATED) est envoyée pour la home + /blog/
+ *   si GSC_CLIENT_EMAIL / GSC_PRIVATE_KEY sont configurés — liée explicitement au même flux que publishScheduledArticlesDaily.
  * — Fusionne avec data/blog-posts.json sur GitHub (n’efface pas les articles déjà en ligne).
  * — « Tester jusqu’à 3 articles » ou « Tester 1 article » pour essayer sans attendre le déclencheur.
  * — « Supprimer déclencheur publication planifiée » supprime les déclencheurs liés (y compris anciens hebdo).
@@ -858,7 +861,11 @@ function publishNextArticleWeekly() {
   publishScheduledArticlesDaily();
 }
 
-/** Appelé par le déclencheur horaire quotidien. */
+/**
+ * Appelé par le déclencheur horaire quotidien.
+ * Enchaîne les publications GitHub puis, si au moins un article a été poussé, déclenche l’indexation Google
+ * (même logique que safeNotifyIndexingAfterPublish_ : home + /blog/).
+ */
 function publishScheduledArticlesDaily() {
   publishScheduledBatchCore_(false, SCHEDULED_PUBLISH_PER_RUN);
 }
@@ -893,7 +900,23 @@ function publishScheduledBatchCore_(showUi, maxArticles) {
       count++;
       titles.push('« ' + one.newPost.title + ' » (' + one.newPost.id + ')');
       if (one.pushResult && one.pushResult.commitUrl) lastCommit = one.pushResult.commitUrl;
-      if (one.indexingNote) lastIndexing = one.indexingNote;
+    }
+
+    if (count > 0) {
+      var propsIx = getProps_();
+      lastIndexing = safeNotifyIndexingAfterPublish_(propsIx) || '';
+      if (lastIndexing) {
+        var ixFail =
+          lastIndexing.indexOf('échec') !== -1 ||
+          lastIndexing.indexOf('erreur') !== -1 ||
+          lastIndexing.indexOf('Erreur') !== -1;
+        appendAutomationLog_(
+          sourceBase + ' — indexation Google',
+          ixFail ? 'Partiel' : 'OK',
+          'Après ' + count + ' publication(s) : URL_UPDATED (home + /blog/)',
+          lastIndexing
+        );
+      }
     }
 
     if (count === 0) {
@@ -928,7 +951,8 @@ function publishScheduledBatchCore_(showUi, maxArticles) {
 
 /**
  * Publie le prochain article éligible (première ligne « published » vide). Un commit GitHub.
- * @return {{ newPost: Object, postsTotal: number, pushResult: Object, indexingNote: string }|null} null si file vide
+ * @return {{ newPost: Object, postsTotal: number, pushResult: Object }|null} null si file vide
+ * (L’indexation Google est déclenchée une fois par batch dans publishScheduledBatchCore_, pas ici.)
  */
 function publishOneQueuedArticle_(sourceLabel) {
   var props = getProps_();
@@ -1011,7 +1035,6 @@ function publishOneQueuedArticle_(sourceLabel) {
 
   var commitMsg = 'chore(blog): publication planifiée (' + newPost.id + ')';
   var pushResult = pushJsonToGitHub_(props, jsonString, commitMsg);
-  var indexingNote = safeNotifyIndexingAfterPublish_(props);
 
   var colPub = ci.published + 1;
   var stamp =
@@ -1019,23 +1042,17 @@ function publishOneQueuedArticle_(sourceLabel) {
     Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'dd/MM/yyyy HH:mm');
   sheet.getRange(found.sheetRow, colPub).setValue(stamp);
 
-  var logStat = 'OK';
-  if (indexingNote && (indexingNote.indexOf('échec') !== -1 || indexingNote.indexOf('erreur') !== -1)) {
-    logStat = 'Partiel';
-  }
-  var logDetail =
-    (pushResult && pushResult.commitUrl ? pushResult.commitUrl : '') +
-    (indexingNote ? ' | ' + indexingNote : '');
+  var logDetail = pushResult && pushResult.commitUrl ? pushResult.commitUrl : '';
   appendAutomationLog_(
     sourceLabel,
-    logStat,
+    'OK',
     '« ' + newPost.title + ' » (' + newPost.id + ') — ' + posts.length + ' article(s) sur le site',
     logDetail
   );
 
   safeNotifyTwitterNewArticle_(props, newPost);
 
-  return { newPost: newPost, postsTotal: posts.length, pushResult: pushResult, indexingNote: indexingNote };
+  return { newPost: newPost, postsTotal: posts.length, pushResult: pushResult };
 }
 
 function buildPostFromRow_(row, ci) {
