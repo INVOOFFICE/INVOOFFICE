@@ -32,7 +32,35 @@ WaApply (ancien guide) vs INVOOffice (ce projet) — ce qui manquait à adapter
       (pas WAAPPLY_SITE_BASE_URL).
 
   [ ] Build : validate-blog-posts.mjs + generate-blog + generate-sitemap + …
-      Si le JSON est invalide, Actions échoue avec un message dans les logs.
+      Si le JSON est absent (voir 1bis), validate + generate-blog font un skip
+      sans erreur ; si le JSON est présent mais invalide, Actions échoue.
+
+--------------------------------------------------------------------------------
+1bis) data/blog-posts.json — .gitignore et conflits Git
+--------------------------------------------------------------------------------
+
+  Le fichier data/blog-posts.json est listé dans .gitignore pour limiter les
+  conflits de merge : la source « officielle » côté dépôt distant est souvent
+  mise à jour par l’API GitHub depuis Google Apps Script, pas par un commit
+  local du même fichier.
+
+  Première fois (si le fichier était déjà versionné) :
+    git rm --cached data/blog-posts.json
+    git commit -m "chore: ne plus versionner data/blog-posts.json"
+    git push
+
+  En local vous pouvez garder une copie de blog-posts.json pour npm run build ;
+  Git ne la proposera plus en « modified » tant qu’elle est ignorée.
+
+  Comportement du build sans fichier local :
+    - validate-blog-posts.mjs : avertissement + exit 0 (pas d’échec CI).
+    - generate-blog.mjs : skip (ne réécrit pas les blocs BLOG_* à partir du JSON).
+    Les pages index.html et blog/index.html déjà commitées restent telles quelles
+    jusqu’au prochain build qui dispose d’un JSON valide (ex. après push Apps Script
+    ou copie locale du fichier avant build).
+
+  Sur GitHub : après un commit Apps Script, blog-posts.json est à nouveau présent
+  sur la branche ; le workflow Actions peut alors valider et régénérer le HTML.
 
 --------------------------------------------------------------------------------
 PIÈGE #1 (souvent confondu avec « synchro cassée »)
@@ -83,8 +111,13 @@ PIÈGE #1 (souvent confondu avec « synchro cassée »)
 
   A) Synchroniser vers GitHub — remplace tout le tableau posts[] par la feuille.
 
-  B) Publication planifiée (ou test 1 article) — merge UN article dans le JSON
-     distant, tampon sur la ligne concernée uniquement.
+  B) Publication planifiée (quotidien, jusqu’à 3 articles) ou tests menu —
+     merge successif : chaque article = un commit sur le JSON distant + tampon
+     « Publié … » sur la ligne concernée. Test menu : 1 article ou batch 3.
+     Après chaque article ainsi publié : tentative de tweet X (titre + lien /blog/#id).
+
+  La sync complète (A) envoie aussi un tweet par ligne qui passait de « published »
+  vide à tamponnée dans la même exécution (plusieurs tweets si plusieurs lignes).
 
 --------------------------------------------------------------------------------
 4) Propriétés du script (minimum)
@@ -94,6 +127,11 @@ PIÈGE #1 (souvent confondu avec « synchro cassée »)
   GITHUB_OWNER, GITHUB_REPO, GITHUB_BRANCH (sinon défauts invooffice / INVOOFFICE / main)
   SITE_BASE_URL recommandé en production (URL canonique du site)
 
+  Twitter / X (optionnel) — un tweet par article nouvellement publié :
+    TWITTER_API_KEY, TWITTER_API_SECRET, TWITTER_ACCESS_TOKEN,
+    TWITTER_ACCESS_TOKEN_SECRET (OAuth 1.0a, portail développeur X).
+    Désactiver : TWITTER_DISABLE = 1. Menu « Tester publication Twitter / X ».
+
   Voir l’en-tête de BlogSyncToGitHub.gs pour indexation GSC et rapport feuille.
 
 --------------------------------------------------------------------------------
@@ -102,7 +140,8 @@ PIÈGE #1 (souvent confondu avec « synchro cassée »)
 
   1) Workflow Actions en échec — onglet Actions du repo : l’étape
      validate-blog-posts ou generate-blog affiche l’erreur (champ manquant,
-     date invalide, marqueurs HTML manquants).
+     date invalide, marqueurs HTML manquants). Si blog-posts.json est absent
+     dans le clone CI, validate ne fait qu’un skip : chercher une autre cause.
 
   2) Push sur une branche qui ne déclenche pas deploy-pages.yml (main/master).
 
@@ -141,7 +180,7 @@ PIÈGE #1 (souvent confondu avec « synchro cassée »)
   scripts/validate-blog-posts.mjs   — garde-fou CI + message explicite
   scripts/generate-blog.mjs
   scripts/generate-sitemap.mjs
-  data/blog-posts.json
+  data/blog-posts.json   (souvent ignoré par Git ; présent sur GitHub via Apps Script)
   index.html  (marqueurs BLOG_GRID_AUTO_*)
   blog/index.html (BLOG_ARTICLES_AUTO_*, BLOG_JSONLD_AUTO_*)
   .github/workflows/deploy-pages.yml
@@ -157,6 +196,9 @@ PIÈGE #1 (souvent confondu avec « synchro cassée »)
   [ ] Brouillons explicites (published = brouillon ou false), pas juste vide si
       vous voulez exclure de la sync COMPLÈTE.
   [ ] Après sync : fichier blog-posts.json sur GitHub contient l’article.
+  [ ] Si vous utilisez .gitignore sur blog-posts.json : git rm --cached déjà fait
+      côté dépôt ; en local, build possible avec copie du JSON ou après pull
+      d’un commit Apps Script.
   [ ] Actions : build vert ; sinon lire le log validate-blog-posts / generate-blog.
   [ ] Site : section blog accueil + page /blog/ à jour après déploiement.
 

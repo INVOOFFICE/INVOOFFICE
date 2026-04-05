@@ -18,6 +18,13 @@
  *      pour un blog générique, Google peut refuser la notification (403) ; la demande reste sans effet sur le push GitHub.
  * 6. Synchroniser vers GitHub : pousse data/blog-posts.json ; GitHub Actions exécute npm run build et publie Pages.
  *
+ * 7. Twitter / X (optionnel) : après chaque article réellement publié (publication planifiée ou sync avec
+ *    lignes « published » vides devenues tamponnées), envoi d’un tweet avec titre + lien vers /blog/#id.
+ *    Propriétés du script (OAuth 1.0a — contexte utilisateur, clés depuis le portail développeur X) :
+ *    TWITTER_API_KEY, TWITTER_API_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET.
+ *    Désactiver : TWITTER_DISABLE = 1. Menu « Tester publication Twitter / X » pour valider sans GitHub.
+ *    Compte X doit avoir accès API « tweet.write » (niveau projet selon les règles X).
+ *
  * SÉCURITÉ : ne commitez jamais le token GitHub dans ce fichier (dépôt public = fuite).
  * Seule la propriété script GITHUB_TOKEN est obligatoire ; owner/repo/branche/site ont des défauts ci-dessous.
  *
@@ -261,6 +268,135 @@ function safeNotifyIndexingAfterPublish_(props) {
   }
 }
 
+// --- Twitter / X (API v2, OAuth 1.0a User context) ---------------------------------
+
+/** @return {Object|null} clés ou null si désactivé / incomplet */
+function getTwitterCredentials_() {
+  var p = PropertiesService.getScriptProperties();
+  if (String(p.getProperty('TWITTER_DISABLE') || '').trim() === '1') return null;
+  var apiKey = p.getProperty('TWITTER_API_KEY');
+  var apiSecret = p.getProperty('TWITTER_API_SECRET');
+  var accessToken = p.getProperty('TWITTER_ACCESS_TOKEN');
+  var accessSecret = p.getProperty('TWITTER_ACCESS_TOKEN_SECRET');
+  if (!apiKey || !apiSecret || !accessToken || !accessSecret) return null;
+  return {
+    apiKey: String(apiKey).trim(),
+    apiSecret: String(apiSecret).trim(),
+    accessToken: String(accessToken).trim(),
+    accessTokenSecret: String(accessSecret).trim(),
+  };
+}
+
+function oauthPercentEncode_(s) {
+  return encodeURIComponent(String(s))
+    .replace(/!/g, '%21')
+    .replace(/'/g, '%27')
+    .replace(/\(/g, '%28')
+    .replace(/\)/g, '%29')
+    .replace(/\*/g, '%2A');
+}
+
+/**
+ * Publie un tweet (API v2). Lève une exception si échec HTTP.
+ * @return {{ tweetId: string }}
+ */
+function postTwitterV2Tweet_(text, c) {
+  var url = 'https://api.twitter.com/2/tweets';
+  var bodyStr = JSON.stringify({ text: String(text) });
+  var sha1Bytes = Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_1, bodyStr, Utilities.Charset.UTF_8);
+  var bodyHash = Utilities.base64Encode(sha1Bytes);
+
+  var oauth = {
+    oauth_body_hash: bodyHash,
+    oauth_consumer_key: c.apiKey,
+    oauth_nonce: Utilities.getUuid().replace(/-/g, ''),
+    oauth_signature_method: 'HMAC-SHA1',
+    oauth_timestamp: String(Math.floor(Date.now() / 1000)),
+    oauth_token: c.accessToken,
+    oauth_version: '1.0',
+  };
+
+  var keys = Object.keys(oauth).sort();
+  var paramParts = [];
+  for (var i = 0; i < keys.length; i++) {
+    paramParts.push(oauthPercentEncode_(keys[i]) + '=' + oauthPercentEncode_(oauth[keys[i]]));
+  }
+  var paramString = paramParts.join('&');
+  var baseString = 'POST&' + oauthPercentEncode_(url) + '&' + oauthPercentEncode_(paramString);
+  var signingKey = oauthPercentEncode_(c.apiSecret) + '&' + oauthPercentEncode_(c.accessTokenSecret);
+  var sigBytes = Utilities.computeHmacSignature(Utilities.MacAlgorithm.HMAC_SHA_1, baseString, signingKey);
+  var signature = Utilities.base64Encode(sigBytes);
+  oauth.oauth_signature = signature;
+
+  var hdrKeys = Object.keys(oauth).sort();
+  var hdrParts = [];
+  for (var j = 0; j < hdrKeys.length; j++) {
+    var k = hdrKeys[j];
+    hdrParts.push(oauthPercentEncode_(k) + '="' + oauthPercentEncode_(oauth[k]) + '"');
+  }
+  var authHeader = 'OAuth ' + hdrParts.join(', ');
+
+  var resp = UrlFetchApp.fetch(url, {
+    method: 'post',
+    contentType: 'application/json',
+    muteHttpExceptions: true,
+    headers: { Authorization: authHeader },
+    payload: bodyStr,
+  });
+  var code = resp.getResponseCode();
+  var respText = resp.getContentText();
+  if (code !== 200 && code !== 201) {
+    throw new Error('Twitter HTTP ' + code + ' : ' + respText.slice(0, 600));
+  }
+  var parsed = JSON.parse(respText);
+  var id = parsed.data && parsed.data.id ? String(parsed.data.id) : '';
+  return { tweetId: id };
+}
+
+/** Titre + lien blog (max ~280 car. côté X — troncature titre si besoin). */
+function buildTweetTextForArticle_(siteBase, post) {
+  var base = String(siteBase).replace(/\/+$/, '');
+  var url = base + '/blog/#' + String(post.id || '').replace(/#/g, '');
+  var suffix = '\n' + url;
+  var maxTotal = 275;
+  var maxTitle = maxTotal - suffix.length;
+  var title = String(post.title || 'Nouvel article').trim();
+  if (title.length > maxTitle) {
+    title = title.slice(0, Math.max(1, maxTitle - 1)) + '…';
+  }
+  return title + suffix;
+}
+
+/**
+ * Tweet après publication d’un article (ne bloque jamais la synchro : journalise seulement).
+ */
+function safeNotifyTwitterNewArticle_(props, post) {
+  try {
+    var tw = getTwitterCredentials_();
+    if (!tw) {
+      Logger.log('Twitter / X : ignoré (propriétés absentes ou TWITTER_DISABLE=1).');
+      return;
+    }
+    var text = buildTweetTextForArticle_(props.siteBase, post);
+    var r = postTwitterV2Tweet_(text, tw);
+    appendAutomationLog_(
+      'Twitter (X)',
+      'OK',
+      'Tweet « ' + String(post.id || '') + ' »',
+      r.tweetId ? 'id=' + r.tweetId : ''
+    );
+  } catch (e) {
+    var msg = e.message || String(e);
+    Logger.log('Twitter / X erreur : ' + msg);
+    appendAutomationLog_(
+      'Twitter (X)',
+      'Échec',
+      'Article « ' + String(post.id || '') + ' »',
+      msg.slice(0, 4500)
+    );
+  }
+}
+
 /**
  * Test isolé : envoie URL_UPDATED pour SITE_BASE_URL (home + /blog/) sans toucher à GitHub.
  * Vérifiez aussi Exécutions → Journal après le test.
@@ -288,6 +424,33 @@ function testGoogleIndexingOnly() {
   SpreadsheetApp.getUi().alert(note || 'Erreur inattendue : aucun retour.');
 }
 
+/**
+ * Test tweet sans GitHub (vérifie OAuth 1.0a + droit tweet.write sur le compte X).
+ */
+function testTwitterPostMenu() {
+  var tw = getTwitterCredentials_();
+  if (!tw) {
+    SpreadsheetApp.getUi().alert(
+      'Twitter / X non configuré ou TWITTER_DISABLE=1.\n\n' +
+        'Propriétés du script :\n' +
+        '• TWITTER_API_KEY (Consumer Key)\n' +
+        '• TWITTER_API_SECRET (Consumer Secret)\n' +
+        '• TWITTER_ACCESS_TOKEN\n' +
+        '• TWITTER_ACCESS_TOKEN_SECRET\n\n' +
+        'Portail développeur X : projet avec OAuth 1.0a + permission lecture/écriture pour votre compte.'
+    );
+    return;
+  }
+  try {
+    var r = postTwitterV2Tweet_('Test INVOOffice — publication blog depuis Google Sheets ✓', tw);
+    appendAutomationLog_('Test Twitter (menu)', 'OK', 'Tweet test', r.tweetId ? 'id=' + r.tweetId : '');
+    SpreadsheetApp.getUi().alert('Tweet publié sur X.\nID : ' + (r.tweetId || '—'));
+  } catch (e) {
+    appendAutomationLog_('Test Twitter (menu)', 'Échec', e.message || String(e), '');
+    SpreadsheetApp.getUi().alert('Erreur Twitter / X :\n' + (e.message || e));
+  }
+}
+
 function onOpen() {
   SpreadsheetApp.getUi()
     .createMenu('Blog GitHub')
@@ -296,6 +459,7 @@ function onOpen() {
     .addSeparator()
     .addItem('Synchroniser vers GitHub', 'syncBlogPostsToGitHub')
     .addItem('Tester indexation Google (sans GitHub)', 'testGoogleIndexingOnly')
+    .addItem('Tester publication Twitter / X (sans GitHub)', 'testTwitterPostMenu')
     .addItem('Ouvrir le rapport automatisation…', 'openAutomationLogSheet')
     .addSeparator()
     .addItem('Installer déclencheur quotidien (9 h, jusqu’à 3 articles)', 'installDailyPublishTrigger')
@@ -545,6 +709,8 @@ function syncBlogPostsToGitHub() {
     var posts = [];
     /** Numéros de ligne feuille (1-based) où published était vide et qu’on marquera après envoi */
     var sheetRowsToMarkPublished = [];
+    /** Articles correspondants (même ordre) pour tweet X après succès */
+    var newlyPublishedPostsForTwitter = [];
 
     for (var r = 1; r < values.length; r++) {
       var row = values[r];
@@ -598,6 +764,7 @@ function syncBlogPostsToGitHub() {
 
       if (ci.published !== undefined && pubCellEmpty) {
         sheetRowsToMarkPublished.push(r + 1);
+        newlyPublishedPostsForTwitter.push(post);
       }
     }
 
@@ -636,6 +803,9 @@ function syncBlogPostsToGitHub() {
       for (var m = 0; m < sheetRowsToMarkPublished.length; m++) {
         sheet.getRange(sheetRowsToMarkPublished[m], colPub).setValue(stamp);
       }
+      for (var tx = 0; tx < newlyPublishedPostsForTwitter.length; tx++) {
+        safeNotifyTwitterNewArticle_(props, newlyPublishedPostsForTwitter[tx]);
+      }
     }
 
     var logStat = 'OK';
@@ -644,7 +814,8 @@ function syncBlogPostsToGitHub() {
     }
     var logDetail =
       (pushResult && pushResult.commitUrl ? pushResult.commitUrl : '') +
-      (indexingNote ? ' | ' + indexingNote : '');
+      (indexingNote ? ' | ' + indexingNote : '') +
+      (newlyPublishedPostsForTwitter.length > 0 ? ' | X : ' + newlyPublishedPostsForTwitter.length + ' tweet(s) tenté(s)' : '');
     appendAutomationLog_(
       'Sync GitHub (menu)',
       logStat,
@@ -861,6 +1032,8 @@ function publishOneQueuedArticle_(sourceLabel) {
     '« ' + newPost.title + ' » (' + newPost.id + ') — ' + posts.length + ' article(s) sur le site',
     logDetail
   );
+
+  safeNotifyTwitterNewArticle_(props, newPost);
 
   return { newPost: newPost, postsTotal: posts.length, pushResult: pushResult, indexingNote: indexingNote };
 }
