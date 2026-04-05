@@ -2,6 +2,19 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "devis-vers-facture-maroc-gagner-temps-2026",
+      "title": "Du devis à la facture au Maroc : enchaîner sans double saisie",
+      "date": "2026-04-14",
+      "tag": "Facturation",
+      "excerpt": "Transformer un devis accepté en facture rapidement réduit les erreurs et accélère l’encaissement. Bonnes pratiques pour les PME.",
+      "paragraphs": [
+        "Le devis professionnel marocain sert souvent de base négociée : prix, délais, conditions. Si la facture est ressaisie à la main, le risque d’écart sur les montants ou la TVA Maroc augmente. Les entreprises performantes réutilisent les données validées par le client.",
+        "Un flux devis → facture homogène améliore aussi le suivi commercial : taux de transformation, délais d’acceptation, panier moyen.",
+        "Cette rigueur renforce la confiance lorsque le client retrouve exactement les mêmes lignes sur la facture finale.",
+        "INVOOffice permet d’enchaîner devis et facturation dans une logique unique, adaptée aux habitudes des TPE et PME marocaines qui veulent gagner du temps sans sacrifier la conformité DGI."
+      ]
+    },
+    {
       "id": "avoir-facture-maroc-regles-pratiques-2026",
       "title": "Avoir et facture au Maroc : quand l’émettre et comment le tracer",
       "date": "2026-04-12",
