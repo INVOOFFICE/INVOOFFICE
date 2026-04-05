@@ -2,6 +2,19 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "tresorerie-pme-maroc-prevision-encaissements-2026",
+      "title": "Trésorerie PME Maroc : lier facturation et prévision des encaissements",
+      "date": "2026-04-10",
+      "tag": "Gestion & Trésorerie",
+      "excerpt": "Relier vos factures à vos échéances réelles aide à anticiper les tensions de trésorerie. Méthode simple pour les dirigeants.",
+      "paragraphs": [
+        "La gestion trésorerie d’une PME marocaine repose souvent sur une vision partielle : factures émises mais pas encore payées, charges récurrentes oubliées, décalage entre TVA encaissée et décaissée. Sans lien entre ventes et calendrier de paiement, le dirigeant découvre les trous trop tard.",
+        "En structurant le suivi des factures et des relances, vous transformez votre facturation en indicateur d’avenir. Les encaissements prévisibles deviennent un levier de décision pour les achats et les investissements.",
+        "Une discipline simple sur les dates d’échéance et les statuts de paiement suffit souvent à stabiliser la trésorerie sur trois mois.",
+        "INVOOffice intègre facturation, devis et éléments utiles au pilotage quotidien, pour que la relation client et la trésorerie restent sur la même base de données."
+      ]
+    },
+    {
       "id": "conformite-dgi-maroc-preparer-controle-2026",
       "title": "Conformité DGI Maroc : préparer son dossier avant un contrôle ou une demande",
       "date": "2026-04-08",
