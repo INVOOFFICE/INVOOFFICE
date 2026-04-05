@@ -2,6 +2,19 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "avoir-facture-maroc-regles-pratiques-2026",
+      "title": "Avoir et facture au Maroc : quand l’émettre et comment le tracer",
+      "date": "2026-04-12",
+      "tag": "Facturation",
+      "excerpt": "L’avoir corrige une facture sans effacer l’historique. Comprendre son usage évite les erreurs en cas de contrôle DGI Maroc.",
+      "paragraphs": [
+        "Lorsqu’un client retourne une marchandise ou qu’une erreur de montant est constatée, l’avoir est l’outil adapté pour annuler partiellement ou totalement une opération tout en conservant la traçabilité. Au Maroc, comme ailleurs, la continuité de la numérotation et la cohérence avec la facture d’origine sont essentielles.",
+        "Mélanger corrections manuelles et documents non reliés complique la TVA Maroc et la lecture d’un audit. Mieux vaut un processus répétable, compris par toute l’équipe.",
+        "Former les commerciaux à déclencher un avoir plutôt qu’une « nouvelle facture » au hasard protège la conformité.",
+        "INVOOffice facilite la logique facture / avoir dans un parcours de facturation Maroc clair, pour garder des dossiers propres et des exports exploitables."
+      ]
+    },
+    {
       "id": "tresorerie-pme-maroc-prevision-encaissements-2026",
       "title": "Trésorerie PME Maroc : lier facturation et prévision des encaissements",
       "date": "2026-04-10",
