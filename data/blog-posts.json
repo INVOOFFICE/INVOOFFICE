@@ -1,8 +1,19 @@
 {
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
-  "whatsappPhone": "212630230803",
-  "whatsappArticleMessage": "Bonjour, je veux en savoir plus",
   "posts": [
+    {
+      "id": "relance-client-maroc-sans-griller-relation-2026",
+      "title": "Relance client au Maroc : cadences et messages qui préservent la relation",
+      "date": "2026-04-20",
+      "tag": "Gestion & Trésorerie",
+      "excerpt": "Une relance efficace combine fermeté et professionnalisme. Comment rester payé sans froisser les bons clients au Maroc.",
+      "paragraphs": [
+        "Les retards de paiement fragilisent la trésorerie des PME marocaines. Une relance trop agressive peut coûter un client ; l’absence totale de suivi invite au non-paiement. La solution consiste à des étapes claires : rappel avant échéance, relance J+7, escalade documentée.",
+        "Relier chaque relance à une facture identifiée évite les malentendus et montre votre sérieux.",
+        "Une traçabilité simple suffit souvent à débloquer les situations de négligence plutôt que d’insolvabilité.",
+        "INVOOffice centralise facturation et suivi pour que la relance client s’appuie sur des montants et dates exacts, au service d’une trésorerie plus prévisible."
+      ]
+    },
     {
       "id": "rapports-fiscaux-maroc-simplifier-fin-mois-2026",
       "title": "Rapports fiscaux et fin de mois : structurer ses données au Maroc",
