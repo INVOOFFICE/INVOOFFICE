@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "desorganisation-bons-commande-stock-maroc-2026",
+      "title": "Mauvaise organisation des bons de commande : quand le stock ne suit plus la réalité",
+      "date": "2026-04-24",
+      "tag": "Organisation",
+      "excerpt": "Bons manquants, quantités approximatives, écarts à l’inventaire : la désorganisation des entrées et sorties coûte cher aux commerçants et artisans marocains.",
+      "paragraphs": [
+        "Lorsque les commandes fournisseurs vivent sur des carnets ou des fichiers éparpillés, personne ne sait vraiment ce qui est disponible pour honorer une vente. Les promesses clients se font sur une mémoire fragile.",
+        "Les conséquences vont des ruptures inopinées aux surstock qui immobilise la trésorerie. Le dirigeant passe ses soirées à « recoller » les chiffres au lieu d’anticiper.",
+        "Instaurer une saisie systématique à la réception, une validation avant mise en stock, et un inventaire tournant sur les références critiques suffit souvent à stabiliser la situation avant tout investissement lourd.",
+        "Un outil qui relie commandes, stock et facturation réduit les oublis et les écarts entre ce que vous croyez avoir et ce qu’il reste réellement en rayon ou en atelier.",
+        "INVOOffice aide à structurer stock, bons et facturation dans une même logique, adaptée aux PME marocaines qui veulent une vision fiable sans serveur obligatoire."
+      ]
+    },
+    {
       "id": "perte-temps-facturation-manuelle-pme-maroc-2026",
       "title": "Perte de temps sur la facturation manuelle : comment les PME marocaines y remédient",
       "date": "2026-04-23",
