@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "perte-temps-facturation-manuelle-pme-maroc-2026",
+      "title": "Perte de temps sur la facturation manuelle : comment les PME marocaines y remédient",
+      "date": "2026-04-23",
+      "tag": "Problèmes & solutions",
+      "excerpt": "Saisir deux fois les mêmes données, retrouver un devis, refaire un PDF : la facturation manuelle coûte des heures chaque semaine aux TPE et PME au Maroc.",
+      "paragraphs": [
+        "Beaucoup d’entreprises au Maroc enchaînent encore WhatsApp, tableur et modèles Word pour facturer. Chaque client demandant une modification relance tout le circuit : retrouver la version, corriger les montants, renvoyer le PDF.",
+        "Le temps perdu se traduit directement en retard sur la production, la relation client ou le pilotage. Le stress monte quand une échéance fiscale approche et que les pièces ne sont pas regroupées au même endroit.",
+        "Trois réflexes simples : un numéro de devis lié à la facture, un dossier par mois fiscal, et une règle « rien ne part sans double vérification TVA ». Même sur papier, l’habitude prime sur l’outil.",
+        "Une solution digitale locale évite la double saisie : devis, factures et exports dans un seul flux, avec possibilité de travailler hors ligne quand la connexion faiblit.",
+        "INVOOffice centralise facturation, devis, stock et rapports TVA pour les professionnels marocains qui veulent récupérer du temps sans complexité inutile."
+      ]
+    },
+    {
       "id": "location-saisonniere-maroc-ajuster-flotte-tarifs-2026",
       "title": "Location saisonnière au Maroc : ajuster flotte et tarifs sans se tromper",
       "date": "2026-04-21",
