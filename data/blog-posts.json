@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "perte-donnees-tableur-casse-maroc-2026",
+      "title": "Perte de données : quand le fichier Excel ou la clé USB devient le point faible",
+      "date": "2026-04-25",
+      "tag": "Sécurité & données",
+      "excerpt": "Un fichier corrompu, une version écrasée, une clé perdue : les TPE marocaines perdent parfois des mois de chiffres en un instant.",
+      "paragraphs": [
+        "Le tableur est pratique jusqu’au jour où la mauvaise manipulation, la panne matérielle ou l’absence de sauvegarde fige l’activité. Sans copie datée, la reconstitution est longue et jamais totalement fiable.",
+        "Au-delà du stress, il y a un coût réel : factures à refaire, historique client incomplet, déclarations difficiles à justifier.",
+        "Adoptez une règle simple : export ou sauvegarde nommée par date au moins une fois par semaine, et évitez qu’un seul poste détienne l’« original » sans copie ailleurs.",
+        "Une application qui garde les données en local sur votre navigateur ou appareil, avec usage hors ligne, limite la dépendance à un fichier unique oublié sur le bureau.",
+        "INVOOffice s’inscrit dans cette approche : données chez vous, PWA utilisable sans connexion permanente, licence à vie sans surprise d’abonnement."
+      ]
+    },
+    {
       "id": "desorganisation-bons-commande-stock-maroc-2026",
       "title": "Mauvaise organisation des bons de commande : quand le stock ne suit plus la réalité",
       "date": "2026-04-24",
