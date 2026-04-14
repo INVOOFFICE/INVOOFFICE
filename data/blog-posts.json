@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "impayes-desorganisation-relances-maroc-2026",
+      "title": "Impayés et relances oubliées : l’argent reste dehors par manque d’organisation",
+      "date": "2026-04-28",
+      "tag": "Trésorerie",
+      "excerpt": "Sans calendrier de relances ni visibilité sur les factures émises, les PME marocaines laissent dormir des créances qui pèsent sur la trésorerie.",
+      "paragraphs": [
+        "Quand les factures sont éparpillées, impossible de savoir qui a dépassé trente jours sans régler. Le dirigeant évite la relance par fatigue ou par crainte d’être désagréable.",
+        "Les conséquences sont mesurables : besoin en découvert, retard fournisseurs, stress permanent sur les salaires.",
+        "Fixez des jalons clairs (J+7 rappel amical, J+30 ferme), notez chaque échange, et gardez une trace unique des montants dus par client.",
+        "Digitaliser la facturation et les suivis permet d’extraire rapidement la liste des retards sans fouiller cinq dossiers.",
+        "INVOOffice aide à structurer factures et historique pour que les relances deviennent une routine, pas une improvisation de fin de mois."
+      ]
+    },
+    {
       "id": "double-taches-admin-entrepreneur-maroc-2026",
       "title": "L’entrepreneur qui tout fait : quand l’administratif mange la croissance",
       "date": "2026-04-27",
