@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "erreurs-tva-saisie-risque-pme-maroc-2026",
+      "title": "Erreurs de TVA à la saisie : petites fautes, gros impacts pour la PME",
+      "date": "2026-04-26",
+      "tag": "Fiscalité",
+      "excerpt": "Un mauvais taux, une ligne mal libellée ou un arrondi répété : les erreurs de TVA s’accumulent et compliquent les déclarations au Maroc.",
+      "paragraphs": [
+        "La TVA Maroc impose de distinguer correctement les taux et les opérations. Quand la saisie est dispersée entre plusieurs fichiers, les incohérences ne se voient qu’en fin de période.",
+        "Résultat : régularisations, tension avec le comptable ou l’administration, et temps passé à expliquer des écarts qui auraient pu être évités dès la facture.",
+        "Formez-vous à un modèle unique de facture, vérifiez systématiquement le taux avant validation, et gardez les factures d’achat au même endroit que les ventes.",
+        "Un logiciel qui applique les taux de façon cohérente et produit des rapports exploitables fait gagner en sérénité sur toute l’année.",
+        "INVOOffice est pensé pour la facturation marocaine : TVA multi-taux, contrôles utiles sur les mentions et exports pour suivre vos montants sans ressaisie permanente."
+      ]
+    },
+    {
       "id": "perte-donnees-tableur-casse-maroc-2026",
       "title": "Perte de données : quand le fichier Excel ou la clé USB devient le point faible",
       "date": "2026-04-25",
