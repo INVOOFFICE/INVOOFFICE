@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "devis-perdus-conversions-ratees-maroc-2026",
+      "title": "Devis perdus ou non transformés : combien de ventes la mauvaise organisation vous coûte",
+      "date": "2026-04-29",
+      "tag": "Ventes",
+      "excerpt": "Un devis envoyé puis oublié, une version obsolète renvoyée au client : la désorganisation fait perdre des affaires concrètes aux entreprises marocaines.",
+      "paragraphs": [
+        "Le client compare plusieurs offres. Si votre devis arrive en retard ou contient une ancienne grille tarifaire, la confiance flanche. Sans suivi, la conversion retombe à zéro.",
+        "Ce n’est pas seulement une déception commerciale : c’est du chiffre d’affaires directement perdu.",
+        "Standardisez un modèle, numérotez chaque proposition, et programmez un rappel systématique deux jours après envoi.",
+        "Un flux devis → facture dans le même outil évite les doubles versions et accélère la signature.",
+        "INVOOffice relie devis et facturation pour que les TPE et PME au Maroc enchaînent sans retraduire les montants à la main."
+      ]
+    },
+    {
       "id": "impayes-desorganisation-relances-maroc-2026",
       "title": "Impayés et relances oubliées : l’argent reste dehors par manque d’organisation",
       "date": "2026-04-28",
