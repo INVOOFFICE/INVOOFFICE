@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "location-double-reservation-stress-agence-maroc-2026",
+      "title": "Double réservation et planning flou : le cauchemar des agences de location au Maroc",
+      "date": "2026-05-01",
+      "tag": "Problèmes & solutions",
+      "excerpt": "Deux clients pour le même véhicule, carnet effacé, appels croisés : la mauvaise organisation du planning coûte cher en image et en litiges.",
+      "paragraphs": [
+        "Sans calendrier unique partagé, chaque interlocuteur tient sa vérité. Une promise donnée au téléphone n’apparaît pas sur le tableau affiché au garage.",
+        "Les conséquences vont du client mécontent aux indemnités ou remises négociées sous pression. Le stress équipe explose les jours de forte affluence.",
+        "Centralisez les réservations dans un seul support, imposez une confirmation écrite avant blocage véhicule, et interdisez les « réservations orales » sans trace.",
+        "Un outil dédié location synchronise véhicules, dates et clients pour voir d’un coup d’œil ce qui est libre.",
+        "INVOORent Pro est pensé pour la gestion de flotte et de location : réservations, contrats et suivi sans se battre avec des tableurs incompatibles entre agences."
+      ]
+    },
+    {
       "id": "conformite-facture-stress-declaration-maroc-2026",
       "title": "Stress des déclarations : quand la peur de l’erreur paralyse la facturation",
       "date": "2026-04-30",
