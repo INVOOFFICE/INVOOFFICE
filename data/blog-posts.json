@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "contrats-location-papiers-perdus-maroc-2026",
+      "title": "Contrats de location éparpillés : perte d’informations et risques juridiques",
+      "date": "2026-05-02",
+      "tag": "Organisation",
+      "excerpt": "Bacs à archives, scans nommés « Contrat1 », versions multiples : quand les contrats ne sont pas structurés, l’agence marocaine perd du temps à chaque litige.",
+      "paragraphs": [
+        "Retrouver la bonne clause ou l’état des lieux signé devient un jeu de piste. En cas de différend, l’absence de pièce claire affaiblit votre position.",
+        "Au quotidien, c’est aussi du temps perdu à chaque renouvellement ou prolongation.",
+        "Numérotez les contrats, associez systématiquement véhicule + client + dates, et conservez un modèle unique validé par vos habitudes locales.",
+        "Une solution digitale avec export PDF homogène évite les oublis de page ou les mentions contradictoires entre versions.",
+        "INVOORent Pro aide à structurer contrats et fiches pour que l’historique client et véhicule reste exploitable, même en période chargée."
+      ]
+    },
+    {
       "id": "location-double-reservation-stress-agence-maroc-2026",
       "title": "Double réservation et planning flou : le cauchemar des agences de location au Maroc",
       "date": "2026-05-01",
