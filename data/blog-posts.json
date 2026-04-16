@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "maintenance-flotte-oublis-couts-cache-maroc-2026",
+      "title": "Entretiens de flotte oubliés : quand la mauvaise gestion fait exploser les coûts",
+      "date": "2026-05-03",
+      "tag": "Gestion",
+      "excerpt": "Vidanges reportées, pneus usés jusqu’à la panne : sans suivi, la maintenance réactive coûte plus cher que la maintenance planifiée.",
+      "paragraphs": [
+        "Les véhicules qui roulent pour l’agence sont votre stock vivant. Les oublis d’entretien mènent à des immobilisations surprise et à des factures garage plus lourdes.",
+        "Le stress opérationnel monte quand plusieurs voitures partent en panne la même semaine.",
+        "Tenez un carnet d’entretien par immatriculation, fixez des kilomètres ou dates seuil, et faites le point mensuellement avec le responsable atelier.",
+        "Digitaliser le suivi par véhicule permet d’anticiper au lieu de subir.",
+        "INVOORent Pro intègre la logique flotte et maintenance pour que les agences de location au Maroc voient rapidement quoi planifier avant la casse."
+      ]
+    },
+    {
       "id": "contrats-location-papiers-perdus-maroc-2026",
       "title": "Contrats de location éparpillés : perte d’informations et risques juridiques",
       "date": "2026-05-02",
