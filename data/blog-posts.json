@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "donnees-location-dispersées-plusieurs-outils-maroc-2026",
+      "title": "Données de location éclatées entre WhatsApp, Excel et papier : la perte d’information",
+      "date": "2026-05-06",
+      "tag": "Sécurité & données",
+      "excerpt": "Quand chaque collaborateur tient son fichier, personne n’a la vue complète. Les décisions se prennent à l’aveugle.",
+      "paragraphs": [
+        "La désorganisation numérique mène aux mêmes erreurs que la désorganisation papier : double saisie, versions contradictoires, informations introuvables le samedi soir.",
+        "Le dirigeant ne peut pas piloter s’il doit consolider manuellement trois sources.",
+        "Choisissez un référentiel unique, migrez progressivement, et formez l’équipe sur une seule méthode de saisie.",
+        "Une application locale et hors ligne limite les dépendances et garde l’historique accessible même avec un réseau instable.",
+        "INVOORent Pro s’adresse aux agences marocaines qui veulent une gestion de flotte et de location centralisée, sans abonnement cloud imposé."
+      ]
+    },
+    {
       "id": "fiche-client-location-incomplete-maroc-2026",
       "title": "Fiches client incomplètes en location : risques et perte de temps à chaque contrat",
       "date": "2026-05-05",
