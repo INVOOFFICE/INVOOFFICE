@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "fiche-client-location-incomplete-maroc-2026",
+      "title": "Fiches client incomplètes en location : risques et perte de temps à chaque contrat",
+      "date": "2026-05-05",
+      "tag": "Relation client",
+      "excerpt": "Permis non scanné, adresse approximative, historique absent : les dossiers légers compliquent chaque prolongation ou sinistre.",
+      "paragraphs": [
+        "Repasser les mêmes questions à chaque location fatigue le client et l’équipe. Les informations manquantes ressortent toujours au mauvais moment.",
+        "En cas de litige, un dossier propre fait la différence.",
+        "Créez une check-list minimale avant remise des clés : pièce d’identité, contact d’urgence, état des lieux signé.",
+        "Un logiciel avec fiche client structurée évite les allers-retours et sécurise la relation sur le long terme.",
+        "INVOORent Pro permet de centraliser l’historique client et les contrats pour les agences qui veulent moins de friction à chaque location."
+      ]
+    },
+    {
       "id": "location-saisonniere-desorganisation-tarifs-maroc-2026",
       "title": "Haute saison et tarifs incohérents : la désorganisation qui érode la marge",
       "date": "2026-05-04",
