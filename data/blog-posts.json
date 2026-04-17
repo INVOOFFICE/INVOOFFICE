@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "rush-hour-erreurs-caisse-cafe-maroc-2026",
+      "title": "Heures de pointe au café : erreurs de caisse et stress quand tout s’accélère",
+      "date": "2026-05-07",
+      "tag": "Problèmes & solutions",
+      "excerpt": "Midi bondé, commandes qui s’empilent : sans organisation, les erreurs de prix et les additions faussées irritent clients et équipe.",
+      "paragraphs": [
+        "Sous pression, on tape vite, on oublie une table, on mélange deux additions. Chaque erreur est une perte directe ou une ristourne pour calmer le client.",
+        "La mauvaise organisation du poste de vente amplifie la fatigue et les turnovers.",
+        "Préparez le menu et les prix dans l’outil avant le service, placez un responsable caisse aux heures critiques, et faites un mini bilan toutes les deux heures en pointe.",
+        "Un POS clair et tactile réduit les frappes inutiles et accélère les encaissements.",
+        "INVOOCoffee est conçu pour cafés et restaurants au Maroc : caisse rapide, catégories et suivi des ventes même quand le réseau faiblit."
+      ]
+    },
+    {
       "id": "donnees-location-dispersées-plusieurs-outils-maroc-2026",
       "title": "Données de location éclatées entre WhatsApp, Excel et papier : la perte d’information",
       "date": "2026-05-06",
