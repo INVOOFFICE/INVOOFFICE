@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "stock-cuisine-desorganisation-gaspillage-restaurant-maroc-2026",
+      "title": "Stock cuisine et désorganisation : gaspillage silencieux dans les petits restaurants",
+      "date": "2026-05-08",
+      "tag": "Organisation",
+      "excerpt": "Produits achetés en double, DLC ignorées, inventaires jamais faits : la mauvaise organisation du stock mange la marge des restos marocains.",
+      "paragraphs": [
+        "Sans visibilité sur ce qui part en consommation réelle, on commande « au feeling ». Le gaspillage et les achats d’urgence à prix fort s’accumulent.",
+        "Le stress en cuisine monte quand il manque un ingrédient en plein service.",
+        "Introduisez une rotation simple (premier entré, premier sorti), une liste hebdomadaire des top ventes, et un point stock rapide avant commande fournisseur.",
+        "Digitaliser le lien entre ventes et stocks consommables aide à ajuster les quantités sans tableur fragile.",
+        "INVOOCoffee permet de suivre menu, ventes et stocks consommables pour que snack et restaurant au Maroc commandent avec plus de lucidité."
+      ]
+    },
+    {
       "id": "rush-hour-erreurs-caisse-cafe-maroc-2026",
       "title": "Heures de pointe au café : erreurs de caisse et stress quand tout s’accélère",
       "date": "2026-05-07",
