@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "menu-prix-papier-erreurs-communication-maroc-2026",
+      "title": "Menu papier et prix obsolètes : erreurs de communication qui coûtent la confiance client",
+      "date": "2026-05-10",
+      "tag": "Ventes",
+      "excerpt": "Le client lit un prix, l’addition en affiche un autre : la désorganisation entre affichage et caisse crée tension et pertes.",
+      "paragraphs": [
+        "Les hausses de coût non reflétées partout en même temps mènent aux discussions désagréables au comptoir. L’équipe improvise des excuses.",
+        "Au-delà de l’image, c’est du temps perdu à recalculer et à apaiser.",
+        "Mettez à jour menu physique et système le même jour, avec une personne responsable de la cohérence.",
+        "Une caisse numérique avec catégories à jour évite l’écart entre « ce qui est affiché » et « ce qui est facturé ».",
+        "INVOOCoffee centralise menu et ventes pour que cafés et restaurants au Maroc parlent un seul langage tarifaire, du comptoir à l’addition."
+      ]
+    },
+    {
       "id": "ecart-caisse-fin-journee-stress-restaurant-maroc-2026",
       "title": "Écarts de caisse en fin de journée : quand les erreurs de gestion font douter sur les chiffres",
       "date": "2026-05-09",
