@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "multi-tables-commandes-perdues-restaurant-maroc-2026",
+      "title": "Multi-tables et commandes perdues : la désorganisation qui ralentit le service",
+      "date": "2026-05-11",
+      "tag": "Gestion",
+      "excerpt": "Terrasse pleine, intérieur plein : sans suivi clair des tables, les oublis de commande et les retards s’accumulent.",
+      "paragraphs": [
+        "Le client attend, la cuisine prépare dans le désordre, personne ne sait quelle table est prioritaire. Le chiffre d’affaires potentiel chute car la rotation des tables ralentit.",
+        "Le stress salarial grimpe ; les pourboires aussi peuvent en pâtir.",
+        "Attribuez des zones (terrasse / salle), numérotez systématiquement, et validez chaque commande avant envoi cuisine.",
+        "Un outil adapté au multi-tables structure le flux sans surcharge cognitive.",
+        "INVOOCoffee prend en charge commandes et tables pour que les établissements marocains servent plus vite avec moins d’erreurs."
+      ]
+    },
+    {
       "id": "menu-prix-papier-erreurs-communication-maroc-2026",
       "title": "Menu papier et prix obsolètes : erreurs de communication qui coûtent la confiance client",
       "date": "2026-05-10",
