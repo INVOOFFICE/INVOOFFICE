@@ -2,6 +2,20 @@
   "siteBaseUrl": "https://invooffice.github.io/INVOOFFICE",
   "posts": [
     {
+      "id": "rapport-journalier-absent-pilotage-restaurant-maroc-2026",
+      "title": "Sans rapport de fin de journée : le dirigeant pilote à l’instinct et se trompe",
+      "date": "2026-05-12",
+      "tag": "Stratégie",
+      "excerpt": "Pas de synthèse des ventes : on croit avoir fait un bon jour alors que la marge réelle était faible. La perte d’information décourage le pilotage.",
+      "paragraphs": [
+        "Décider les horaires, les plats du jour ou les promotions sans chiffre fiable mène à répéter les mêmes erreurs. La désorganisation informationnelle coûte plus cher qu’un mauvais service ponctuel.",
+        "Le stress du dirigeant vient de l’incertitude, pas seulement du rythme.",
+        "Instaurez un rituel de dix minutes en fin de service : ventes totales, top produits, incidents notables.",
+        "Un logiciel qui sort un rapport journalier ou mensuel automatise ce réflexe.",
+        "INVOOCoffee permet aux cafés et restaurants au Maroc de disposer de rapports utiles pour ajuster offre et achats sans reconstruire des tableurs la nuit."
+      ]
+    },
+    {
       "id": "multi-tables-commandes-perdues-restaurant-maroc-2026",
       "title": "Multi-tables et commandes perdues : la désorganisation qui ralentit le service",
       "date": "2026-05-11",
