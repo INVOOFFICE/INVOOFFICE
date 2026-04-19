@@ -607,6 +607,19 @@
       ]
     },
     {
+      "id": "facture-proforma-maroc-usage-export-2026",
+      "title": "Facture proforma au Maroc : utilité, usage à l'export et différence avec la facture définitive",
+      "date": "2026-04-05",
+      "tag": "Facturation",
+      "excerpt": "La facture proforma est indispensable pour les opérations d'import-export au Maroc. Comprendre son rôle évite les blocages douaniers et les malentendus commerciaux.",
+      "paragraphs": [
+        "La facture proforma n'est pas une facture comptable : elle ne déclenche ni paiement ni enregistrement dans les livres. Elle sert avant tout à informer l'acheteur du prix, des conditions et du contenu d'une livraison à venir — et c'est souvent le document exigé par la douane marocaine pour les opérations d'import-export avant l'émission de la facture définitive.",
+        "Dans les échanges commerciaux internationaux impliquant des entreprises marocaines, la proforma est également utilisée pour débloquer les transferts de devises ou obtenir des lettres de crédit. Un document mal structuré ou manquant de mentions clés peut bloquer une transaction pendant plusieurs jours.",
+        "La différence essentielle avec la facture définitive : la proforma n'a pas de numéro séquentiel obligatoire, ne génère pas de TVA et ne s'intègre pas dans la comptabilité. Elle doit néanmoins mentionner clairement qu'il s'agit d'une proforma pour éviter toute confusion.",
+        "INVOOffice permet de générer des factures proforma distinctes des factures commerciales, avec conversion en facture définitive en un clic, pour fluidifier les échanges à l'export depuis le Maroc."
+      ]
+    },
+    {
       "id": "tva-maroc-taux-declaration-pme-2026",
       "title": "TVA Maroc : taux courants et bonnes habitudes pour les déclarations PME",
       "date": "2026-04-04",
