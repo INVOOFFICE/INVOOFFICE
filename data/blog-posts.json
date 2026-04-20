@@ -633,6 +633,19 @@
       ]
     },
     {
+      "id": "paiement-echeancier-maroc-client-pme-2026",
+      "title": "Paiement en plusieurs fois au Maroc : structurer un échéancier client sans risque",
+      "date": "2026-04-05",
+      "tag": "Gestion & Trésorerie",
+      "excerpt": "Proposer un échéancier à un client marocain sans documentation solide, c'est prendre un risque. Comment structurer les paiements différés pour rester payé et protégé.",
+      "paragraphs": [
+        "Accorder un paiement en plusieurs fois à un client au Maroc est courant, surtout dans les services B2B. Mais sans document écrit précisant les montants, les dates et les conditions de chaque versement, l'accord verbal est fragile : difficile à faire valoir en cas de litige, impossible à comptabiliser correctement.",
+        "Un bon échéancier doit être annexé au contrat ou mentionné directement sur la facture : montant de l'acompte, dates des versements intermédiaires, solde à la livraison ou à la réception. Chaque versement partiel doit donner lieu à une quittance ou une facture d'acompte — pas seulement un virement noté mentalement.",
+        "Côté trésorerie, un échéancier bien documenté permet d'intégrer les entrées prévues dans les prévisions d'encaissement. On sait exactement quand l'argent arrive — ou quand il est en retard, déclenchant une relance ciblée plutôt qu'une relance générale.",
+        "INVOOffice permet de structurer des factures avec acomptes et échéances multiples, de suivre les versements reçus par dossier client et d'automatiser les relances selon les dates d'échéance définies."
+      ]
+    },
+    {
       "id": "tva-maroc-taux-declaration-pme-2026",
       "title": "TVA Maroc : taux courants et bonnes habitudes pour les déclarations PME",
       "date": "2026-04-04",
