@@ -659,6 +659,19 @@
       ]
     },
     {
+      "id": "devis-accepte-maroc-convertir-facture-2026",
+      "title": "Du devis accepté à la facture au Maroc : comment éviter la double saisie et les erreurs",
+      "date": "2026-04-05",
+      "tag": "Facturation",
+      "excerpt": "Retaper un devis accepté en facture est une source d'erreurs et de temps perdu. La bonne pratique pour les PME marocaines qui veulent aller vite sans se tromper.",
+      "paragraphs": [
+        "Dans beaucoup de PME marocaines, le devis est saisi dans un fichier, le client valide par WhatsApp, et la facture est retapée manuellement dans un autre fichier. Ce processus en deux étapes génère des erreurs de montant, des oublis de références et des pertes de temps qui s'accumulent semaine après semaine.",
+        "La bonne pratique est simple : devis et facture partagent les mêmes données. Quand le client confirme, on transforme le devis en facture sans ressaisir une ligne — le prix, la désignation, la TVA et les coordonnées sont déjà là. Le numéro de devis devient une référence sur la facture pour assurer la traçabilité.",
+        "Cette fluidité réduit aussi le délai entre la validation du client et l'envoi de la facture. Moins de délai, c'est un encaissement plus rapide — et une trésorerie qui respire mieux. Pour les PME marocaines qui gèrent plusieurs devis par semaine, le gain est immédiat.",
+        "INVOOffice transforme un devis validé en facture conforme en un clic, avec reprise automatique de toutes les lignes, application de la TVA Maroc et archivage lié des deux documents pour une traçabilité complète."
+      ]
+    },
+    {
       "id": "tva-maroc-taux-declaration-pme-2026",
       "title": "TVA Maroc : taux courants et bonnes habitudes pour les déclarations PME",
       "date": "2026-04-04",
