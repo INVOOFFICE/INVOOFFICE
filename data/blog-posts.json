@@ -711,6 +711,19 @@
       ]
     },
     {
+      "id": "gestion-multi-activite-pme-maroc-2026",
+      "title": "PME multi-activité au Maroc : gérer facturation et TVA quand on opère dans plusieurs secteurs",
+      "date": "2026-04-05",
+      "tag": "Fiscalité",
+      "excerpt": "Une PME marocaine qui cumule activités de service, commerce et location doit gérer plusieurs taux de TVA et règles fiscales. Comment s'y retrouver sans erreur.",
+      "paragraphs": [
+        "Certaines PME marocaines exercent plusieurs activités en parallèle : une agence qui fait de la location de véhicules, du transport occasionnel et de la vente de pièces détachées, par exemple. Chaque activité peut relever d'un taux de TVA différent, d'un régime comptable distinct et d'obligations déclaratives spécifiques.",
+        "La principale difficulté est de ne pas mélanger les taux et les règles entre les activités. Facturer une location au taux de 20 % alors qu'une activité de transport relève de 14 % crée des incohérences qui se retrouveront dans les déclarations. La DGI peut y voir une erreur de bonne foi — ou une irrégularité à rectifier.",
+        "L'organisation est la clé : séparer clairement les lignes de facturation par activité, paramétrer les taux corrects dans l'outil de gestion, et s'assurer que les exports comptables distinguent bien les différents flux. Une comptabilité analytique simple par activité aide aussi à mesurer la rentabilité réelle de chaque pôle.",
+        "INVOOffice permet de configurer plusieurs activités avec des taux de TVA distincts, de segmenter les rapports par ligne d'activité et de produire des exports différenciés pour simplifier les déclarations des PME marocaines multi-secteurs."
+      ]
+    },
+    {
       "id": "tva-maroc-taux-declaration-pme-2026",
       "title": "TVA Maroc : taux courants et bonnes habitudes pour les déclarations PME",
       "date": "2026-04-04",
