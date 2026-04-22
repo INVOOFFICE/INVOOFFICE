@@ -724,6 +724,19 @@
       ]
     },
     {
+      "id": "archivage-factures-maroc-obligations-2026",
+      "title": "Archivage des factures au Maroc : durée légale, format accepté et bonnes pratiques numériques",
+      "date": "2026-04-05",
+      "tag": "Conformité DGI",
+      "excerpt": "Au Maroc, les factures doivent être conservées 10 ans. Format papier ou numérique, organisation par période : ce que la loi exige et comment s'y conformer facilement.",
+      "paragraphs": [
+        "L'obligation d'archivage des factures au Maroc est fixée à 10 ans à compter de la date d'émission par le Code Général des Impôts. Cela signifie qu'une facture émise en 2016 doit encore être disponible aujourd'hui si la DGI en fait la demande lors d'un contrôle. Beaucoup de dirigeants l'ignorent jusqu'au moment où c'est trop tard.",
+        "La DGI accepte les archives numériques à condition que les documents soient lisibles, intègres et traçables. Un scan de mauvaise qualité ou un fichier corrompu ne vaut pas grand-chose comme justificatif. L'idéal est de conserver les originaux numériques — les PDF générés par votre logiciel de facturation — organisés par exercice fiscal.",
+        "L'archivage physique (classeurs papier) reste courant au Maroc mais présente des risques évidents : incendie, inondation, perte lors d'un déménagement. La combinaison d'un stockage local et d'une sauvegarde régulière sur un support externe ou un service cloud fiable est la solution la plus robuste.",
+        "INVOOffice archive automatiquement chaque document émis dans un historique structuré par date, client et période fiscale — accessible en quelques secondes, exportable en PDF et conforme aux attentes de la DGI Maroc pendant toute la durée légale."
+      ]
+    },
+    {
       "id": "tva-maroc-taux-declaration-pme-2026",
       "title": "TVA Maroc : taux courants et bonnes habitudes pour les déclarations PME",
       "date": "2026-04-04",
