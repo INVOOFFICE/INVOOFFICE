@@ -789,6 +789,19 @@
       ]
     },
     {
+      "id": "gps-telematics-flotte-maroc-2026",
+      "title": "Géolocalisation et télématique pour flotte au Maroc : ce que ça change vraiment pour une agence",
+      "date": "2026-04-05",
+      "tag": "Gestion flotte",
+      "excerpt": "Installer des traceurs GPS sur sa flotte de location au Maroc : avantages concrets, limites légales et comment l'intégrer dans sa politique client.",
+      "paragraphs": [
+        "Les boîtiers GPS et les solutions de télématique se démocratisent dans les flottes marocaines. Pour une agence de location, les bénéfices sont concrets : localisation d'un véhicule en cas de non-retour, vérification du kilométrage réel déclaré par le locataire, alerte en cas de sortie de zone géographique autorisée, et récupération facilitée en cas de vol.",
+        "Mais l'installation d'un traceur GPS sur un véhicule loué soulève une question légale et commerciale : le locataire doit être informé. En pratique, la mention dans le contrat de location suffit dans la plupart des cas. Ce qui ne se fait pas, c'est la surveillance en temps réel sans en avoir informé le client — cela crée des risques juridiques.",
+        "La télématique va plus loin que la localisation : elle peut mesurer le style de conduite (accélérations brusques, freinages), détecter les anomalies moteur à distance et optimiser les tournées de récupération. Pour une flotte de plus de 20 véhicules, le retour sur investissement est souvent atteint en quelques mois grâce à la réduction des sinistres et des coûts de maintenance.",
+        "INVOOffice s'intègre avec les principales solutions de géolocalisation du marché marocain pour centraliser les données de flotte — kilométrage réel, alertes de zone et historique de localisation — dans un tableau de bord unique."
+      ]
+    },
+    {
       "id": "tva-maroc-taux-declaration-pme-2026",
       "title": "TVA Maroc : taux courants et bonnes habitudes pour les déclarations PME",
       "date": "2026-04-04",
