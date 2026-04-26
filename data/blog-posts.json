@@ -854,6 +854,19 @@
       ]
     },
     {
+      "id": "menu-engineering-restaurant-maroc-2026",
+      "title": "Menu engineering pour restaurant marocain : identifier les plats qui font la marge et ceux qui la plombent",
+      "date": "2026-04-05",
+      "tag": "Gestion",
+      "excerpt": "Tous les plats d'un menu ne rapportent pas la même marge. Le menu engineering aide les restaurateurs marocains à décider quoi garder, quoi promouvoir et quoi retirer.",
+      "paragraphs": [
+        "Un menu de restaurant marocain peut comporter 30 à 50 références. Derrière chacune se cachent un coût de revient, un prix de vente et un volume de vente — et la combinaison de ces trois facteurs détermine la vraie contribution de chaque plat à la marge globale. La plupart des restaurateurs n'ont pas cette vision : ils gèrent le menu par habitude et par intuition.",
+        "Le menu engineering classe les plats en quatre catégories : les stars (marge haute, fort volume), les vaches à lait (marge haute, volume faible), les puzzles (marge basse, fort volume) et les poids morts (marge et volume faibles). Chaque catégorie appelle une décision différente : promouvoir les stars, fidéliser les vaches à lait, améliorer ou reformuler les puzzles, et éliminer les poids morts.",
+        "Appliquer cette méthode au contexte marocain demande de connaître le coût réel de chaque plat — ingrédients, portion, perte en cuisine. Beaucoup de restaurateurs découvrent en faisant cet exercice que certains plats populaires sont en réalité peu rentables, et que des ajustements de portion ou de prix peuvent transformer le résultat mensuel.",
+        "INVOOCoffee permet de configurer les coûts et prix de vente par produit, d'analyser les ventes par catégorie et de générer des rapports de marge par plat pour les cafés et restaurants marocains qui veulent piloter leur menu avec des données réelles."
+      ]
+    },
+    {
       "id": "tva-maroc-taux-declaration-pme-2026",
       "title": "TVA Maroc : taux courants et bonnes habitudes pour les déclarations PME",
       "date": "2026-04-04",
