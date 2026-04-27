@@ -906,6 +906,19 @@
       ]
     },
     {
+      "id": "cout-revient-plat-maroc-calculer-2026",
+      "title": "Calculer le coût de revient d'un plat au Maroc : méthode simple pour maîtriser sa marge en cuisine",
+      "date": "2026-04-05",
+      "tag": "Gestion",
+      "excerpt": "Sans calcul du coût de revient, un restaurateur marocain fixe ses prix à l'intuition et peut vendre à perte sans le savoir. La méthode en 4 étapes pour y voir clair.",
+      "paragraphs": [
+        "Beaucoup de restaurateurs marocains fixent leurs prix en regardant ce que fait la concurrence. C'est une erreur fréquente : le concurrent a peut-être des fournisseurs différents, un loyer plus bas ou une qualité d'ingrédients différente. Le seul prix qui garantit la rentabilité est celui qui est basé sur votre propre coût de revient.",
+        "Calculer le coût d'un plat se fait en quatre étapes : lister tous les ingrédients de la recette avec leurs quantités précises, multiplier par le prix d'achat unitaire de chaque ingrédient, ajouter un coefficient de perte en cuisine (épluchage, cuisson, découpe) et additionner le tout pour obtenir le coût matière du plat.",
+        "Une fois ce coût connu, appliquer un coefficient multiplicateur standard — entre 3 et 4 pour la restauration marocaine selon le positionnement — donne un prix de vente qui couvre les charges et dégage une marge. Si le prix obtenu est au-dessus du marché, c'est un signal pour retravailler la recette ou revoir les fournisseurs.",
+        "INVOOCoffee permet de configurer les fiches recettes avec coûts d'ingrédients, de calculer automatiquement le coût de revient par plat et de suivre l'évolution des marges en temps réel quand les prix fournisseurs changent au Maroc."
+      ]
+    },
+    {
       "id": "tva-maroc-taux-declaration-pme-2026",
       "title": "TVA Maroc : taux courants et bonnes habitudes pour les déclarations PME",
       "date": "2026-04-04",
