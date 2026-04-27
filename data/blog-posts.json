@@ -919,6 +919,19 @@
       ]
     },
     {
+      "id": "gestion-caisse-cafe-maroc-ecart-clôture-2026",
+      "title": "Clôture de caisse et écarts dans un café marocain : comprendre, prévenir et corriger",
+      "date": "2026-04-05",
+      "tag": "POS & Caisse",
+      "excerpt": "Un écart de caisse quotidien dans un café marocain peut signifier une erreur ou un problème plus grave. Comment organiser la clôture et traiter les écarts proprement.",
+      "paragraphs": [
+        "La clôture de caisse quotidienne est un moment clé pour tout café ou restaurant marocain. Elle devrait prendre 5 minutes et confirmer que le solde physique correspond au solde théorique du logiciel. En réalité, beaucoup d'établissements accumulent des écarts non expliqués qui faussent les comptes sur la durée.",
+        "Les causes les plus fréquentes d'écarts de caisse : erreurs de rendu monnaie, annulations non enregistrées dans le logiciel, consommations du personnel non tracées, et — moins fréquemment mais réellement — petites disparitions non documentées. Identifier la cause est la première étape pour corriger.",
+        "Une procédure de clôture structurée réduit considérablement ces écarts. Elle doit inclure : comptage physique par coupure, comparaison avec le total théorique du POS, enregistrement systématique de l'écart même s'il est faible, et validation par une deuxième personne pour les montants dépassant un seuil défini.",
+        "INVOOCoffee génère un rapport de clôture automatique avec calcul de l'écart, historique des annulations et détail des encaissements par mode de paiement — pour que chaque journée se termine avec une caisse transparente au café ou restaurant marocain."
+      ]
+    },
+    {
       "id": "tva-maroc-taux-declaration-pme-2026",
       "title": "TVA Maroc : taux courants et bonnes habitudes pour les déclarations PME",
       "date": "2026-04-04",
