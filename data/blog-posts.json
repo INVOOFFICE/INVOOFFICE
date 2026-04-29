@@ -451,6 +451,19 @@
       ]
     },
     {
+      "id": "archivage-factures-numeriques-maroc-dgi-2026",
+      "title": "Archivage numérique des factures au Maroc : durée, organisation et recherche rapide",
+      "date": "2026-04-13",
+      "tag": "Conformité DGI",
+      "excerpt": "Dix ans de conservation : la règle est connue, la mise en œuvre l’est moins. Comment classer ses factures PDF et les retrouver sans perdre une journée.",
+      "paragraphs": [
+        "Les entreprises marocaines savent qu’il faut conserver les pièces plusieurs années — mais beaucoup les stockent dans des dossiers mal nommés ou des boîtes mail. Quand la DGI ou un audit client demande une facture de 2022, la panique n’est pas une stratégie.",
+        "Un archivage efficace repose sur trois axes : nom de fichier ou tag incluant année-mois et numéro de facture, arborescence par exercice fiscal, et sauvegarde hors du poste unique (cloud ou disque externe).",
+        "Numériser le flux dès l’émission évite la ressaisie et les versions contradictoires entre « Word du bureau » et « PDF envoyé au client ».",
+        "INVOOffice centralise l’émission et l’historique des factures avec numérotation continue et exports par période — pour retrouver une pièce en secondes, pas en heures."
+      ]
+    },
+    {
       "id": "avoir-facture-maroc-regles-pratiques-2026",
       "title": "Avoir et facture au Maroc : quand l’émettre et comment le tracer",
       "date": "2026-04-12",
