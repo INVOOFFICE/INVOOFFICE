@@ -464,6 +464,19 @@
       ]
     },
     {
+      "id": "facture-dirhams-client-etranger-maroc-2026",
+      "title": "Facturer en dirhams un client à l’étranger : devises, mentions et bonnes habitudes",
+      "date": "2026-04-12",
+      "tag": "Facturation",
+      "excerpt": "Exporter un service ou une marchandise depuis le Maroc vers un client hors pays implique des choix de devise et de mentions sur la facture. Points de vigilance pour éviter les blocages.",
+      "paragraphs": [
+        "La facture marocaine vers un client étranger doit rester lisible pour les deux parties : montants, devise, coordonnées complètes, nature de l’opération. Même si le client paie en euros ou dollars, afficher clairement l’équivalent ou le montant contractuel en MAD évite les malentendus au paiement.",
+        "La TVA et le traitement comptable dépendent du type d’opération (B2B hors Maroc, services, biens). Une PME doit harmoniser sa facturation avec l’avis de son expert-comptable — l’outil ne remplace pas l’analyse fiscale.",
+        "Centraliser devis, factures et versions dans un même outil réduit les erreurs de conversion et les doubles envois.",
+        "INVOOffice aide à structurer factures et devis avec mentions cohérentes et exports utiles pour le suivi des ventes à l’international depuis le Maroc."
+      ]
+    },
+    {
       "id": "maintenance-preventive-flotte-maroc-planning-2026",
       "title": "Maintenance préventive de flotte au Maroc : planning et traçabilité",
       "date": "2026-04-11",
