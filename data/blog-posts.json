@@ -490,6 +490,19 @@
       ]
     },
     {
+      "id": "avoir-facture-maroc-quand-emettre-2026",
+      "title": "Avoir (facture d’avoir) au Maroc : quand l’émettre et comment le lier à la facture d’origine",
+      "date": "2026-04-11",
+      "tag": "Facturation",
+      "excerpt": "L’avoir annule ou réduit une facture déjà émise. Mal utilisé, il crée des incohérences en TVA et en compta. Rappel des cas utiles pour les PME marocaines.",
+      "paragraphs": [
+        "Un avoir n’est pas une « petite réduction » : c’est un document qui corrige une facture déjà enregistrée — retour marchandise, erreur de prix, remise commerciale après coup ou annulation partielle. Au Maroc comme ailleurs, il doit rester traçable vers la facture d’origine pour que la TVA et le chiffre d’affaires reflètent la réalité.",
+        "Émettre un avoir sans référence claire à la facture initiale complique les contrôles et les rapprochements bancaires. La bonne pratique : numérotation distincte des avoirs, mention explicite du numéro de facture corrigée, et conservation des deux pièces ensemble.",
+        "Les équipes qui gèrent beaucoup de retours ou de négociations après facturation gagnent à industrialiser le flux avoir plutôt que de refaire une nouvelle facture « en négatif » à la main.",
+        "INVOOffice permet d’émettre des avoirs rattachés aux factures, avec cohérence des montants et des taux de TVA, pour garder un dossier propre côté DGI et comptabilité."
+      ]
+    },
+    {
       "id": "tresorerie-pme-maroc-prevision-encaissements-2026",
       "title": "Trésorerie PME Maroc : lier facturation et prévision des encaissements",
       "date": "2026-04-10",
