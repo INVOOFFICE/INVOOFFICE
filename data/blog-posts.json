@@ -412,6 +412,19 @@
       ]
     },
     {
+      "id": "bon-livraison-vs-facture-maroc-pme-2026",
+      "title": "Bon de livraison et facture au Maroc : deux rôles, une seule chaîne à ne pas casser",
+      "date": "2026-04-15",
+      "tag": "Gestion",
+      "excerpt": "Le bon de livraison prouve le mouvement physique ; la facture enregistre la créance. Les PME qui mélangent les deux documents créent des écarts stock et trésorerie.",
+      "paragraphs": [
+        "Dans la distribution et le BTP marocain, le bon de livraison signé par le client est souvent la preuve que la marchandise est partie. La facture doit suivre avec le même détail — références, quantités, prix — sinon le client conteste et le stock interne ne correspond plus.",
+        "La séquence idéale : bon de livraison → validation logistique → facturation automatique à partir des mêmes lignes. Toute ressaisie manuelle entre les deux étapes est une source d’erreur.",
+        "Les dirigeants qui pilotent à la trésorerie ont besoin que chaque BL non facturé apparaisse clairement dans un état « à facturer ».",
+        "INVOOffice relie devis, bons de livraison et factures pour que la PME marocaine garde une chaîne unique du premier envoi au paiement."
+      ]
+    },
+    {
       "id": "devis-vers-facture-maroc-gagner-temps-2026",
       "title": "Du devis à la facture au Maroc : enchaîner sans double saisie",
       "date": "2026-04-14",
