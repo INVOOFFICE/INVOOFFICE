@@ -425,6 +425,19 @@
       ]
     },
     {
+      "id": "tva-restaurant-snack-maroc-taux-2026",
+      "title": "TVA dans la restauration au Maroc : ce que les snacks et cafés doivent vérifier sur la caisse",
+      "date": "2026-04-14",
+      "tag": "Fiscalité",
+      "excerpt": "Bar, snack ou restaurant : les taux et les libellés sur ticket et facture doivent être cohérents. Les erreurs les plus fréquentes et comment les éviter.",
+      "paragraphs": [
+        "Une caisse qui applique un mauvais taux de TVA sur une partie du menu fausse la déclaration et la marge réelle. En restauration marocaine, la complexité vient souvent des produits mélangés — boissons, plats, produits à emporter.",
+        "Former l’équipe à sélectionner la bonne catégorie produit au moment de la vente est aussi important que choisir le logiciel. Une catégorie « repas » et une catégorie « boisson » bien paramétrées réduisent les erreurs à la source.",
+        "Les contrôles croisés en fin de semaine (échantillon de tickets vs rapport TVA) détectent les dérives avant la clôture mensuelle.",
+        "INVOOCoffee permet de paramétrer catégories et TVA sur le menu, avec rapports de ventes pour aligner encaissements et obligations fiscales des établissements au Maroc."
+      ]
+    },
+    {
       "id": "reservation-en-ligne-agence-location-maroc-2026",
       "title": "Réservations et planning : fluidifier l’agence de location au Maroc",
       "date": "2026-04-13",
