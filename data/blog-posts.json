@@ -142,6 +142,19 @@
       ]
     },
     {
+      "id": "pwa-maroc-connexion-installe-2026",
+      "title": "PWA au Maroc : travailler avec une connexion instable (3G, coupures)",
+      "date": "2026-05-03",
+      "tag": "Stratégie",
+      "excerpt": "Les logiciels dans le navigateur qui tiennent hors ligne évitent les arrêts d’activité quand le réseau faiblit.",
+      "paragraphs": [
+        "Dans beaucoup de zones marocaines, la fibre n’est pas garantie ; les commerces et agences subissent des coupures courtes mais répétées. Un outil 100 % cloud sans mode dégradé bloque la vente ou la facturation.",
+        "Les PWA avec stockage local permettent de continuer à saisir et synchroniser ensuite.",
+        "Pour une PME, c’est aussi un argument de résilience face aux pannes opérateur.",
+        "INVOOffice, INVOORent Pro et INVOOCoffee s’inscrivent dans cette logique PWA hors ligne pour les professionnels marocains."
+      ]
+    },
+    {
       "id": "contrats-location-papiers-perdus-maroc-2026",
       "title": "Contrats de location éparpillés : perte d’informations et risques juridiques",
       "date": "2026-05-02",
