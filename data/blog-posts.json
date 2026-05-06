@@ -128,6 +128,19 @@
       ]
     },
     {
+      "id": "sauvegarde-donnees-locales-pme-maroc-2026",
+      "title": "Sauvegardes quand les données restent en local : stratégie simple pour les PME marocaines",
+      "date": "2026-05-04",
+      "tag": "Sécurité",
+      "excerpt": "Données sur le poste : avantage de contrôle, risque de panne disque. Export périodique et routine à caler.",
+      "paragraphs": [
+        "Travailler avec des données locales rassure sur la confidentialité, mais un disque dur mort sans copie efface des années d’activité. Une PME marocaine doit définir une fréquence d’export — hebdomadaire ou mensuelle — et un lieu de stockage distinct (NAS, cloud chiffré, clé dédiée).",
+        "Tester une restauration une fois par an valide que les fichiers ne sont pas corrompus.",
+        "Former une personne responsable du « jour de sauvegarde » évite que la tâche soit toujours reportée.",
+        "Les logiciels INVOOffice permettent d’exporter et d’archiver les données métier pour compléter cette discipline côté entreprise."
+      ]
+    },
+    {
       "id": "maintenance-flotte-oublis-couts-cache-maroc-2026",
       "title": "Entretiens de flotte oubliés : quand la mauvaise gestion fait exploser les coûts",
       "date": "2026-05-03",
