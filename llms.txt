@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+# INVOO OFFICE — Blog
+# Solution de facturation conforme DGI Maroc
+# http://invooffice.com
+
+## À propos
+INVOO OFFICE est une PWA de facturation 100% hors ligne, conforme DGI Maroc,
+destinée aux TPE, PME, freelances et commerçants marocains.
+
+## Articles de blog disponibles
+- [Devis vs Facture : différences et bonnes pratiques au Maroc](http://invooffice.com/blogs/devis-vs-facture-differences-et-bonnes-pratiques-au-maroc/)
+  Découvrez les différences entre devis et facture. Téléchargez INVOO OFFICE dès maintenant !
+
+- [Logiciel de facturation offline vs cloud : que choisir pour votre TPE ?](http://invooffice.com/blogs/logiciel-de-facturation-offline-vs-cloud-que-choisir-pour-votre-tpe/)
+  Découvrez le meilleur logiciel de facturation pour votre TPE et téléchargez INVOO OFFICE maintenant
+
+- [Comment créer un bon de livraison conforme au Maroc](http://invooffice.com/blogs/comment-creer-un-bon-de-livraison-conforme-au-maroc/)
+  Téléchargez vos bons de livraison gratuits avec INVOO OFFICE et facilitez vos livraisons au Maroc
+=======
 # INVOO OFFICE - Blog et ressources
 # Solution marocaine de facturation, devis et gestion commerciale
 # https://invooffice.com
@@ -33,3 +52,4 @@ comptable.
 
 ## Articles de blog disponibles
 
+>>>>>>> 763da51 (SEO + responsive + PWA improvements)

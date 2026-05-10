@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
+Sitemap: http://invooffice.com/sitemap.xml
+=======
 Sitemap: https://invooffice.com/sitemap.xml
+>>>>>>> 763da51 (SEO + responsive + PWA improvements)
