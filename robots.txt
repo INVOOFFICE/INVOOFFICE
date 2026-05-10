@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://invoo-office.ma/sitemap.xml
-
-# Security
-# See: https://invoo-office.ma/security.txt
+Sitemap: https://invooffice.com/sitemap.xml

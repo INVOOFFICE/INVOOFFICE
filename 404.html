@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page non trouvée | INVOO OFFICE</title>
+    <meta name="description" content="La page que vous cherchez n'existe pas ou a été déplacée. Retournez à l'accueil d'INVOO OFFICE, la facturation intelligente conforme DGI Maroc.">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://invoo-office.ma/404.html">
+    <meta name="author" content="INVOO OFFICE">
+    <meta name="theme-color" content="#1a6b3c">
+    <meta name="application-name" content="INVOO OFFICE">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/variables.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/buttons.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <style>
+        .page-404 {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 2rem 6rem;
+        }
+        .error-code {
+            font-size: clamp(6rem, 20vw, 12rem);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.04em;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            margin-bottom: 0.5rem;
+        }
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s forwards;
+        }
+        .error-desc {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 480px;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+        }
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.45s forwards;
+        }
+        @media (max-width: 480px) {
+            .page-404 { padding: 6rem 1rem 4rem; }
+            .error-code { font-size: clamp(4rem, 20vw, 6rem); }
+            .error-title { font-size: clamp(1.25rem, 5vw, 1.5rem); }
+            .error-desc { font-size: 0.9375rem; padding: 0 0.5rem; }
+            .error-actions .btn { width: 100%; }
+        }
+        @media (max-width: 375px) {
+            .page-404 { padding: 5rem 0.75rem 3rem; }
+            .error-code { font-size: clamp(3rem, 18vw, 4rem); }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="hero-bg"></div>
+
+    <header role="banner">
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="/" class="nav-logo">
+                    <div class="nav-logo-icon">IN</div>
+                    INVOO OFFICE
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/#fonctionnalites">Fonctionnalités</a></li>
+                    <li><a href="/#dashboard">Dashboard</a></li>
+                    <li><a href="/blogs/">Blog</a></li>
+                    <li><a href="/#faq">FAQ</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="https://wa.me/212630230803?text=Bonjour%20INVOO%20OFFICE%20%F0%9F%91%8B%20Je%20souhaite%20essayer%20votre%20solution%20de%20facturation." target="_blank" class="btn btn-primary" style="font-size:0.875rem; padding: 0.6rem 1.25rem;">Essai gratuit</a>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-expanded="false" aria-label="Menu principal">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="page-404">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Page non trouvée</h1>
+            <p class="error-desc">
+                Oups ! La page que vous recherchez semble avoir disparu dans le cloud.<br>
+                Elle a peut-être été déplacée ou n'existe plus.
+            </p>
+            <div class="error-actions">
+                <a href="/" class="btn btn-primary btn-lg">Retour à l'accueil</a>
+                <a href="/blogs/" class="btn btn-secondary btn-lg">Voir le blog</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="footer-logo">
+                    <div class="footer-logo-icon">IN</div>
+                    INVOO OFFICE
+                </a>
+                <p class="footer-desc">La solution de facturation intelligente conforme DGI Maroc. PWA ultra rapide 100% hors ligne pour TPE, PME, freelances et commerçants.</p>
+                <div class="footer-badge">
+                    <span style="width:6px;height:6px;background:var(--success);border-radius:50%;"></span>
+                    Données 100% locales
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Produit</h4>
+                <ul class="footer-links">
+                    <li><a href="/#fonctionnalites">Fonctionnalités</a></li>
+                    <li><a href="/#pdf">Templates PDF</a></li>
+                    <li><a href="/#dashboard">Dashboard</a></li>
+                    <li><a href="#">Tarification</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Ressources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Guide DGI</a></li>
+                    <li><a href="/blogs/">Blog</a></li>
+                    <li><a href="#">API</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Conformité DGI</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                &copy; 2026 INVOO OFFICE. Tous droits réservés. Conforme DGI Maroc.
+            </div>
+            <div class="footer-social">
+                <a href="#" title="WhatsApp">💬</a>
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="Twitter">𝕏</a>
+                <a href="#" title="GitHub">⚡</a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

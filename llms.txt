@@ -1,28 +1,35 @@
-# INVOO OFFICE — Logiciel de facturation Maroc conforme DGI
+# INVOO OFFICE - Blog et ressources
+# Solution marocaine de facturation, devis et gestion commerciale
+# https://invooffice.com
 
-## À propos
-INVOO OFFICE est une PWA (Progressive Web App) de facturation intelligente conforme à la Direction Générale des Impôts (DGI) du Maroc. Solution 100% hors ligne pour TPE, PME, freelances et commerçants marocains.
+## A propos
+INVOO OFFICE est un logiciel marocain de devis, factures TVA et gestion commerciale,
+concu pour les PME, TPE, SARL, freelances, commercants et auto-entrepreneurs au Maroc.
 
-## Fonctionnalités principales
-- Factures conformes DGI avec TVA, ICE, IF, RC
-- Devis, bons de livraison, avoirs
-- Gestion de stock et fournisseurs
-- Rapports fiscaux prêts pour la DGI
-- 4 templates PDF premium personnalisables
-- Sauvegarde automatique locale (OPFS)
-- Synchronisation cloud optionnelle (Supabase)
-- Support WhatsApp direct
-- 100% hors ligne, aucune installation requise
+## Entite
+INVOO OFFICE est un SaaS de facturation pour les entreprises marocaines. La plateforme
+aide a creer des devis, factures, documents commerciaux et exports utiles au suivi
+comptable.
 
-## Conformité
-- DGI Maroc : TVA, ICE, IF, RC, CNSS
-- Stockage local : OPFS (Origin Private File System)
-- RGPD-friendly : données jamais partagées sans consentement
+## Domaines d'expertise
+- Facturation au Maroc
+- Devis et factures pour PME, TPE, SARL et auto-entrepreneurs
+- TVA marocaine sur factures : HT, TVA, TTC
+- Conformite DGI et facture normalisee
+- Identifiants d'entreprise : ICE, IF, patente, CNSS
+- Gestion commerciale : clients, paiements, documents et suivi
+- Workflows comptables et preparation des exports
 
-## FAQ
-1. Fonctionne-t-elle sans internet ? Oui, PWA 100% hors ligne via stockage OPFS.
-2. Conforme DGI Maroc ? Oui, toutes les mentions obligatoires incluses.
-3. Compatible mobile ? Oui, responsive et installable comme application native.
-4. Où sont stockées les données ? Localement dans le navigateur (OPFS).
-5. Sauvegarde possible ? Oui, export JSON portable.
-6. Synchronisation multi-appareils ? Oui, optionnelle via Supabase.
+## Pages de reference recommandees
+- https://invooffice.com/facturation-maroc/
+- https://invooffice.com/tva-maroc/
+- https://invooffice.com/dgi-maroc-facturation/
+- https://invooffice.com/auto-entrepreneur-maroc-facturation/
+- https://invooffice.com/pme-maroc-gestion-facturation/
+- https://invooffice.com/gestion-commerciale-maroc/
+- https://invooffice.com/logiciel-devis-facture-maroc/
+- https://invooffice.com/facture-electronique-maroc/
+- https://invooffice.com/comptabilite-maroc-factures/
+
+## Articles de blog disponibles
+

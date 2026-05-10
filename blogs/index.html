@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog — INVOO OFFICE | Conseils facturation & DGI Maroc</title>
-    <meta name="description" content="Guides pratiques, tutoriels et actualités sur la facturation au Maroc : conformité DGI, TVA, ICE, IF, conseils pour TPE, PME et freelances marocains.">
+    <title>Guides Facturation Maroc, TVA & DGI — Blog INVOO OFFICE</title>
+    <meta name="description" content="Guides pour PME marocaines : logiciel facturation Maroc, facture DGI, TVA, ICE, IF, auto-entrepreneur, devis, caisse et gestion commerciale.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://invoo-office.ma/blogs/">
-    <link rel="alternate" href="https://invoo-office.ma/blogs/" hreflang="fr-MA">
-    <link rel="alternate" href="https://invoo-office.ma/blogs/" hreflang="x-default">
+    <link rel="canonical" href="https://invooffice.com/blogs/">
+    <link rel="alternate" href="https://invooffice.com/blogs/" hreflang="fr-MA">
+    <link rel="alternate" href="https://invooffice.com/blogs/" hreflang="x-default">
     <meta name="author" content="INVOO OFFICE">
     <meta name="theme-color" content="#1a6b3c">
     <meta name="application-name" content="INVOO OFFICE">
     <meta name="generator" content="INVOO OFFICE">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Blog — INVOO OFFICE | Conseils facturation & DGI Maroc">
-    <meta property="og:description" content="Guides pratiques, tutoriels et actualités sur la facturation au Maroc : conformité DGI, TVA, ICE, IF.">
+    <meta property="og:title" content="Guides facturation Maroc, TVA & DGI — INVOO OFFICE">
+    <meta property="og:description" content="Topical authority autour de la facturation marocaine : DGI, TVA, ICE, IF, devis, caisse, comptabilité et gestion commerciale.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://invoo-office.ma/blogs/">
+    <meta property="og:url" content="https://invooffice.com/blogs/">
     <meta property="og:locale" content="fr_MA">
     <meta property="og:site_name" content="INVOO OFFICE">
+    <meta property="og:image" content="https://invooffice.com/assets/icons/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Blog INVOO OFFICE — Conseils facturation & DGI Maroc">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blog — INVOO OFFICE | Conseils facturation & DGI Maroc">
-    <meta name="twitter:description" content="Guides pratiques sur la facturation conforme DGI Maroc.">
+    <meta name="twitter:title" content="Guides facturation Maroc, TVA & DGI — INVOO OFFICE">
+    <meta name="twitter:description" content="Réponses concrètes aux questions des PME marocaines sur factures, TVA, ICE, IF et DGI.">
 
     <!-- PWA / Apple -->
     <link rel="manifest" href="/manifest.webmanifest">
@@ -52,6 +56,7 @@
     <link rel="stylesheet" href="../assets/css/hero.css">
     <link rel="stylesheet" href="../assets/css/features.css">
     <link rel="stylesheet" href="../assets/css/faq.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -59,10 +64,29 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "INVOO OFFICE",
-        "url": "https://invoo-office.ma/",
-        "description": "Facturation intelligente conforme DGI Maroc. PWA ultra rapide 100% hors ligne.",
-        "inLanguage": "fr-MA",
-        "applicationCategory": "BusinessApplication"
+        "url": "https://invooffice.com/",
+        "description": "Centre de ressources marocain sur la facturation, la TVA, l'ICE, l'IF, la DGI, les devis et la gestion commerciale.",
+        "inLanguage": "fr-MA"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://invooffice.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guides facturation Maroc",
+                "item": "https://invooffice.com/blogs/"
+            }
+        ]
     }
     </script>
 </head>
@@ -87,7 +111,7 @@
             <div class="nav-cta">
                 <a href="https://wa.me/212630230803?text=Bonjour%20INVOO%20OFFICE%20%F0%9F%91%8B%20Je%20souhaite%20essayer%20votre%20solution%20de%20facturation." target="_blank" class="btn btn-primary" style="font-size:0.875rem; padding: 0.6rem 1.25rem;">Essai gratuit</a>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-expanded="false" aria-label="Menu principal">☰</button>
         </div>
     </nav>
     </header>
@@ -101,10 +125,10 @@
                     BLOG & RESSOURCES
                 </div>
                 <h1 class="hero-title">
-                    Conseils facturation<br>& DGI Maroc
+                    Guides facturation Maroc<br>TVA, DGI & gestion
                 </h1>
                 <p class="hero-subtitle">
-                    Guides pratiques, tutoriels et actualités fiscales pour TPE, PME et freelances marocains.
+                    Un centre de ressources pour comprendre les factures normalisées, la TVA, l'ICE, l'IF, la patente, les devis, la caisse et la gestion commerciale des entreprises marocaines.
                 </p>
             </div>
         </div>
@@ -112,6 +136,29 @@
 
     <section style="padding: 2rem 2rem 6rem;" aria-label="Liste des articles">
         <div class="container">
+            <div class="section-header reveal" style="margin-bottom:2rem;">
+                <div class="section-label">TOPICAL MAP MAROC</div>
+                <h2 class="section-title">Tous les sujets clés<br>de la facturation marocaine</h2>
+                <p class="section-subtitle">Les articles sont organisés pour couvrir les recherches locales : logiciel facturation Maroc, facturation électronique Maroc, DGI Maroc facture, TVA, devis, caisse, comptabilité et auto-entrepreneur.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:3rem;">
+                <a class="feature-card" href="/#fonctionnalites" style="text-decoration:none;color:inherit;padding:1.25rem;">
+                    <h3 class="feature-title" style="font-size:1rem;">Logiciel facturation Maroc</h3>
+                    <p class="feature-desc">Devis, factures, avoirs, clients et fournisseurs pour PME marocaines.</p>
+                </a>
+                <a class="feature-card" href="/#faq" style="text-decoration:none;color:inherit;padding:1.25rem;">
+                    <h3 class="feature-title" style="font-size:1rem;">DGI Maroc facture</h3>
+                    <p class="feature-desc">Mentions utiles : TVA, ICE, IF, patente, RC et facture normalisée.</p>
+                </a>
+                <a class="feature-card" href="/#dashboard" style="text-decoration:none;color:inherit;padding:1.25rem;">
+                    <h3 class="feature-title" style="font-size:1rem;">Facturation TVA Maroc</h3>
+                    <p class="feature-desc">Suivi du chiffre d'affaires, TVA collectée et exports de gestion.</p>
+                </a>
+                <a class="feature-card" href="/#fonctionnalites" style="text-decoration:none;color:inherit;padding:1.25rem;">
+                    <h3 class="feature-title" style="font-size:1rem;">Gestion commerciale Maroc</h3>
+                    <p class="feature-desc">Stock, caisse, bons de livraison et pilotage commercial local.</p>
+                </a>
+            </div>
             <div id="articles-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
                 <!-- Rempli dynamiquement par le script ci-dessous -->
             </div>
@@ -130,7 +177,7 @@
                     <div class="footer-logo-icon">IN</div>
                     INVOO OFFICE
                 </a>
-                <p class="footer-desc">La solution de facturation intelligente conforme DGI Maroc. PWA ultra rapide 100% hors ligne pour TPE, PME, freelances et commerçants.</p>
+                <p class="footer-desc">Logiciel marocain de devis, factures TVA et gestion commerciale conforme aux usages DGI pour PME, TPE, commerçants et auto-entrepreneurs.</p>
                 <div class="footer-badge">
                     <span style="width:6px;height:6px;background:var(--success);border-radius:50%;"></span>
                     Données 100% locales
@@ -139,27 +186,27 @@
             <div class="footer-column">
                 <h4>Produit</h4>
                 <ul class="footer-links">
-                    <li><a href="/#fonctionnalites">Fonctionnalités</a></li>
-                    <li><a href="/#dashboard">Dashboard</a></li>
-                    <li><a href="#">Tarification</a></li>
+                    <li><a href="/#fonctionnalites">Logiciel facturation Maroc</a></li>
+                    <li><a href="/#dashboard">Tableau TVA</a></li>
+                    <li><a href="https://wa.me/212630230803?text=Bonjour%20INVOO%20OFFICE%20%F0%9F%91%8B%20Je%20souhaite%20connaitre%20vos%20tarifs." target="_blank" rel="noopener">Tarification</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>Ressources</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Guide DGI</a></li>
-                    <li><a href="/blogs/">Blog</a></li>
-                    <li><a href="#">API</a></li>
+                    <li><a href="/blogs/">Guides facturation Maroc</a></li>
+                    <li><a href="/blogs/">Guide DGI Maroc</a></li>
+                    <li><a href="/blogs/">TVA, ICE et IF</a></li>
+                    <li><a href="/blogs/">Auto-entrepreneur Maroc</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>Support</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Centre d'aide</a></li>
-                    <li><a href="#">WhatsApp</a></li>
-                    <li><a href="#">Email</a></li>
-                    <li><a href="#">Conformité DGI</a></li>
+                    <li><a href="/#faq">FAQ facturation Maroc</a></li>
+                    <li><a href="https://wa.me/212630230803?text=Bonjour%20INVOO%20OFFICE%20%F0%9F%91%8B%20J%27ai%20une%20question%20sur%20la%20facturation%20au%20Maroc." target="_blank" rel="noopener">Support WhatsApp Maroc</a></li>
+                    <li><a href="/humans.txt">Equipe & expertise</a></li>
+                    <li><a href="/#faq">Conformité DGI</a></li>
                 </ul>
             </div>
         </div>
@@ -191,7 +238,8 @@
                 return;
             }
             grid.innerHTML = published.map(a => `
-                <article class="feature-card" style="padding:0;overflow:hidden;cursor:pointer;" onclick="location.href='/blogs/${a.slug}/'">
+                <article class="feature-card" style="padding:0;overflow:hidden;">
+                    <a href="/blogs/${a.slug}/" aria-label="Lire le guide ${a.title}" style="display:block;color:inherit;text-decoration:none;">
                     <img src="${a.image_url}" alt="${a.title}" style="width:100%;height:200px;object-fit:cover;">
                     <div style="padding:1.5rem;">
                         <span class="section-label" style="margin-bottom:0.75rem;display:inline-flex;">${a.category}</span>
@@ -202,6 +250,7 @@
                             <span style="color:var(--primary-light);font-size:0.875rem;font-weight:600;">Lire →</span>
                         </div>
                     </div>
+                    </a>
                 </article>
             `).join('');
         })
@@ -211,5 +260,10 @@
         });
     </script>
     <script type="module" src="../assets/js/main.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+    </script>
 </body>
 </html>

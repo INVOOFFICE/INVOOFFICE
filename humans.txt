@@ -1,14 +1,18 @@
 /* TEAM */
     Developer: INVOO OFFICE Team
     Contact: https://wa.me/212630230803
-    Language: fr, en
+    Location: Casablanca, Morocco
+    Language: fr-MA, fr, en
+    Expertise: logiciel facturation Maroc, TVA, ICE, IF, gestion commerciale, conformité DGI
 
 /* THANKS */
     DGI Maroc — Pour les références fiscales
+    Experts-comptables marocains — Pour les usages terrain des PME et commerçants
     Supabase — Pour la synchronisation cloud optionnelle
     Google Fonts — Pour les polices Inter et JetBrains Mono
 
 /* SITE */
     Standards: HTML5, CSS3, ES6, PWA, JSON-LD
-    Components: Web App Manifest, Service Worker (PWA)
-    Hosting: invoo-office.ma
+    Components: Web App Manifest, JSON-LD, blog SEO, sitemap XML
+    Market: Maroc francophone
+    Hosting: invooffice.com

@@ -3,22 +3,38 @@ export function toggleFaq(button) {
     const item = button.parentElement;
     const isActive = item.classList.contains('active');
 
-    // Close all
     document.querySelectorAll('.faq-item').forEach(faq => {
         faq.classList.remove('active');
     });
 
-    // Open clicked if wasn't active
     if (!isActive) {
         item.classList.add('active');
     }
 }
 
 export function toggleMobileMenu() {
-    // Simple alert for demo - in production would toggle a mobile menu
-    alert('Menu mobile - En production, ceci ouvrirait un menu latéral responsive');
+    const nav = document.querySelector('.nav-links');
+    const btn = document.querySelector('.mobile-menu-btn');
+    const isOpen = nav.classList.toggle('active');
+    btn.textContent = isOpen ? '✕' : '☰';
+    btn.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+
+    if (isOpen) {
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu, { once: true });
+        });
+    }
 }
 
-// Attach to window for inline onclick handlers in HTML
+function closeMobileMenu() {
+    const nav = document.querySelector('.nav-links');
+    const btn = document.querySelector('.mobile-menu-btn');
+    nav.classList.remove('active');
+    btn.textContent = '☰';
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+}
+
 window.toggleFaq = toggleFaq;
 window.toggleMobileMenu = toggleMobileMenu;
