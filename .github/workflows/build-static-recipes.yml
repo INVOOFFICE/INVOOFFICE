@@ -10,6 +10,8 @@ on:
     branches: [main]
     paths:
       - "blogs.json"
+      - "scripts/build-blog-pages.mjs"
+      - ".github/workflows/build-static-recipes.yml"
   workflow_dispatch:
 
 permissions:
