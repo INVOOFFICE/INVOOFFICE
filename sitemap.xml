@@ -1,42 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-<<<<<<< HEAD
-    <loc>http://invooffice.com/</loc>
-=======
     <loc>https://invooffice.com/</loc>
->>>>>>> 763da51 (SEO + responsive + PWA improvements)
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-<<<<<<< HEAD
-    <loc>http://invooffice.com/blogs/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>http://invooffice.com/blogs/devis-vs-facture-differences-et-bonnes-pratiques-au-maroc/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-05-10</lastmod>
-  </url>
-  <url>
-    <loc>http://invooffice.com/blogs/logiciel-de-facturation-offline-vs-cloud-que-choisir-pour-votre-tpe/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-05-10</lastmod>
-  </url>
-  <url>
-    <loc>http://invooffice.com/blogs/comment-creer-un-bon-de-livraison-conforme-au-maroc/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-05-10</lastmod>
-  </url>
-=======
     <loc>https://invooffice.com/blogs/</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
->>>>>>> 763da51 (SEO + responsive + PWA improvements)
+  <url>
+    <loc>https://invooffice.com/blogs/devis-vs-facture-differences-et-bonnes-pratiques-au-maroc/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+  <url>
+    <loc>https://invooffice.com/blogs/logiciel-de-facturation-offline-vs-cloud-que-choisir-pour-votre-tpe/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+  <url>
+    <loc>https://invooffice.com/blogs/comment-creer-un-bon-de-livraison-conforme-au-maroc/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-10</lastmod>
+  </url>
 </urlset>
