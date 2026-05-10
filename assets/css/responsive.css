@@ -96,6 +96,10 @@
     .footer-grid {
         gap: 2rem;
     }
+    .hero-mockup {
+        transform: none !important;
+        perspective: none !important;
+    }
     .mockup-frame {
         transform: none !important;
     }

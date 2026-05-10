@@ -23,3 +23,8 @@ body {
     background: var(--primary);
     color: white;
 }
+
+:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
