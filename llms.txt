@@ -1,0 +1,28 @@
+# INVOO OFFICE — Logiciel de facturation Maroc conforme DGI
+
+## À propos
+INVOO OFFICE est une PWA (Progressive Web App) de facturation intelligente conforme à la Direction Générale des Impôts (DGI) du Maroc. Solution 100% hors ligne pour TPE, PME, freelances et commerçants marocains.
+
+## Fonctionnalités principales
+- Factures conformes DGI avec TVA, ICE, IF, RC
+- Devis, bons de livraison, avoirs
+- Gestion de stock et fournisseurs
+- Rapports fiscaux prêts pour la DGI
+- 4 templates PDF premium personnalisables
+- Sauvegarde automatique locale (OPFS)
+- Synchronisation cloud optionnelle (Supabase)
+- Support WhatsApp direct
+- 100% hors ligne, aucune installation requise
+
+## Conformité
+- DGI Maroc : TVA, ICE, IF, RC, CNSS
+- Stockage local : OPFS (Origin Private File System)
+- RGPD-friendly : données jamais partagées sans consentement
+
+## FAQ
+1. Fonctionne-t-elle sans internet ? Oui, PWA 100% hors ligne via stockage OPFS.
+2. Conforme DGI Maroc ? Oui, toutes les mentions obligatoires incluses.
+3. Compatible mobile ? Oui, responsive et installable comme application native.
+4. Où sont stockées les données ? Localement dans le navigateur (OPFS).
+5. Sauvegarde possible ? Oui, export JSON portable.
+6. Synchronisation multi-appareils ? Oui, optionnelle via Supabase.

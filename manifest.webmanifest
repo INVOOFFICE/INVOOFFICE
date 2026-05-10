@@ -1,0 +1,57 @@
+{
+    "name": "INVOO OFFICE — Facturation intelligente conforme DGI Maroc",
+    "short_name": "INVOO OFFICE",
+    "description": "Logiciel de facturation intelligent conforme DGI Maroc. PWA 100% hors ligne avec TVA, ICE, IF.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "theme_color": "#1a6b3c",
+    "background_color": "#0a0a0a",
+    "categories": ["business", "finance", "productivity"],
+    "lang": "fr-MA",
+    "dir": "ltr",
+    "icons": [
+        {
+            "src": "/assets/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/assets/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/assets/icons/screenshot.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Vue d'ensemble du dashboard INVOO OFFICE"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Nouvelle facture",
+            "short_name": "Facture",
+            "description": "Créer une nouvelle facture conforme DGI",
+            "url": "/#facture"
+        },
+        {
+            "name": "Dashboard",
+            "short_name": "Dashboard",
+            "description": "Voir le tableau de bord financier",
+            "url": "/#dashboard"
+        },
+        {
+            "name": "Contact support",
+            "short_name": "Support",
+            "description": "Contacter le support via WhatsApp",
+            "url": "https://wa.me/212630230803"
+        }
+    ]
+}

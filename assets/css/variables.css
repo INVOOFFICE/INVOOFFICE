@@ -1,0 +1,24 @@
+/* === Tokens CSS — variables :root === */
+:root {
+    --primary: #1a6b3c;
+    --primary-light: #2d8a52;
+    --primary-dark: #0f4a28;
+    --primary-glow: rgba(26, 107, 60, 0.15);
+    --dark: #0a0a0a;
+    --dark-elevated: #111111;
+    --dark-card: #141414;
+    --dark-border: rgba(255,255,255,0.06);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255,255,255,0.6);
+    --text-muted: rgba(255,255,255,0.35);
+    --glass-bg: rgba(20, 20, 20, 0.7);
+    --glass-border: rgba(255,255,255,0.08);
+    --success: #22c55e;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-medium: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}

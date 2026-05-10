@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVOO OFFICE — Logiciel facturation Maroc conforme DGI, PWA hors ligne</title>
+    <meta name="description" content="INVOO OFFICE : logiciel de facturation intelligent conforme DGI Maroc. PWA 100% hors ligne avec TVA, ICE, IF. Pour TPE, PME, freelances et commerçants marocains.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://invoo-office.ma/">
+    <link rel="alternate" href="https://invoo-office.ma/" hreflang="fr-MA">
+    <link rel="alternate" href="https://invoo-office.ma/" hreflang="x-default">
+    <meta name="author" content="INVOO OFFICE">
+    <meta name="theme-color" content="#1a6b3c">
+    <meta name="application-name" content="INVOO OFFICE">
+    <meta name="generator" content="INVOO OFFICE">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="INVOO OFFICE — Logiciel facturation Maroc conforme DGI">
+    <meta property="og:description" content="Facturation intelligente conforme DGI Maroc. PWA ultra rapide 100% hors ligne pour TPE, PME et freelances.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://invoo-office.ma/">
+    <meta property="og:locale" content="fr_MA">
+    <meta property="og:site_name" content="INVOO OFFICE">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="INVOO OFFICE — Logiciel facturation Maroc conforme DGI">
+    <meta name="twitter:description" content="Facturation intelligente conforme DGI Maroc. PWA ultra rapide 100% hors ligne.">
+
+    <!-- PWA / Apple -->
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="INVOO OFFICE">
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png">
+    <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+
+    <!-- Preconnect & Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/features.css">
+    <link rel="stylesheet" href="assets/css/why.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/pricing.css">
+    <link rel="stylesheet" href="assets/css/faq.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "INVOO OFFICE",
+        "url": "https://invoo-office.ma/",
+        "description": "Logiciel de facturation intelligent conforme DGI Maroc. PWA 100% hors ligne avec TVA, ICE, IF, RC.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web browser (PWA)",
+        "browserRequirements": "Requires JavaScript. PWA compatible.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "MAD",
+            "description": "Free trial available"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "INVOO OFFICE"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "INVOO OFFICE",
+        "url": "https://invoo-office.ma/",
+        "description": "Solution de facturation intelligente conforme DGI Maroc.",
+        "foundingLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Casablanca",
+                "addressCountry": "MA"
+            }
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "MA"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "INVOO OFFICE",
+        "url": "https://invoo-office.ma/",
+        "description": "Facturation intelligente conforme DGI Maroc. PWA ultra rapide 100% hors ligne.",
+        "inLanguage": "fr-MA",
+        "applicationCategory": "BusinessApplication"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Fonctionne-t-elle sans internet ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, absolument. INVOO OFFICE est une PWA qui fonctionne 100% hors ligne grâce au stockage OPFS de votre navigateur. Vous pouvez créer, modifier et consulter toutes vos factures même sans connexion internet."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Est-ce conforme aux exigences de la DGI Maroc ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, INVOO OFFICE est entièrement conforme aux exigences de la Direction Générale des Impôts du Maroc. Toutes les factures incluent automatiquement les mentions obligatoires : TVA, ICE, IF, RC."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Est-ce compatible avec les appareils mobiles ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, INVOO OFFICE est entièrement responsive et fonctionne parfaitement sur mobile, tablette et PC. Vous pouvez l'installer comme une application native sur votre téléphone."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Où sont stockées mes données ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Vos données sont stockées localement dans votre navigateur via l'API OPFS. Elles ne quittent jamais votre appareil sauf si vous activez la synchronisation cloud optionnelle."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Peut-on sauvegarder ses données ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, vous pouvez exporter l'intégralité de vos données à tout moment sous forme de fichier JSON portable sur votre ordinateur ou cloud."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Peut-on synchroniser plusieurs appareils ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, via la synchronisation optionnelle avec Supabase. Cette fonctionnalité est totalement optionnelle et désactivée par défaut."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Noise Overlay -->
+    <div class="noise"></div>
+
+    <!-- Animated Background -->
+    <div class="hero-bg"></div>
+
+    <!-- NAVBAR: components/navbar.html -->
+    <header role="banner">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="nav-logo-icon">IN</div>
+                INVOO OFFICE
+            </a>
+            <ul class="nav-links">
+                <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+                <li><a href="#fonctionnalites">Pourquoi nous</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#pdf">Templates PDF</a></li>
+                <li><a href="#securite">Sécurité</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="/blogs/">Blog</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="https://wa.me/212630230803?text=Bonjour%20INVOO%20OFFICE%20%F0%9F%91%8B%20Je%20souhaite%20essayer%20votre%20solution%20de%20facturation." target="_blank" class="btn btn-primary" style="font-size:0.875rem; padding: 0.6rem 1.25rem;">Essai gratuit</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+    </header>
+
+    <main id="main-content" role="main">
+
+    <!-- HERO: components/hero.html -->
+    <section class="hero" aria-label="Présentation">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    Conforme DGI Maroc
+                </div>
+                <h1 class="hero-title">
+                    Facturation <span class="highlight">intelligente</span><br>
+                    conforme DGI Maroc
+                </h1>
+                <p class="hero-subtitle">
+                    PWA ultra rapide 100 % hors ligne avec stockage local sécurisé et génération PDF professionnelle. Pensée pour les TPE, PME, freelances et commerçants marocains.
+                </p>
+                <div style="display:inline-flex;align-items:center;gap:0.75rem;background:linear-gradient(135deg,rgba(245,158,11,0.15),rgba(245,158,11,0.05));border:1px solid rgba(245,158,11,0.3);border-radius:var(--radius-lg);padding:0.75rem 1.5rem;margin-bottom:1.5rem;">
+                    <span style="font-size:1.5rem;">⚡</span>
+                    <div>
+                        <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">Offre exceptionnelle</div>
+                        <div style="font-size:1.5rem;font-weight:800;color:#f59e0b;line-height:1.2;">500 DH <span style="font-size:0.875rem;font-weight:400;color:var(--text-muted);text-decoration:line-through;">2 500 DH</span> <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">à vie</span></div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary btn-lg">
+                        Commencer maintenant
+                        <span>→</span>
+                    </a>
+                    <a href="#" class="btn btn-secondary btn-lg">
+                        Voir la démonstration
+                    </a>
+                </div>
+
+                <!-- Security badges -->
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; font-size: 0.75rem; color: var(--text-muted);">
+                    <span>🔒 Stockage local chiffré</span>
+                    <span>☁️ 0 % cloud obligatoire</span>
+                    <span>💾 Sauvegarde portable</span>
+                    <span>🛡️ Confidentialité totale</span>
+                </div>
+
+            </div>
+            <div class="hero-visual">
+                <div class="mockup-frame">
+                    <div class="mockup-glow"></div>
+                    <div class="mockup-header">
+                        <div class="mockup-dot"></div>
+                        <div class="mockup-dot"></div>
+                        <div class="mockup-dot"></div>
+                        <span style="margin-left:auto;font-size:0.75rem;color:var(--text-muted);">INVOO OFFICE Dashboard</span>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="mockup-sidebar">
+                            <div class="mockup-nav">
+                                <div class="mockup-nav-item active">📊</div>
+                                <div class="mockup-nav-item">📄</div>
+                                <div class="mockup-nav-item">📦</div>
+                                <div class="mockup-nav-item">👥</div>
+                                <div class="mockup-nav-item">⚙️</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-topbar">
+                                    <div class="mockup-search"></div>
+                                    <div class="mockup-avatar"></div>
+                                </div>
+                                <div class="mockup-cards">
+                                    <div class="mockup-card">
+                                        <div class="mockup-card-label">CA Mensuel</div>
+                                        <div class="mockup-card-value" style="color:var(--primary-light);">142.5K</div>
+                                    </div>
+                                    <div class="mockup-card">
+                                        <div class="mockup-card-label">Factures</div>
+                                        <div class="mockup-card-value">847</div>
+                                    </div>
+                                    <div class="mockup-card">
+                                        <div class="mockup-card-label">Clients</div>
+                                        <div class="mockup-card-value">126</div>
+                                    </div>
+                                </div>
+                                <div class="mockup-chart">
+                                    <div class="mockup-chart-bars">
+                                        <div class="mockup-bar" style="height:40%"></div>
+                                        <div class="mockup-bar" style="height:65%"></div>
+                                        <div class="mockup-bar" style="height:45%"></div>
+                                        <div class="mockup-bar" style="height:80%"></div>
+                                        <div class="mockup-bar" style="height:55%"></div>
+                                        <div class="mockup-bar" style="height:90%"></div>
+                                        <div class="mockup-bar" style="height:70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLATEFORME COMPLÈTE: features + why fusionnées -->
+    <section class="features" id="fonctionnalites" aria-label="Fonctionnalités">
+        <div class="container">
+
+            <!-- EN-TÊTE -->
+            <div class="section-header reveal">
+                <div class="section-label">PLATEFORME COMPLÈTE</div>
+                <h2 class="section-title">La solution marocaine<br>de référence</h2>
+                <p class="section-subtitle">Une suite complète de fonctionnalités pensées pour la facturation marocaine moderne, conforme aux exigences de la DGI.</p>
+            </div>
+
+            <!-- GRILLE DE FEATURES -->
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📄</div>
+                    <h3 class="feature-title">Factures professionnelles</h3>
+                    <p class="feature-desc">Générez des factures conformes DGI avec TVA, ICE, IF et toutes les mentions obligatoires.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📋</div>
+                    <h3 class="feature-title">Devis</h3>
+                    <p class="feature-desc">Créez et envoyez des devis professionnels transformables en factures en un clic.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🚚</div>
+                    <h3 class="feature-title">Bons de livraison</h3>
+                    <p class="feature-desc">Gérez vos bons de livraison avec suivi des expéditions et signatures électroniques.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">Avoirs</h3>
+                    <p class="feature-desc">Émettez des avoirs et notes de crédit conformes à la réglementation fiscale marocaine.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📦</div>
+                    <h3 class="feature-title">Gestion de stock</h3>
+                    <p class="feature-desc">Suivez vos stocks en temps réel avec alertes de seuil et inventaire automatique.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🏭</div>
+                    <h3 class="feature-title">Fournisseurs</h3>
+                    <p class="feature-desc">Gérez votre base fournisseurs avec historique des achats et paiements.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Rapports fiscaux</h3>
+                    <p class="feature-desc">Exportez vos déclarations TVA et rapports fiscaux prêts pour la DGI.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Templates PDF premium</h3>
+                    <p class="feature-desc">4 templates professionnels personnalisables avec votre logo et vos couleurs.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">💾</div>
+                    <h3 class="feature-title">Sauvegarde automatique</h3>
+                    <p class="feature-desc">Vos données sont sauvegardées automatiquement dans le navigateur, sans risque de perte.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">☁️</div>
+                    <h3 class="feature-title">Synchronisation Supabase</h3>
+                    <p class="feature-desc">Synchronisation cloud optionnelle avec Supabase pour un accès multi-appareils.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="feature-title">Support WhatsApp</h3>
+                    <p class="feature-desc">Assistance technique directe via WhatsApp pour une réponse rapide et personnalisée.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">100% hors ligne</h3>
+                    <p class="feature-desc">Fonctionne sans internet grâce au stockage OPFS du navigateur. Vos données restent locales.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Données locales</h3>
+                    <p class="feature-desc">Aucune donnée ne quitte votre appareil sans votre consentement. Confidentialité maximale.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">💻</div>
+                    <h3 class="feature-title">Multi-plateforme</h3>
+                    <p class="feature-desc">Compatible mobile, tablette et PC. Une expérience optimale sur tous les écrans.</p>
+                </div>
+            </div>
+
+            <!-- SÉPARATEUR VISUEL -->
+            <div style="background: linear-gradient(90deg, transparent, rgba(26,107,60,0.3), transparent); height: 1px; margin: 4rem 0;"></div>
+
+            <!-- BLOC "POURQUOI INVOO" -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+
+                <!-- Colonne gauche : mockup visuel -->
+                <div class="reveal">
+                    <div style="position:relative;">
+                        <div class="mockup-frame" style="transform:none;">
+                            <div class="mockup-header">
+                                <div class="mockup-dot"></div>
+                                <div class="mockup-dot"></div>
+                                <div class="mockup-dot"></div>
+                            </div>
+                            <div style="padding:2rem; text-align:center;">
+                                <div style="width:80px;height:80px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:50%;margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center;font-size:2rem;">⚡</div>
+                                <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">PWA Ultra Rapide</h3>
+                                <p style="color:var(--text-secondary);font-size:0.875rem;">Temps de chargement instantané grâce au stockage local OPFS</p>
+                                <div style="margin-top:2rem;display:flex;justify-content:center;gap:1rem;">
+                                    <div style="text-align:center;">
+                                        <div style="font-size:1.5rem;font-weight:800;color:var(--primary-light);">0ms</div>
+                                        <div style="font-size:0.625rem;color:var(--text-muted);">LATENCE</div>
+                                    </div>
+                                    <div style="width:1px;background:var(--dark-border);"></div>
+                                    <div style="text-align:center;">
+                                        <div style="font-size:1.5rem;font-weight:800;color:var(--primary-light);">∞</div>
+                                        <div style="font-size:0.625rem;color:var(--text-muted);">DONNÉES</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;background:linear-gradient(135deg,var(--primary),transparent);border-radius:50%;filter:blur(40px);opacity:0.3;"></div>
+                    </div>
+                </div>
+
+                <!-- Colonne droite : avantages en cards compactes -->
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <div style="background: rgba(26,107,60,0.05); border: 1px solid rgba(26,107,60,0.15); border-radius: var(--radius-md); padding: 0.75rem 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--success); font-size: 0.625rem;">✓</div>
+                        <div>
+                            <div style="font-size: 0.9375rem; font-weight: 600;">Aucune installation compliquée</div>
+                            <div style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.125rem;">Ouvrez simplement votre navigateur et commencez immédiatement. Aucun téléchargement requis.</div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(26,107,60,0.05); border: 1px solid rgba(26,107,60,0.15); border-radius: var(--radius-md); padding: 0.75rem 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--success); font-size: 0.625rem;">✓</div>
+                        <div>
+                            <div style="font-size: 0.9375rem; font-weight: 600;">Application ultra rapide</div>
+                            <div style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.125rem;">Stockage OPFS natif du navigateur pour des performances maximales sans latence.</div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(26,107,60,0.05); border: 1px solid rgba(26,107,60,0.15); border-radius: var(--radius-md); padding: 0.75rem 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--success); font-size: 0.625rem;">✓</div>
+                        <div>
+                            <div style="font-size: 0.9375rem; font-weight: 600;">PWA moderne</div>
+                            <div style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.125rem;">Progressive Web App installable sur mobile, tablette et desktop comme une application native.</div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(26,107,60,0.05); border: 1px solid rgba(26,107,60,0.15); border-radius: var(--radius-md); padding: 0.75rem 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--success); font-size: 0.625rem;">✓</div>
+                        <div>
+                            <div style="font-size: 0.9375rem; font-weight: 600;">Données illimitées</div>
+                            <div style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.125rem;">Stockage local illimité dans le navigateur. Aucune limite de factures ou de clients.</div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(26,107,60,0.05); border: 1px solid rgba(26,107,60,0.15); border-radius: var(--radius-md); padding: 0.75rem 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--success); font-size: 0.625rem;">✓</div>
+                        <div>
+                            <div style="font-size: 0.9375rem; font-weight: 600;">Fonctionne sans internet</div>
+                            <div style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.125rem;">Créez, modifiez et consultez vos documents même en mode hors connexion.</div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(26,107,60,0.05); border: 1px solid rgba(26,107,60,0.15); border-radius: var(--radius-md); padding: 0.75rem 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--success); font-size: 0.625rem;">✓</div>
+                        <div>
+                            <div style="font-size: 0.9375rem; font-weight: 600;">Sécurité locale maximale</div>
+                            <div style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.125rem;">Vos données restent sur votre appareil. Aucun serveur externe obligatoire.</div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(26,107,60,0.05); border: 1px solid rgba(26,107,60,0.15); border-radius: var(--radius-md); padding: 0.75rem 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--success); font-size: 0.625rem;">✓</div>
+                        <div>
+                            <div style="font-size: 0.9375rem; font-weight: 600;">Conforme entreprises marocaines</div>
+                            <div style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.125rem;">TVA, ICE, IF, RC, CNSS — toutes les mentions obligatoires selon la législation marocaine.</div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(26,107,60,0.05); border: 1px solid rgba(26,107,60,0.15); border-radius: var(--radius-md); padding: 0.75rem 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--success); font-size: 0.625rem;">✓</div>
+                        <div>
+                            <div style="font-size: 0.9375rem; font-weight: 600;">Optimisé impression PDF</div>
+                            <div style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.125rem;">Export PDF haute qualité prêt à l'impression ou à l'envoi par email.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DASHBOARD: components/dashboard.html -->
+    <section class="dashboard-section" id="dashboard" aria-label="Aperçu du tableau de bord">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Dashboard</div>
+                <h2 class="section-title">Votre cockpit<br>financier</h2>
+                <p class="section-subtitle">Une interface intuitive et puissante pour piloter votre activité en temps réel.</p>
+            </div>
+            <div class="dashboard-preview reveal">
+                <div class="dashboard-header">
+                    <div class="dashboard-tabs">
+                        <button class="dashboard-tab active">Vue d'ensemble</button>
+                        <button class="dashboard-tab">Factures</button>
+                        <button class="dashboard-tab">Stock</button>
+                        <button class="dashboard-tab">Rapports</button>
+                    </div>
+                    <div style="display:flex;gap:0.5rem;align-items:center;">
+                        <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-light));display:flex;align-items:center;justify-content:center;font-size:0.75rem;">👤</div>
+                    </div>
+                </div>
+                <div class="dashboard-body">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-logo">
+                            <div class="sidebar-logo-icon">IN</div>
+                            <span class="sidebar-logo-text">INVOO OFFICE</span>
+                        </div>
+                        <div class="sidebar-menu">
+                            <div class="sidebar-item active">📊 Tableau de bord</div>
+                            <div class="sidebar-item">📄 Factures</div>
+                            <div class="sidebar-item">📋 Devis</div>
+                            <div class="sidebar-item">🚚 Bons de livraison</div>
+                            <div class="sidebar-item">🔄 Avoirs</div>
+                            <div class="sidebar-item">📦 Stock</div>
+                            <div class="sidebar-item">🏭 Fournisseurs</div>
+                            <div class="sidebar-item">👥 Clients</div>
+                            <div class="sidebar-item">📊 Rapports</div>
+                            <div class="sidebar-item">⚙️ Paramètres</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-main">
+                        <div class="dashboard-stats-row">
+                            <div class="dash-stat">
+                                <div class="dash-stat-label">Chiffre d'affaires</div>
+                                <div class="dash-stat-value" style="color:var(--primary-light);">245.8K <span style="font-size:0.75rem;">MAD</span></div>
+                                <div class="dash-stat-trend">↑ +12.5% ce mois</div>
+                            </div>
+                            <div class="dash-stat">
+                                <div class="dash-stat-label">Factures émises</div>
+                                <div class="dash-stat-value">1,247</div>
+                                <div class="dash-stat-trend">↑ +8.2% ce mois</div>
+                            </div>
+                            <div class="dash-stat">
+                                <div class="dash-stat-label">Clients actifs</div>
+                                <div class="dash-stat-value">186</div>
+                                <div class="dash-stat-trend">↑ +5 nouveaux</div>
+                            </div>
+                            <div class="dash-stat">
+                                <div class="dash-stat-label">TVA collectée</div>
+                                <div class="dash-stat-value">42.3K <span style="font-size:0.75rem;">MAD</span></div>
+                                <div class="dash-stat-trend down">↓ -2.1% ce mois</div>
+                            </div>
+                        </div>
+                        <div class="dashboard-chart-area">
+                            <div class="dash-panel">
+                                <div class="dash-panel-title">Évolution du CA</div>
+                                <div class="chart-placeholder">
+                                    <div class="chart-bar" style="height:30%"></div>
+                                    <div class="chart-bar" style="height:45%"></div>
+                                    <div class="chart-bar" style="height:35%"></div>
+                                    <div class="chart-bar" style="height:60%"></div>
+                                    <div class="chart-bar" style="height:50%"></div>
+                                    <div class="chart-bar" style="height:75%"></div>
+                                    <div class="chart-bar" style="height:65%"></div>
+                                    <div class="chart-bar" style="height:85%"></div>
+                                    <div class="chart-bar" style="height:70%"></div>
+                                    <div class="chart-bar" style="height:90%"></div>
+                                    <div class="chart-bar" style="height:80%"></div>
+                                    <div class="chart-bar" style="height:95%"></div>
+                                </div>
+                            </div>
+                            <div class="dash-panel">
+                                <div class="dash-panel-title">Dernières factures</div>
+                                <div class="recent-invoices">
+                                    <div class="invoice-row">
+                                        <span>FAC-2026-0042</span>
+                                        <span style="color:var(--text-muted);">12,500 MAD</span>
+                                        <span class="invoice-status status-paid">Payée</span>
+                                    </div>
+                                    <div class="invoice-row">
+                                        <span>FAC-2026-0041</span>
+                                        <span style="color:var(--text-muted);">8,750 MAD</span>
+                                        <span class="invoice-status status-paid">Payée</span>
+                                    </div>
+                                    <div class="invoice-row">
+                                        <span>FAC-2026-0040</span>
+                                        <span style="color:var(--text-muted);">15,200 MAD</span>
+                                        <span class="invoice-status status-pending">En attente</span>
+                                    </div>
+                                    <div class="invoice-row">
+                                        <span>FAC-2026-0039</span>
+                                        <span style="color:var(--text-muted);">3,400 MAD</span>
+                                        <span class="invoice-status status-paid">Payée</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" id="temoignages" aria-label="Témoignages">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Témoignages</div>
+                <h2 class="section-title">Ils nous font<br>confiance</h2>
+                <p class="section-subtitle">Des entrepreneurs marocains qui ont transformé leur facturation avec INVOO OFFICE.</p>
+            </div>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+
+                <div class="testimonial-card" style="background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 2rem;">
+                    <div style="color: #f59e0b; margin-bottom: 1rem; font-size: 1rem;">★★★★★</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">"Enfin une solution de facturation qui comprend les besoins des commerçants marocains. La conformité DGI est impeccable et le fonctionnement hors ligne me sauve la vie dans ma boutique à Tanger."</p>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem; color: white;">AY</div>
+                        <div>
+                            <div style="font-weight: 600; font-size: 0.875rem;">Ahmed Youssefi</div>
+                            <div style="color: var(--text-muted); font-size: 0.75rem;">Commerçant, Tanger</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 2rem;">
+                    <div style="color: #f59e0b; margin-bottom: 1rem; font-size: 1rem;">★★★★★</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">"En tant que freelance designer, j'avais besoin d'un outil simple mais professionnel. INVOO OFFICE génère des factures magnifiques que mes clients internationaux apprécient. Le support WhatsApp est réactif."</p>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem; color: white;">SB</div>
+                        <div>
+                            <div style="font-weight: 600; font-size: 0.875rem;">Sara Benkirane</div>
+                            <div style="color: var(--text-muted); font-size: 0.75rem;">Freelance Designer, Casablanca</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 2rem;">
+                    <div style="color: #f59e0b; margin-bottom: 1rem; font-size: 1rem;">★★★★★</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">"Notre PME de 12 employés utilise INVOO OFFICE depuis 6 mois. La gestion de stock intégrée et les rapports fiscaux nous font gagner un temps précieux chaque mois. Hautement recommandé."</p>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem; color: white;">MA</div>
+                        <div>
+                            <div style="font-weight: 600; font-size: 0.875rem;">Mohamed Amrani</div>
+                            <div style="color: var(--text-muted); font-size: 0.75rem;">Directeur, PME Import-Export, Rabat</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ: components/faq.html -->
+    <section class="faq-section" id="faq" aria-label="Questions fréquentes">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">FAQ</div>
+                <h2 class="section-title">Questions<br>fréquentes</h2>
+                <p class="section-subtitle">Tout ce que vous devez savoir sur INVOO OFFICE.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Fonctionne-t-elle sans internet ?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, absolument. INVOO OFFICE est une PWA (Progressive Web App) qui fonctionne 100% hors ligne grâce au stockage OPFS (Origin Private File System) de votre navigateur. Vous pouvez créer, modifier et consulter toutes vos factures même sans connexion internet.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Est-ce conforme aux exigences de la DGI Maroc ?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, INVOO OFFICE est entièrement conforme aux exigences de la Direction Générale des Impôts du Maroc. Toutes les factures incluent automatiquement les mentions obligatoires : TVA, ICE, IF, RC, et autres informations fiscales requises.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Est-ce compatible avec les appareils mobiles ?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, INVOO OFFICE est entièrement responsive et fonctionne parfaitement sur mobile, tablette et PC. Vous pouvez même l'installer comme une application native sur votre téléphone depuis votre navigateur.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Où sont stockées mes données ?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Vos données sont stockées localement dans votre navigateur via l'API OPFS (Origin Private File System). Elles ne quittent jamais votre appareil sauf si vous choisissez explicitement d'activer la synchronisation cloud optionnelle.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Peut-on sauvegarder ses données ?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, vous pouvez exporter l'intégralité de vos données à tout moment sous forme de fichier JSON portable. Cette sauvegarde peut être stockée sur votre ordinateur, une clé USB ou tout service de cloud de votre choix.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Peut-on synchroniser plusieurs appareils ?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, via la synchronisation optionnelle avec Supabase. Cette fonctionnalité vous permet de synchroniser vos données entre plusieurs appareils (mobile, tablette, PC) de manière sécurisée. Elle est totalement optionnelle et désactivée par défaut.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA: components/cta.html -->
+    <section style="padding: 6rem 2rem; text-align: center;" aria-label="Appel à l'action">
+        <div class="container reveal">
+            <div style="background: linear-gradient(135deg, rgba(26,107,60,0.1) 0%, rgba(26,107,60,0.05) 100%); border: 1px solid rgba(26,107,60,0.2); border-radius: var(--radius-xl); padding: 4rem 2rem; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(26,107,60,0.1) 0%, transparent 50%);"></div>
+                <h2 style="font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; position: relative;">Prêt à moderniser votre facturation ?</h2>
+                <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; position: relative;">Rejoignez les entreprises marocaines qui ont déjà adopté INVOO OFFICE.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative;">
+                    <a href="https://wa.me/212630230803?text=Bonjour%20INVOO%20OFFICE%20%F0%9F%91%8B%20Je%20souhaite%20essayer%20votre%20solution%20de%20facturation." target="_blank" class="btn btn-primary btn-lg">Commencer gratuitement</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="features" id="blog" aria-label="Blog" style="padding-bottom:2rem;">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">BLOG</div>
+                <h2 class="section-title">Conseils & guides<br>DGI Maroc</h2>
+                <p class="section-subtitle">Restez informé des dernières actualités fiscales marocaines.</p>
+            </div>
+            <div id="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem;">
+            </div>
+            <div id="blog-empty" style="display:none;text-align:center;padding:2rem;">
+                <p style="color:var(--text-muted);">Aucun article publié pour le moment.</p>
+            </div>
+            <div style="text-align:center;margin-top:3rem;">
+                <a href="/blogs/" class="btn btn-secondary btn-lg">Voir tous les articles →</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER: components/footer.html -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">
+                    <div class="footer-logo-icon">IN</div>
+                    INVOO OFFICE
+                </a>
+                <p class="footer-desc">La solution de facturation intelligente conforme DGI Maroc. PWA ultra rapide 100% hors ligne pour TPE, PME, freelances et commerçants.</p>
+                <div class="footer-badge">
+                    <span style="width:6px;height:6px;background:var(--success);border-radius:50%;"></span>
+                    Données 100% locales
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Produit</h4>
+                <ul class="footer-links">
+                    <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+                    <li><a href="#pdf">Templates PDF</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#">Tarification</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Ressources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Guide DGI</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">API</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Conformité DGI</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2026 INVOO OFFICE. Tous droits réservés. Conforme DGI Maroc.
+            </div>
+            <div class="footer-social">
+                <a href="#" title="WhatsApp">💬</a>
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="Twitter">𝕏</a>
+                <a href="#" title="GitHub">⚡</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    fetch('/blogs.json')
+        .then(r => r.json())
+        .then(articles => {
+            const grid = document.getElementById('blog-grid');
+            const empty = document.getElementById('blog-empty');
+            const published = articles
+                .filter(a => a.status === 'published')
+                .sort((a,b) => new Date(b.published_at) - new Date(a.published_at))
+                .slice(0, 3);
+            if (published.length === 0) {
+                grid.style.display = 'none';
+                if (empty) empty.style.display = 'block';
+                return;
+            }
+            grid.innerHTML = published.map(a => `
+                <article class="feature-card" style="padding:0;overflow:hidden;cursor:pointer;" onclick="location.href='/blogs/${a.slug}/'">
+                    <img src="${a.image_url}" alt="${a.title}" style="width:100%;height:200px;object-fit:cover;">
+                    <div style="padding:1.5rem;">
+                        <span class="section-label" style="margin-bottom:0.75rem;display:inline-flex;">${a.category}</span>
+                        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;line-height:1.4;">${a.title}</h3>
+                        <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">${a.meta_description}</p>
+                        <div style="display:flex;align-items:center;justify-content:space-between;">
+                            <span style="font-size:0.75rem;color:var(--text-muted);">${new Date(a.published_at).toLocaleDateString('fr-MA', {day:'numeric',month:'long',year:'numeric'})}</span>
+                            <span style="color:var(--primary-light);font-size:0.875rem;font-weight:600;">Lire →</span>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        })
+        .catch(() => {
+            document.getElementById('blog-grid').style.display = 'none';
+            const empty = document.getElementById('blog-empty');
+            if (empty) empty.style.display = 'block';
+        });
+    </script>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
