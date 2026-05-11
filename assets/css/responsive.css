@@ -133,6 +133,10 @@
     .nav-links {
         display: none;
     }
+    .home-page .nav-cta,
+    .article-page .nav-cta {
+        display: none;
+    }
     .mobile-menu-btn {
         display: block;
     }

@@ -247,6 +247,7 @@ ${faqs.length ? buildFaqSchema(faqs) : ''}
   <link rel="stylesheet" href="../../assets/css/animations.css">
   <link rel="stylesheet" href="../../assets/css/layout.css">
   <link rel="stylesheet" href="../../assets/css/buttons.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
 
   <style>
     /* ── Article page styles ── */
@@ -456,12 +457,13 @@ ${faqs.length ? buildFaqSchema(faqs) : ''}
     }
   </style>
 </head>
-<body>
+<body class="article-page">
 
   <div class="hero-bg"></div>
   <div class="noise"></div>
 
   <!-- NAVBAR -->
+  <header role="banner">
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../../" class="nav-logo">
@@ -470,15 +472,20 @@ ${faqs.length ? buildFaqSchema(faqs) : ''}
       </a>
       <ul class="nav-links">
         <li><a href="../../#fonctionnalites">Fonctionnalités</a></li>
-        <li><a href="../../#dashboard">Dashboard</a></li>
-        <li><a href="../../#tarifs">Tarifs</a></li>
-        <li><a href="../../blogs/">Blog</a></li>
+        <li><a href="../../#fonctionnalites">Pourquoi nous</a></li>
+        <li><a href="../../#dashboard">Tableau TVA</a></li>
+        <li><a href="../../#fonctionnalites">Devis & factures</a></li>
+        <li><a href="../../#securite">Données locales</a></li>
+        <li><a href="../../#faq">FAQ DGI</a></li>
+        <li><a href="../../blogs/">Guides Maroc</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="${CTA_WA}" target="_blank" rel="noopener" class="btn btn-primary">Essai gratuit</a>
+        <a href="${CTA_WA}" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.875rem; padding: 0.6rem 1.25rem;">Essai gratuit</a>
       </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-expanded="false" aria-label="Menu principal">☰</button>
     </div>
   </nav>
+  </header>
 
   <!-- ARTICLE HERO -->
   <div class="article-hero">
@@ -566,13 +573,7 @@ ${faqs.length ? buildFaqSchema(faqs) : ''}
     </div>
   </footer>
 
-  <script>
-    // Navbar scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
-  </script>
+  <script type="module" src="../../assets/js/main.js"></script>
 
 </body>
 </html>`;
