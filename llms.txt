@@ -43,3 +43,6 @@ comptable.
 
 - [Avoir et note de credit au Maroc : corriger une facture proprement](https://invooffice.com/blogs/avoir-et-note-de-credit-au-maroc-corriger-une-facture-proprement/)
   Corrigez vos factures avec INVOO OFFICE et evitez les problemes avec la DGI Maroc. Decouvrez notre logiciel de facturation Maroc pour PME et entrepreneurs.
+
+- [DGI Maroc et facturation : organiser ses documents sans stress](https://invooffice.com/blogs/dgi-maroc-et-facturation-organiser-ses-documents-sans-stress/)
+  Gérez vos factures TVA et déclarations DGI en toute simplicité avec INVOO OFFICE. Essayez notre logiciel de facturation en ligne pour les PME marocaines.
