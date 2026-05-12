@@ -1,4 +1,4 @@
-const CACHE_NAME = 'invoocache-v1';
+const CACHE_NAME = 'invoocache-v2';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
@@ -18,7 +18,8 @@ const PRECACHE_URLS = [
   '/assets/icons/icon-192.png',
   '/assets/icons/icon-512.png',
   '/assets/icons/favicon-32.png',
-  '/assets/icons/favicon-16.png'
+  '/assets/icons/favicon-16.png',
+  '/blogs.json'
 ];
 
 const STATIC_ASSET_REGEX = /\.(css|js|png|jpg|jpeg|gif|svg|ico|webp|woff2?|ttf|otf|eot)(\?.*)?$/;

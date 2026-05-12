@@ -245,7 +245,6 @@ ${faqs.length ? buildFaqSchema(faqs) : ''}
   <link rel="stylesheet" href="../../assets/css/variables.css">
   <link rel="stylesheet" href="../../assets/css/base.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/responsive.css">
 
   <style>
     /* ── Article page styles ── */
