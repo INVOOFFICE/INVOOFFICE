@@ -244,9 +244,7 @@ ${faqs.length ? buildFaqSchema(faqs) : ''}
   <!-- CSS du site principal -->
   <link rel="stylesheet" href="../../assets/css/variables.css">
   <link rel="stylesheet" href="../../assets/css/base.css">
-  <link rel="stylesheet" href="../../assets/css/animations.css">
-  <link rel="stylesheet" href="../../assets/css/layout.css">
-  <link rel="stylesheet" href="../../assets/css/buttons.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/responsive.css">
 
   <style>

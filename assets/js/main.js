@@ -1,10 +1,9 @@
-import './navbar.js';
-import './reveal.js';
-import './counter.js';
-import './faq.js';
-import './charts.js';
+import './modules/navbar.js';
+import './modules/reveal.js';
+import './modules/counter.js';
+import './modules/faq.js';
+import './modules/charts.js';
 
-// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

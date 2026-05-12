@@ -13,38 +13,11 @@
     .hero-grid {
         gap: 3rem;
     }
-    .why-grid {
-        gap: 3rem;
-    }
-}
-
-/* ============================================ */
-/*              1024px — Tablet Landscape       */
-/* ============================================ */
-@media (max-width: 1024px) {
-    .nav-links {
-        gap: 1rem;
-    }
-    .nav-links a {
-        font-size: 0.8125rem;
-    }
-    .nav-cta .btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.8125rem;
-    }
     .hero-grid {
         gap: 2rem;
     }
     .hero-title {
         font-size: clamp(2.25rem, 5vw, 3.5rem);
-    }
-    .why-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-    .why-visual {
-        max-width: 480px;
-        margin: 0 auto;
     }
     .dashboard-body {
         grid-template-columns: 1fr;

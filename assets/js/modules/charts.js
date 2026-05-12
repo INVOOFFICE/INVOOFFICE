@@ -11,13 +11,3 @@ const chartObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 
 chartBars.forEach(bar => chartObserver.observe(bar));
-
-// Add growBar keyframe dynamically
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes growBar {
-        from { transform: scaleY(0); }
-        to { transform: scaleY(1); }
-    }
-`;
-document.head.appendChild(style);

@@ -1,0 +1,27 @@
+{
+  "name": "invooffice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "INVOO OFFICE — Logiciel de facturation conforme DGI Maroc. PWA 100% hors ligne.",
+  "type": "module",
+  "scripts": {
+    "build:blog": "node scripts/build-blog-pages.mjs",
+    "build": "npm run build:blog",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "facturation",
+    "Maroc",
+    "DGI",
+    "TVA",
+    "ICE",
+    "devis",
+    "PWA",
+    "gestion commerciale"
+  ],
+  "author": "INVOO OFFICE",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  }
+}

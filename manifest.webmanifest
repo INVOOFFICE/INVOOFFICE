@@ -25,15 +25,6 @@
             "purpose": "any maskable"
         }
     ],
-    "screenshots": [
-        {
-            "src": "/assets/icons/screenshot.png",
-            "sizes": "1280x720",
-            "type": "image/png",
-            "form_factor": "wide",
-            "label": "Vue d'ensemble du dashboard INVOO OFFICE"
-        }
-    ],
     "shortcuts": [
         {
             "name": "Nouvelle facture",
