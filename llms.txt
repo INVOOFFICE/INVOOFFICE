@@ -58,3 +58,6 @@ comptable.
 
 - [Facture normalisee au Maroc : ce que les entreprises doivent verifier](https://invooffice.com/blogs/facture-normalisee-au-maroc-ce-que-les-entreprises-doivent-verifier/)
   Assurez-vous de la conformité de vos factures avec la DGI Maroc. Téléchargez INVOO OFFICE pour une gestion commerciale simplifiée
+
+- [INVOO OFFICE vs Excel : pourquoi structurer sa facturation au Maroc](https://invooffice.com/blogs/invoo-office-vs-excel-pourquoi-structurer-sa-facturation-au-maroc/)
+  Gérez vos factures TVA avec INVOO OFFICE, le logiciel de facturation pour les PME marocaines. Découvrez comment simplifier votre facturation au Maroc.
