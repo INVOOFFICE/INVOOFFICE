@@ -61,3 +61,6 @@ comptable.
 
 - [INVOO OFFICE vs Excel : pourquoi structurer sa facturation au Maroc](https://invooffice.com/blogs/invoo-office-vs-excel-pourquoi-structurer-sa-facturation-au-maroc/)
   Gérez vos factures TVA avec INVOO OFFICE, le logiciel de facturation pour les PME marocaines. Découvrez comment simplifier votre facturation au Maroc.
+
+- [Mentions obligatoires sur une facture marocaine : guide PME et SARL](https://invooffice.com/blogs/mentions-obligatoires-sur-une-facture-marocaine-guide-pme-et-sarl/)
+  Créez des factures conformes avec INVOO OFFICE. Découvrez les mentions obligatoires pour les factures marocaines et gérez votre commerce en toute confiance
