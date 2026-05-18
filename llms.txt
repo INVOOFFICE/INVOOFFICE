@@ -64,3 +64,6 @@ comptable.
 
 - [Mentions obligatoires sur une facture marocaine : guide PME et SARL](https://invooffice.com/blogs/mentions-obligatoires-sur-une-facture-marocaine-guide-pme-et-sarl/)
   Créez des factures conformes avec INVOO OFFICE. Découvrez les mentions obligatoires pour les factures marocaines et gérez votre commerce en toute confiance
+
+- [TVA Maroc sur facture : calcul HT, TVA et TTC explique simplement](https://invooffice.com/blogs/tva-maroc-sur-facture-calcul-ht-tva-et-ttc-explique-simplement/)
+  Calcul de TVA Maroc en ligne avec INVOO OFFICE. Gérez vos factures et votre comptabilité avec notre logiciel de gestion commerciale pour PME et TPE. Essay…
