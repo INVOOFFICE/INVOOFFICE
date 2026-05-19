@@ -67,3 +67,6 @@ comptable.
 
 - [TVA Maroc sur facture : calcul HT, TVA et TTC explique simplement](https://invooffice.com/blogs/tva-maroc-sur-facture-calcul-ht-tva-et-ttc-explique-simplement/)
   Calcul de TVA Maroc en ligne avec INVOO OFFICE. Gérez vos factures et votre comptabilité avec notre logiciel de gestion commerciale pour PME et TPE. Essay…
+
+- [Relance facture impayee au Maroc : methode simple pour PME](https://invooffice.com/blogs/relance-facture-impayee-au-maroc-methode-simple-pour-pme/)
+  Relancez vos factures impayees avec INVOO OFFICE, logiciel de gestion commerciale marocain. Découvrez comment faciliter la facturation et la relance des f…
