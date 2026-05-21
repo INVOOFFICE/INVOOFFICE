@@ -73,3 +73,6 @@ comptable.
 
 - [Meilleur logiciel de facturation au Maroc : criteres pour PME et TPE](https://invooffice.com/blogs/meilleur-logiciel-de-facturation-au-maroc-criteres-pour-pme-et-tpe/)
   Découvrez le meilleur logiciel de facturation pour les PME et TPE au Maroc. Gérez vos factures TVA et ICE avec INVOO OFFICE et améliorez votre gestion com…
+
+- [Archivage des factures au Maroc : bonnes pratiques pour PME](https://invooffice.com/blogs/archivage-des-factures-au-maroc-bonnes-pratiques-pour-pme/)
+  Apprenez à archiver vos factures de manière efficace avec INVOO OFFICE, logiciel de facturation pour les PME au Maroc. Découvrez comment
